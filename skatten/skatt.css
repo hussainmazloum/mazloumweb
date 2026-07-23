@@ -33,11 +33,6 @@ body {
     padding-bottom: 30px;
 }
 
-.topTitel {
-  width: 100%;
-  margin: 0 auto;
-}
-
 ul {
   display: flex;
   justify-content: space-between;
@@ -72,7 +67,7 @@ p {
   padding-top: 10px;
 }
 .topTitel {
-  width: 95%;
+  width: 100%;
   margin: 0 auto;
 }
 
