@@ -304,6 +304,10 @@ ul {
     justify-content: center;
     gap: 10px;
   }
+    .container {
+    height: auto;
+    min-height: 100vh;
+  }
  
   
 }

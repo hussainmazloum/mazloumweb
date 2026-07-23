@@ -391,6 +391,14 @@ ul {
     justify-content: center;
     gap: 10px;
   }
+    .container {
+    height: auto;
+    min-height: 100vh;
+  }
+  .table-container h2{
+    width: 100%;
+    font-size: 16px;
+  }
 
 
 }
