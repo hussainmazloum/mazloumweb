@@ -295,6 +295,11 @@ video, #ytPlayer{
  p{
   text-align: center;
  }
+ ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
  
   
 }

@@ -383,9 +383,11 @@ input:focus {
   
 }
 
-/* ul li a{
-  font-size: 13px;
-} */
+ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
 
 
 }

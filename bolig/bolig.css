@@ -369,6 +369,12 @@ tr {
   #titel img{
     display: none;
   }
+
+  ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
   
 
 }

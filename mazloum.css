@@ -16,10 +16,10 @@ body {
   padding: 5px;
   width: 80%;
   margin: 0 auto;
-  font-family: Arial, Helvetica, sans-serif;
 }
-.logo img {
-  width: 70px;
+.logo img{
+    width: 70px;
+    max-width: 100%;
 }
 
 .logo h2{
@@ -27,7 +27,7 @@ body {
 }
 .container {
   width: 80%;
-  height: 80vh;
+  min-height: 80vh;
   margin: 0 auto;
   background-color: rgb(230, 236, 240);
 }
@@ -54,9 +54,10 @@ ul li a {
   text-decoration: none;
   color: rgb(100, 111, 111);
   font-size: 17px;
-  transition: 0.15s;
+  transition: color 0.2s ease;
 }
 ul li a:hover {
+  color: #f4a261;
   text-decoration: underline;
   text-decoration-color: #f4a261;
   text-decoration-thickness: 2px;
@@ -74,9 +75,7 @@ ul li a:hover {
 
 .soura img{
   width:40%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  
 }
 
 p{
@@ -151,14 +150,15 @@ p{
   
 }
 
-.omOss p{
-    width: 100%;
+.en,
+.no,
+.ar {
+    width: 90%;
+}
+ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
   }
-
-  .omOss p{
-    font-size: 15px;
-  }
-
-  
 
 }
