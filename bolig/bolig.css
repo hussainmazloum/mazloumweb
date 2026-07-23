@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  border: 1px solid red;
 }
 
 body {
@@ -287,29 +288,31 @@ tr {
 
 @media (max-width: 768px) {
 
-  .container {
-    width: 100%;
-    height: 100%;
-  }
-
+  .container,
   .logo {
     width: 100%;
   }
+
   .logo h2 {
         font-size: 22px;
     }
 
   ul li a{
-  font-size: 14px;
+  font-size: 13px;
   display: flex;
   align-items: center;
   justify-content: space-between;
  
 }
-
+ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
 
 .topTitel {
   width: 100%;
+  
 }
 
 .input{
@@ -370,11 +373,7 @@ tr {
     display: none;
   }
 
-  ul {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-  }
+
   
 
 }

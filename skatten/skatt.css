@@ -304,28 +304,31 @@ input:focus {
 
 /*----------------------------------- Mobile divices-----------------------------------------*/
 @media (max-width: 768px) {
-  .container {
-    width: 100%;
-    height: 100%;
-  }
-
+  .container,
   .logo {
     width: 100%;
   }
+
   .logo h2 {
         font-size: 22px;
     }
 
   ul li a{
-  font-size: 14px;
+  font-size: 13px;
   display: flex;
   align-items: center;
   justify-content: space-between;
  
 }
+ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
 
 .topTitel {
   width: 100%;
+  
 }
 
   .top {
@@ -370,8 +373,8 @@ input:focus {
     height: 30px;
   }
 .table-container{
-  width: 90%;
-  height: 225px;
+  width: 100%;
+  min-height: 225px;
   
 }
 
