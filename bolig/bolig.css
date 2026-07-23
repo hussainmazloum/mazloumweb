@@ -369,4 +369,8 @@ tr {
     font-weight: bold;
     border: none;
   }
+
+  ul li a{
+  font-size: 13px;
+}
 }

@@ -228,5 +228,9 @@ p{
     height: 73vh;
     
   }
+
+  ul li a{
+  font-size: 13px;
+}
   
 }

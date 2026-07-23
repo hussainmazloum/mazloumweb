@@ -286,7 +286,9 @@ video, #ytPlayer{
   text-align: center;
  }
  
-
+ul li a{
+  font-size: 13px;
+}
   
 }
 
