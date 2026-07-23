@@ -33,7 +33,7 @@ body {
 }
 
 .topTitel {
-  width: 95%;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -229,8 +229,14 @@ p{
     
   }
 
-  ul li a{
+/*   ul li a{
   font-size: 13px;
+} */
+
+
+.topTitle {
+  width: 100%;
+  
 }
   
 }

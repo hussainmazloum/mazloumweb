@@ -378,10 +378,14 @@ input:focus {
 .buttons{
   width: 100%;
 }
-
-ul li a{
-  font-size: 13px;
+.topTitle {
+  width: 100%;
+  
 }
+
+/* ul li a{
+  font-size: 13px;
+} */
 
 
 }

@@ -72,7 +72,7 @@ p {
   padding-top: 10px;
 }
 .topTitel {
-  width: 95%;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -369,8 +369,12 @@ tr {
     font-weight: bold;
     border: none;
   }
-
-  ul li a{
-  font-size: 13px;
+  .topTitle {
+  width: 100%;
+  
 }
+
+/*   ul li a{
+  font-size: 13px;
+} */
 }
