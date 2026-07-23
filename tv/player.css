@@ -35,7 +35,7 @@ body {
 }
 
 .topTitle {
-  width: 95%;
+  width: 100%;
   margin: 0 auto;
 /*   padding: 20px 0px;
  */}
@@ -213,6 +213,7 @@ video, #ytPlayer{
 
   ul li a{
   font-size: 14px;
+  width: 100%;
 }
 
   #channels {
@@ -286,9 +287,8 @@ video, #ytPlayer{
   text-align: center;
  }
  
-ul li a{
-  font-size: 13px;
-}
+.topTitle {
+  width: 100%;}
   
 }
 
