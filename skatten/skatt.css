@@ -309,16 +309,13 @@ input:focus {
 
 /*----------------------------------- Mobile divices-----------------------------------------*/
 @media (max-width: 768px) {
-    .container {
+  .container {
     width: 100%;
+    height: 100%;
   }
 
   .logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   
-
+    width: 100%;
   }
   .logo h2 {
         font-size: 22px;
@@ -326,6 +323,14 @@ input:focus {
 
   ul li a{
   font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+ 
+}
+
+.topTitel {
+  width: 100%;
 }
 
   .top {

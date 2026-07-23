@@ -203,16 +203,21 @@ video, #ytPlayer{
   }
 
   .logo {
-    display: flex;
-    justify-content: center;
+    width: 100%;
   }
-
   .logo h2 {
-    font-size: 22px; 
+        font-size: 22px;
     }
 
   ul li a{
   font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+ 
+}
+
+.topTitel {
   width: 100%;
 }
 
@@ -221,6 +226,7 @@ video, #ytPlayer{
     width: 100%;
     max-height: 395px;
     cursor: pointer;
+    
   }
   
   #channels:hover {
@@ -247,11 +253,13 @@ video, #ytPlayer{
     padding-right: 15px;
     height:70px;
     align-items: center;
+    
   }
   
   .channel-icon {
     width: 60px;
     height: 60px;
+    
   }
 
   #channelName{
@@ -259,7 +267,8 @@ video, #ytPlayer{
     width: 100%;
     font-size: 17px;
     height: 60px;
-    padding-right: 10px;    
+    padding-right: 10px; 
+       
     
   }
 
@@ -287,8 +296,6 @@ video, #ytPlayer{
   text-align: center;
  }
  
-.topTitle {
-  width: 100%;}
   
 }
 

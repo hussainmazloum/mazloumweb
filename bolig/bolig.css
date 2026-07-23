@@ -33,11 +33,6 @@ body {
     padding-bottom: 30px;
 }
 
-.topTitel {
-  width: 95%;
-  margin: 0 auto;
-}
-
 ul {
   display: flex;
   justify-content: space-between;
@@ -91,7 +86,7 @@ p {
   text-align: center;
 }
 
-#title img {
+#titel img {
   width: 130px;
   padding: 20px;
 }
@@ -102,7 +97,7 @@ h1 {
   font-weight: 700;
 }
 
-#title h2 {
+#titel h2 {
   color: #f4a261;
   padding-bottom: 10px;
 }
@@ -125,6 +120,13 @@ h1 {
   /* border: 5px solid rgb(217, 255, 0); 
  */
 }
+/* 
+.felt{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
 .sokeFelt {
   display: flex;
   width: 100%;
@@ -158,7 +160,7 @@ input:focus {
   outline: none;
 }
 
-.input .felt {
+.felt{
   width: 220px;
   height: 35px;
   font-size: 20px;
@@ -285,48 +287,43 @@ tr {
 
 @media (max-width: 768px) {
 
-
   .container {
     width: 100%;
     height: 100%;
   }
 
   .logo {
-    display: flex;
-    justify-content: center;
-   
+    width: 100%;
   }
-
- .logo h2 {
+  .logo h2 {
         font-size: 22px;
     }
 
   ul li a{
   font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+ 
 }
 
-  .info {
-    display: inline;
-    width: 95%;
-    flex-wrap: wrap;
-  }
 
-  .input {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    width: 100%;
-  }
+.topTitel {
+  width: 100%;
+}
 
-  .input .felt {
-    width: 120px;
-    height: 35px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #0d72ba;
-    padding: 0 10px;
-  }
+.input{
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  
+}
+
+.felt{
+  width:100%;
+}
+
 
   #result {
     width: 100%;
@@ -362,19 +359,16 @@ tr {
 
   .maned {
     width: 120px;
-    height: 35px;
+    height: 30px;
     border-radius: 8px;
     padding-left: 10px;
     font-size: 12px;
     font-weight: bold;
     border: none;
   }
-  .topTitle {
-  width: 100%;
+  #titel img{
+    display: none;
+  }
   
-}
 
-/*   ul li a{
-  font-size: 13px;
-} */
 }
