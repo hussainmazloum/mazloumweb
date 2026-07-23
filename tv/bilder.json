@@ -1,0 +1,966 @@
+  [
+   {
+  "name": "Al Manar",
+  "url": "https://edge.fastpublish.me/live/index.m3u8",
+  "icon":"images/manar.png",
+  "type": "hls"
+},
+{
+  "name": "Al Manar_mac",
+  "url": "http://edge.fastpublish.me/live/index.m3u8",
+  "icon":"images/manar.png",
+  "type": "hls"
+},
+
+{
+  "name": "Al Ittihad",
+  "url": "https://live.alittihad.tv:444/ittihad/index.m3u8",
+  "icon":"images/etihad.png",
+  "type": "hls"
+},
+
+{
+  "name": "Al Mayadeen",
+  "url": "https://mdnlv.cdn.octivid.com/almdn/smil:mpegts.stream.smil/chunklist_b2700000.m3u8",
+  "icon":"images/mayadeen_1.png",
+   "type": "hls"
+},
+
+
+{
+  "name": "Al Alam",
+  "url": "https://live2.alalam.ir/live/Alalam/index.m3u8",
+   "icon":"images/alam.png",
+   "type":"hls"
+},
+
+{
+  "name": "Al Alam 1",
+  "url": "https://live1.alalam.ir/live/Alalam/index.m3u8",
+   "icon":"images/alam.png",
+   "type":"hls"
+},
+
+{
+  "name": "Al Arabi 1",
+  "url": "https://live.kwikmotion.com/alaraby1live/alaraby_abr/alaraby1publish/alaraby1_source/chunks.m3u8",
+  "icon":"images/arabi_1.png",
+   "type": "hls"
+},
+
+{
+  "name": "Al jazeera 1",
+  "url": "https://live-hls-web-aja.getaj.net/AJA/01.m3u8",
+  "icon":"images/jazeera_1.png",
+   "type": "hls"
+},
+
+{
+  "name": "Al jazeera 2",
+  "url": "https://live-hls-web-aja2-gcp.thehlive.com/AJA2/01.m3u8",
+  "icon":"images/jazeera_2.png",
+   "type": "hls"
+},
+    {
+  "name": "Al jazeera direct",
+  "url": "https://live-hls-web-ajm.getaj.net/AJM/04.m3u8",
+  "icon":"images/jazeera_3.png",
+   "type": "hls"
+},
+
+  {
+    "name": "Al Jazeera Doc",
+    "url": "http://154.58.202.18:8080/beinseries1/tracks-v1a1/mono.m3u8",
+    "icon":"images/jazeeraDoc.png",
+    "type": "hls"
+  },
+
+{
+  "name": "Russia Today",
+  "url": "https://rt-arb.rttv.com/live/rtarab/playlist_4500Kb.m3u8",
+  "icon":"images/RT.png",
+   "type": "hls"
+},
+{
+  "name": "Al Masira",
+  "url": "https://live.cdnbridge.tv/Almasirah/Almasirah_all/Almasirah/Almasirah_1080p/chunks.m3u8",
+  "icon":"images/masira.png",
+   "type": "hls"
+},
+{
+  "name": "Al Masira direct",
+  "url": "https://live2.cdnbridge.tv/AlmasirahMubasher/Mubasher_All/MubasherLive/Mubasher_1080p/chunks.m3u8",
+  "icon":"images/masira_3.png",
+   "type": "hls"
+},
+{
+    "name": "Al sirat",
+    "url": "https://softverse.b-cdn.net/Assirat/assiratobs/chunklist_w1223338841.m3u8",
+    "icon":"images/sirat.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "Al iman",
+    "url": "https://svs.itworkscdn.net:443/alimanlive/imantv.smil/playlist.m3u8",
+    "icon":"images/iman.png",
+     "type": "hls"
+  },
+{
+  "name": "TRT Arabic",
+  "url": "https://tv-trtarabi.medya.trt.com.tr/master_1080.m3u8",
+  "icon":"images/TRT_1.png",
+   "type": "hls"
+},
+{
+  "name": "Phalastine Today",
+  "url": "https://live.paltodaytv.com/paltv/live/chunklist.m3u8",
+  "icon":"images/phalastine.png",
+   "type": "hls"
+},
+{
+  "name": "Al Hiwar",
+  "url": "https://mn-nl.mncdn.com/alhiwar_live/smil:alhiwar.smil/chunklist_b3128000.m3u8",
+  "icon":"images/hiwar_1.png",
+   "type": "hls"
+},
+
+{
+    "name": "France 24",
+    "url": "https://live.france24.com/hls/live/2037222-b/F24_AR_HI_HLS/master_5000.m3u8",
+    "icon":"images/france.png",
+     "type": "hls"
+  },
+
+  
+
+  {
+    "name": "IFilm arabic",
+    "url": "https://live.presstv.ir/hls/ifilmar_4_482/index.m3u8",
+    "icon":"images/ifilm_1.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "Al Sharq",
+    "url": "https://svs.itworkscdn.net/bloomberarlive/bloomberg.smil/playlist_dvr.m3u8",
+    "icon":"images/asharq.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "Al sharq discovery",
+    "url": "https://svs.itworkscdn.net/asharqdiscoverylive/asharqd.smil/playlist_dvr.m3u8",
+    "icon":"images/asharq_dis.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "Al sharq doc",
+    "url": "https://svs.itworkscdn.net/asharqdocumentarylive/asharqdocumentary.smil/asharqdocumentarypublish/asharqdocumentary_720p/chunks_dvr.m3u8",
+    "icon":"images/asharq_doc.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "DW TV",
+    "url": "https://dwamdstream103.akamaized.net/hls/live/2015526/dwstream103/index.m3u8",
+    "icon":"images/DW.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "MBC",
+    "url": "https://shd-gcp-live.lg.mncdn.com/live/bitmovin-mbc-1/15cf99af5de54063fdabfefe66adc075/index.m3u8",
+    "icon":"images/mbc1.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "MBC 2",
+    "url": "http://154.58.202.18:8080/mbc2/index.m3u8",
+    "icon":"images/mbc_2.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "MBC 3",
+    "url": "https://shd-gcp-live.lg.mncdn.com/live/bitmovin-mbc-3-usa/5d58265a862a476dc7f97694addb5ded/index.m3u8",
+    "icon":"images/mbc_3.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "MBC 4",
+    "url": "https://shd-gcp-live.lg.mncdn.com/live/bitmovin-mbc-4/24f134f1cd63db9346439e96b86ca6ed/index.m3u8",
+    "icon":"images/mbc4.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "MBC 5",
+    "url": "https://shd-gcp-live.lg.mncdn.com/live/bitmovin-mbc-5/ee6b000cee0629411b666ab26cb13e9b/index.m3u8",
+    "icon":"images/mbc5.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "MBC iraq",
+    "url": "https://shd-gcp-live.akamaized.net/live/bitmovin-mbc-iraq/e38c44b1b43474e1c39cb5b90203691e/index.m3u8",
+    "icon":"images/mbc_iraq.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "MBC Bollywood",
+    "url": "https://shd-gcp-live.lg.mncdn.com/live/bitmovin-mbc-bollywood/546eb40d7dcf9a209255dd2496903764/index.m3u8",
+    "icon":"images/mbc_bollywood.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "MBC Misr Drama",
+    "url": "https://shd-gcp-live.lg.mncdn.com/live/bitmovin-mbc-masr-drama/567b703c19ede6598222de81b0e4508b/index.m3u8",
+    "icon":"images/mbc_misrdrama.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "MBC Drama",
+    "url": "https://shd-gcp-live.lg.mncdn.com/live/bitmovin-mbc-drama/2c28a458e2f3253e678b07ac7d13fe71/index.m3u8",
+    "icon":"images/mbc_drama.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "MBC Drama +",
+    "url": "https://shd-gcp-live.lg.mncdn.com/live/bitmovin-mbc-plus-drama/e37251ec2aac8f6c98f75cd0fa37cd28/index.m3u8",
+    "icon":"images/MBC_Drama_Plus.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "MBC misr 1",
+    "url": "https://shd-gcp-live.lg.mncdn.com/live/bitmovin-mbc-masr/956eac069c78a35d47245db6cdbb1575/index.m3u8",
+    "icon":"images/MBC_Masr.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "MBC misr 2",
+    "url": "https://shd-gcp-live.lg.mncdn.com/live/bitmovin-mbc-masr-2/754931856515075b0aabf0e583495c68/index.m3u8",
+    "icon":"images/mbc_masr2.png",
+     "type": "hls"
+  },
+
+  { "name": "MBC action", 
+  "url": "https://185.9.2.18/chid_378/mono.m3u8" ,
+    "icon":"images/mbc_action.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "Tele Liban",
+    "url": "https://cdn.catiacast.video/abr/ed8f807e2548db4507d2a6f4ba0c4a06/playlist.m3u8",
+    "icon":"images/tele_liban.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "Future",
+    "url": "https://live.kwikmotion.com/futurelive/ftv.smil/playlist.m3u8",
+    "icon":"images/Future_TV.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "OTV",
+    "url": "https://otv.hibridcdn.net/otv/tv_abr/otv/tv_1080p/chunks.m3u8",
+    "icon":"images/otv1.png",
+     "type": "hls"
+  },
+  {
+    "name": "MTV",
+    "url": "https://shd-gcp-live.lg.mncdn.com/live/bitmovin-mtv-lebanon/b8ebb2a5affb812f1541712adde10e26/index.m3u8",
+    "icon":"images/MTV.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "RED tv",
+    "url": "https://live.kwikmotion.com/redtvlive/redtv.smil/playlist.m3u8",
+    "icon":"images/red.png",
+     "type": "hls"
+  },
+
+
+  {
+    "name": "Al Arabi 2",
+    "url": "https://live.kwikmotion.com/alaraby2live/alaraby2.smil/alaraby2publish/alaraby2_source/chunks.m3u8",
+    "icon":"images/arabi_to.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "Roya kids",
+    "url": "https://playlist.fasttvcdn.com/pl/ptllxjd03j6g9oxxjdfapg/roya-kids-originals/playlist.m3u8",
+    "icon":"images/roya_kids.png",
+     "type": "hls"
+  },
+
+{
+    "name": "Conan",
+    "url": "https://fast.spacetoongo.com/channels/ba2f82fb-62ab-4139-ae62-7aa9c37638ee/master1000.m3u8",
+    "icon":"images/conan.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "Sanafer",
+    "url": "https://fast.spacetoongo.com/channels/32f56574-6af3-4fc9-a59d-7dfec23eca0a/master1000.m3u8",
+    "icon":"images/sanafir.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "Osratouna tv",
+    "url": "JQ7mRtfj02I",
+    "icon":"images/ousra.png",
+    "type": "youtube"
+  },
+
+  {
+    "name": "Tom & Jerry",
+    "url": "https://live20.bozztv.com/giatvplayout7/giatv-208314/playlist.m3u8",
+    "icon":"images/tom.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "Tom & Jerry Warner",
+    "url": "400k2SKoeh4",
+    "icon":"images/tom.png",
+    "type": "youtube"
+  },
+
+  {
+    "name": "Masha and the Bear ",
+    "url": "S_6wjcgw1mk",
+    "icon":"images/masha.png",
+    "type": "youtube"
+  },
+
+  {
+    "name": "Shaun the Sheep",
+    "url": "MlkEJ0jWUAg",
+    "icon":"images/shaun.png",
+    "type": "youtube"
+  },
+
+  {
+    "name": "Kung Fu Panda",
+    "url": "L0VqY0s7-5k",
+    "icon":"images/panda.png",
+    "type": "youtube"
+  },
+
+  {
+    "name": "Smurfs",
+    "url": "SgFhzFF2tYA",
+    "icon":"images/Smurfs.png",
+    "type": "youtube"
+  },
+
+  {
+    "name": "Ch4teen kids",
+    "url": "https://ch14.tv/live/ch4teenkids/playlist.m3u8",
+    "icon":"images/ch4teen kids.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "Maraya kids",
+    "url": "https://live.kwikmotion.com/smckidslive/tjkids1/chunks.m3u8",
+    "icon":"images/marayakids.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "MBC 3",
+    "url": "https://shd-gcp-live.lg.mncdn.com/live/bitmovin-mbc-3-usa/5d58265a862a476dc7f97694addb5ded/index.m3u8",
+    "icon":"images/mbc_3.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "Toyor Aljanah",
+    "url": "b9iZR_yTyGc",
+    "icon":"images/toyyor.png",
+    "type": "youtube"
+  },
+
+  {
+    "name": "KidsToon Goggle",
+    "url": "https://amg01329-otterainc-toongoggles-samsungau-ad-4c.amagi.tv/playlist/amg01329-otterainc-toongoggles-samsungau/playlist.m3u8",
+    "icon":"images/kidstoon.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "Taha Kids",
+    "url": "https://stream.starmenajo.com/hls/app/live/medialist_7806664055920539159_hls.m3u8",
+    "icon":"images/tahakids.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "Rotana Kids",
+    "url": "https://cdn1.iptvcdn.tv/mcnc/ROTANA_KIDS/chunks.m3u8?token=demo",
+    "icon":"images/rotanakids.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "Animation Classic",
+    "url": "https://linear-899.frequency.stream/dist/cineverse/899/hls/master/playlist.m3u8",
+    "icon":"images/retro-crush.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "Baby Sharq TV",
+    "url": "https://newidco-babysharktv-1-us.roku.wurl.tv/playlist.m3u8",
+    "icon":"images/shark.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "Mr. Bean TV",
+    "url": "https://amg00627-amg00627c31-rakuten-fr-3991.playouts.now.amagi.tv/playlist/amg00627-banijayfast-mrbeanfrcc-rakutenfr/playlist.m3u8",
+    "icon":"images/bean.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "Mr. Bean TV action",
+    "url": "https://amg00627-amg00627c40-rakuten-uk-5725.playouts.now.amagi.tv/playlist/amg00627-banijayfast-mrbeanpopupcc-rakutenuk/playlist.m3u8",
+    "icon":"images/bean1.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "Teletubbies",
+    "url": "https://dv8lsrd8fecw9.cloudfront.net/master.m3u8",
+    "icon":"images/tubbies.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "Super_Simple_Songs",
+    "url": "https://janson-supersimplesongs-1-us.roku.wurl.tv/playlist.m3u8",
+    "icon":"images/super.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "Cartoon Calssic",
+    "url": "https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/d5543c06-5122-49a7-9662-32187f48aa2c/manifest.m3u8",
+    "icon":"images/cartoon-classics.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "Zoomoo kids",
+    "url": "https://zoomoo-samsungau.amagi.tv/playlist1080p.m3u8",
+    "icon":"images/Zoomoo kids.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "Al Quran Elkarim",
+    "url": "bNY8a2BB5Gc",
+    "icon":"images/quran.png",
+    "type": "youtube"
+  },  
+
+  {
+    "name": "Quran Al Bahrain",
+    "url": "https://5c7b683162943.streamlock.net/live/ngrp:bahrainquran_all/chunklist_w1937581584_b2487000.m3u8",
+    "icon":"images/bahrain.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "Sharjaht Quran tv",
+    "url": "https://live.kwikmotion.com/sharjahtvquranlive/shqurantv.smil/sharjahtvquranpublish/shqurantv_source/chunks.m3u8",
+    "icon":"images/sharqa.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "Sharjaht Quran Radio",
+    "url": "https://live.kwikmotion.com/smcquranlive/quranradiolive/chunks.m3u8",
+    "icon":"images/radio.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "Ch4teen Quran",
+    "url": "https://ch14.tv/live/ch4teenquran/playlist.m3u8",
+    "icon":"images/ch4teen quran.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "Karbalaa Quran",
+    "url": "https://ktvlive.online/stream/hls/ch1.m3u8",
+    "icon":"images/karbala_1.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "Karbalaa Doc",
+    "url": "https://ktvlive.online/stream/hls/ch3.m3u8",
+    "icon":"images/karbala_2.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "karbala",
+    "url": "TVmcb1TCvIg",
+    "icon":"images/karbala.png",
+    "type": "youtube"
+  },
+
+  {
+    "name": "Al Maaref TV",
+    "url": "https://amsterdam.zeuscdn724.com/CH-AL-MA/tracks-v4a1/mono.ts.m3u8",
+    "icon":"images/Almaaref.png",
+     "type": "hls"
+  },
+
+
+  {
+    "name": "Al gadeer",
+    "url": "https://sd343444.vodu.store:3356/live/Alghadeer/tracks-v1a1/mono.m3u8",
+    "icon":"images/gadeer.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "Al sharqia iraq",
+    "url": "https://5d94523502c2d.streamlock.net/home/mystream/chunklist_w1516467122.m3u8",
+    "icon":"images/Asharq_1.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "Al sharqia news",
+    "url": "https://5d94523502c2d.streamlock.net/alsharqiyalive/mystream/chunklist_w122808259.m3u8",
+    "icon":"images/AsharqNews.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "Afaq",
+    "url": "https://stream.afaq.iq/live/channel/afaqtv/playlist.m3u8",
+    "icon":"images/afaq.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "Dijlah",
+    "url": "https://ghaasiflu.online/Dijlah/tracks-v1a1/mono.m3u8",
+    "icon":"images/dijla.png",
+     "type": "hls"
+  },
+
+
+  {
+    "name": "Al Jawadain TV",
+    "url": "https://live.aljawadain.org/live/aljawadaintv/playlist.m3u8",
+    "icon":"images/jawadain.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "Imam Hussain TV",
+    "url": "https://ak.imamhussein.live/imhtv2live/imhtv2.smil/imhtv2publish/imhtv2_480p/chunks.m3u8",
+    "icon":"images/imamhussain.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "Al Marjaeyat TV",
+    "url": "https://livefa.marjaeyattv.com/mtv_ar/playlist05/index.m3u8",
+    "icon":"images/marjaiha.png",
+     "type": "hls"
+  },
+
+   {
+    "name": "Mix Hollywood",
+    "url": "https://ml-pull-hwc.myco.io/MixTV/hls/MixTV_H264-720p.m3u8?pkg_media=video&pkg_hm=index.m3u8&pkg_svc=1&pkg_vcodec=avc1",
+    "icon":"images/mix.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "Mix Bil arabi",
+    "url": "https://ml-pull-hwc.myco.io/MixBelAraby/hls/MixBelAraby_H264-720p.m3u8?pkg_media=video&pkg_hm=index.m3u8&pkg_svc=1&pkg_vcodec=avc1",
+    "icon":"images/mixarabi.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "Mix One",
+    "url": "https://ml-pull-hwc.myco.io/MixONE/hls/MixONE_H264-720p.m3u8?pkg_media=video&pkg_hm=index.m3u8&pkg_svc=1&pkg_vcodec=avc1",
+    "icon":"images/mixone.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "Lana TV",
+    "url": "https://cdn.streamlane.tv/hls/ltv/1_0/index.m3u8?tkn=3168282027",
+    "icon":"images/lana.png",
+     "type": "hls"
+  },
+
+    {
+    "name": "Rotana aflam",
+    "url": "https://cdn1.iptvcdn.tv/mcnc/ROTANA_AFLAMPLUS/chunks.m3u8?token=demo",
+    "icon":"images/rotana.png",
+     "type": "hls"
+    
+  },
+
+  {
+    "name": "Syria one",
+    "url": "  https://live.syriaone.tv/live/syriaone.m3u8",
+    "icon":"images/one.png",
+     "type": "hls"
+    
+  },
+
+  {
+    "name": "Syria TV 1",
+    "url": "https://svs.itworkscdn.net/syriatvlive/syriatv.smil/syriatvpublish/syriatv_source/chunks_dvr.m3u8",
+    "icon":"images/syria tv.png",
+     "type": "hls"
+    
+  },
+
+  {
+    "name": "Syria tv 2",
+    "url": "https://live.kwikmotion.com/syriatv02live/syriatv02.smil/syriatv02publish/syriatv02_source/chunks.m3u8",
+    "icon":"images/syria 2.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "Al Najah",
+    "url": "https://streaming.najah.edu:8443/hls/AlNajah.m3u8",
+    "icon":"images/najah.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "Huna London",
+    "url": "https://halalondon-live.ercdn.net/halalondon/halalondon_1080p.m3u8",
+    "icon":"images/huna.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "Roya_tv",
+    "url": "https://royatv-live.daioncdn.net/royatv/royatv.m3u8",
+    "icon":"images/roya_1.png",
+     "type": "hls"
+  },
+  {
+    "name": "Roya_Comedy",
+    "url": "https://playlist.fasttvcdn.com/pl/toa2uuhhygheuly7xtuqrg/roya-comedy/playlist/0.m3u8",
+    "icon":"images/roya_2.png",
+     "type": "hls"
+  },
+  {
+    "name": "Roya_Drama",
+    "url": "https://playlist.fasttvcdn.com/pl/a2le4pbpa6rpzv147haf4w/drama/playlist/0.m3u8",
+    "icon":"images/roya_3.png",
+     "type": "hls"
+  },
+  {
+    "name": "Roya_Masrahyyat",
+    "url": "https://playlist.fasttvcdn.com/pl/toa2uuhhygheuly7xtuqrg/masrahyyat/playlist/0.m3u8",
+    "icon":"images/roya_4.png",
+     "type": "hls"
+  },
+  {
+    "name": "Roya_Adel_Imam",
+    "url": "https://playlist.fasttvcdn.com/pl/toa2uuhhygheuly7xtuqrg/adel-imam-movies/playlist/0.m3u8",
+    "icon":"images/roya_7.png",
+     "type": "hls"
+  },
+  {
+    "name": "Roya_Al_Hayba",
+    "url": "https://playlist.fasttvcdn.com/pl/toa2uuhhygheuly7xtuqrg/alhayba/playlist/0.m3u8",
+    "icon":"images/roya_2.png",
+     "type": "hls"
+  },
+  {
+    "name": "Roya_Maraya",
+    "url": "https://playlist.fasttvcdn.com/pl/toa2uuhhygheuly7xtuqrg/maraya/playlist/0.m3u8",
+    "icon":"images/roya_3.png",
+     "type": "hls"
+  },
+  {
+    "name": "Roya_Action",
+    "url": "https://playlist.fasttvcdn.com/pl/toa2uuhhygheuly7xtuqrg/action/playlist/0.m3u8",
+    "icon":"images/roya_7.png",
+     "type": "hls"
+  },
+  {
+    "name": "Roya_Shamyeh",
+    "url": "https://playlist.fasttvcdn.com/pl/toa2uuhhygheuly7xtuqrg/by2ah-shamyeh/playlist/0.m3u8",
+    "icon":"images/roya_4.png",
+     "type": "hls"
+  },
+  {
+    "name": "Roya_Ayman_Zaydan",
+    "url": "https://playlist.fasttvcdn.com/pl/toa2uuhhygheuly7xtuqrg/ayman-zaydan/playlist/0.m3u8",
+    "icon":"images/roya_6.png",
+     "type": "hls"
+  },
+  {
+    "name": "Roya Alzaeem",
+    "url": "https://playlist.fasttvcdn.com/pl/toa2uuhhygheuly7xtuqrg/alzaeem/playlist/0.m3u8",
+    "icon":"images/roya_2.png",
+     "type": "hls"
+  },
+  {
+    "name": "Roya Alqubbeh",
+    "url": "https://playlist.fasttvcdn.com/pl/toa2uuhhygheuly7xtuqrg/haret-alqubbeh/playlist/0.m3u8",
+    "icon":"images/roya_7.png",
+     "type": "hls"
+  },
+  {
+    "name": "Roya Nadine_Njaim",
+    "url": "https://playlist.fasttvcdn.com/pl/toa2uuhhygheuly7xtuqrg/nadinenjaim/playlist/0.m3u8",
+    "icon":"images/roya_3.png",
+     "type": "hls"
+  },
+  {
+    "name": "Roya_Kitchen",
+    "url": "https://playlist.fasttvcdn.com/pl/toa2uuhhygheuly7xtuqrg/roya-kitchen/playlist/0.m3u8",
+    "icon":"images/roya_7.png",
+     "type": "hls"
+  },
+  {
+    "name": "Roya_Doc",
+    "url": "https://playlist.fasttvcdn.com/pl/toa2uuhhygheuly7xtuqrg/documentaries/playlist/0.m3u8",
+    "icon":"images/roya_4.png",
+     "type": "hls"
+  },
+  {
+    "name": "Roya_Kids_org",
+    "url": "https://playlist.fasttvcdn.com/pl/ptllxjd03j6g9oxxjdfapg/roya-kids-originals/playlist/0.m3u8",
+    "icon":"images/roya_kids.png",
+     "type": "hls"
+  },
+  {
+    "name": "Roya_Adventure",
+    "url": "https://playlist.fasttvcdn.com/pl/toa2uuhhygheuly7xtuqrg/roya-adventures/playlist/0.m3u8",
+    "icon":"images/roya_7.png",
+     "type": "hls"
+  },
+  {
+    "name": "Roya_Palestine",
+    "url": "https://playlist.fasttvcdn.com/pl/toa2uuhhygheuly7xtuqrg/roya-palestine/playlist/0.m3u8",
+    "icon":"images/roya_1.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "Roya atfal",
+    "url": "https://playlist.fasttvcdn.com/pl/ptllxjd03j6g9oxxjdfapg/roya-kids/playlist/0.m3u8",
+    "icon":"images/roya_kids.png",
+     "type": "hls"
+  },
+  {
+    "name": "Roya kids sang",
+    "url": "https://playlist.fasttvcdn.com/pl/ptllxjd03j6g9oxxjdfapg/roya-kids-songs/playlist/0.m3u8",
+    "icon":"images/roya_sang.png",
+     "type": "hls"
+  },
+  {
+    "name": "Roya kids stories",
+    "url": "https://playlist.fasttvcdn.com/pl/ptllxjd03j6g9oxxjdfapg/roya-kids-stories/playlist/0.m3u8",
+    "icon":"images/royastory.png",
+     "type": "hls"
+  },
+
+   {
+    "name": "Ch4teen Kids",
+    "url": "https://ch14.tv/live/ch4teenkids/playlist.m3u8",
+    "icon":"images/ch4teen kids.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "Ch4teen Quran",
+    "url": "https://ch14.tv/live/ch4teenquran/playlist.m3u8",
+    "icon":"images/ch4teen quran.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "Ch4teen clip",
+    "url": "https://ch14.tv/live/ch4teenclip/playlist.m3u8",
+    "icon":"images/ch4tee CLIP.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "Ch4teen doc",
+    "url": "https://ch14.tv/live/ch4teendoc/playlist.m3u8",
+    "icon":"images/ch4teen doc.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "NRK Kids",
+    "url": "https://nrk-live-no.akamaized.net/nrksuper/sc-gaFEEA/m523_index.m3u8?adap=large",
+    "icon":"images/nrk_kids.png",
+     "type": "hls"
+  },
+  {
+    "name": "NRK 1",
+    "url": "https://nrk-live-no.akamaized.net/nrk1/sc-gaFEEA/m523_index.m3u8",
+    "icon":"images/nrk1.png",
+     "type": "hls"
+  },
+  {
+    "name": "NRK 2",
+    "url": "https://nrk-live-no.akamaized.net/nrk2/sc-gaFEEA/m523_index.m3u8",
+    "icon":"images/nrk2.png",
+     "type": "hls"
+  },
+  {
+    "name": "NRK 3",
+    "url": "https://nrk-live-no.akamaized.net/nrk3/sc-gaFEEA/m523_index.m3u8",
+    "icon":"images/nrk3.png",
+     "type": "hls"
+  },
+
+
+  {
+    "name": "National Geo.",
+    "url": "wVd836vHl6s",
+    "icon":"images/National.png",
+    "type": "youtube"
+  },
+
+  {
+    "name": "Animal Kingdom",
+    "url": "ItoNVjSmkx0",
+    "icon":"images/animal.png",
+    "type": "youtube"
+  },
+
+  {
+    "name": "Tennis Sport",
+    "url": "https://cdn-uw2-prod.tsv2.amagi.tv/linear/amg01444-tennischannelth-tennischnlintl-lggb/playlist.m3u8",
+    "icon":"images/tennis.png",
+     "type": "hls"
+  },
+
+
+  {
+    "name": "UFC sport",
+    "url": "https://linear-893.frequency.stream/dist/xumo/893/hls/master/playlist.m3u8",
+    "icon":"images/ufc.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "Hard Knock Fighting",
+    "url": "https://d3uyzhwvmemdyf.cloudfront.net/scheduler/scheduleMaster/109/variant/22099396/8d216b41-1,96b-49d2-afb2-46cb9916f903.m3u8",
+    "icon":"images/knock.png",
+     "type": "hls"
+  },
+
+   {
+    "name": "Boxing Royalty",
+    "url": "https://rpn.bozztv.com/gusa/gusa-tvsboxing/index.m3u8",
+    "icon":"images/boxing.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "TSN Sport ",
+    "url": "http://149.100.11.252:8000/play/a050/index.m3u8",
+    "icon":"images/tsn3.png",
+     "type": "hls"
+  },
+  {
+    "name": "TSN Sport 4",
+    "url": "https://tvpass.org/live/tsn4/hd",
+    "icon":"images/tsn4.png",
+     "type": "hls"
+  },
+  {
+    "name": "TSN Sport 5",
+    "url": "https://tvpass.org/live/tsn5/hd",
+    "icon":"images/tsn5.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "Al kass 1",
+    "url": "https://liveeu-gcp.alkassdigital.net:443/alkass1-p/main.m3u8",
+    "icon":"images/alkass1.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "Al kass 2",
+    "url": "https://liveeu-gcp.alkassdigital.net:443/alkass2-p/main.m3u8",
+    "icon":"images/alkass2.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "Al kass 3",
+    "url": "https://liveeu-gcp.alkassdigital.net:443/alkass3-p/main.m3u8",
+    "icon":"images/alkass3.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "Al kass 4",
+    "url": "https://liveeu-gcp.alkassdigital.net:443/alkass4-p/main.m3u8",
+    "icon":"images/alkass4.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "Al kass 5",
+    "url": "https://liveeu-gcp.alkassdigital.net:443/alkass5-p/main.m3u8",
+    "icon":"images/alkass5.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "Al kass 6",
+    "url": "https://liveeu-gcp.alkassdigital.net:443/alkass6-p/main.m3u8",
+    "icon":"images/alkass6.png",
+     "type": "hls"
+  },
+
+
+   {
+    "name": "Bein Sport",
+    "url": "https://dc1644a9jazgj.cloudfront.net/beIN_Sports_Xtra_Espanol.m3u8",
+    "icon":"images/bein.png",
+     "type": "hls"
+  }
+]

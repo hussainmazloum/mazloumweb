@@ -1,0 +1,372 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
+  width: 80%;
+  margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.logo img {
+  width: 70px;
+}
+
+.logo h2 {
+  color: rgb(164, 161, 160);
+}
+.container {
+    width: 80%;
+    min-height: 80vh;
+    margin: 0 auto;
+    background-color: rgb(230, 236, 240);
+    padding-bottom: 30px;
+}
+
+.topTitel {
+  width: 95%;
+  margin: 0 auto;
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding: 15px;
+  margin: 0;
+
+  border-bottom: 1px solid rgb(213, 212, 212);
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ul li a {
+  text-decoration: none;
+  color: rgb(100, 111, 111);
+  font-size: 17px;
+  transition: 0.15s;
+}
+ul li a:hover {
+  text-decoration: underline;
+  text-decoration-color: #f4a261;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px; /* Avstand mellom tekst og underlinje*/
+}
+
+p {
+  color: #f4a261;
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+.topTitel {
+  width: 95%;
+  margin: 0 auto;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------- */
+
+/* Hoved inneholder */
+.content {
+  width: 100%;
+  height: 170px;
+  overflow-y: auto;
+  padding-bottom: 20px;
+}
+
+.top {
+  width: 100%;
+  text-align: center;
+}
+
+#title img {
+  width: 130px;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 60px;
+  color: #8c8686;
+  font-weight: 700;
+}
+
+#title h2 {
+  color: #f4a261;
+  padding-bottom: 10px;
+}
+
+/* Inneholder to div : div- Knapper /div- input */
+.info {
+  width: 100%;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+/* inneholder div- input */
+.input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  gap: 10px;
+  /* border: 5px solid rgb(217, 255, 0); 
+ */
+}
+.sokeFelt {
+  display: flex;
+  width: 100%;
+  justify-content: end;
+  gap: 10px;
+
+  padding: 15px 15px 0 0;
+}
+
+.btnSøk {
+  background-color: #f4a261;
+  color: #ffffff;
+  width: 75px;
+  height: 35px;
+  border-radius: 50px;
+  border: none;
+}
+
+.maned {
+  width: 190px;
+  height: 35px;
+  border-radius: 8px;
+  padding-left: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+}
+
+/* Fjerner standardrammen som nettleseren legger til rundt feltet når det er i fokus.*/
+input:focus {
+  outline: none;
+}
+
+.input .felt {
+  width: 220px;
+  height: 35px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #615f5f;
+  padding: 0 10px;
+
+  border-radius: 8px;
+  border: none;
+}
+/* Inneholder div- knapper */
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 15px;
+}
+
+.btn button {
+  width: 200px;
+  padding: 6px;
+  font-size: 20px;
+  margin: 10px 15px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  background-color: #f4a261;
+  color: #ffffff;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  color: white;
+  background-color: #a6a6ec5a;
+  transform: translateY(-2px);
+}
+
+/* Inneholder tabel */
+/* .content {
+  width: 100%;
+  height: 232px;
+  overflow-y: auto;
+  padding: 0;
+} */
+
+#tableHead th {
+  position: sticky;
+  top: 0;
+  background: rgb(59, 81, 104);
+  color:  #f4a261;
+  z-index: 10;
+  padding: 10px 0;
+}
+
+#tabel {
+  width: 100%;
+  margin: 0;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+#tabel th {
+  color:  #f4a261;
+  font-size: 22px;
+}
+#tabel td {
+  padding: 10px;
+  text-align: center;
+  color: #615f5f;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: hsla(212, 71%, 82%, 0.536);
+  color: #efeff4;
+}
+
+tr {
+  width: 100%;
+  justify-content: space-between;
+  font-size: 18px;
+  /*   text-transform: uppercase;
+ */
+}
+
+#result {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 35px;
+  font-size: 18px;
+  color: rgb(141, 141, 144);
+  font-weight: 600;
+  padding: 10px 5px;
+  margin: 10px 0;
+
+  /*   border: 5px solid rgb(217, 255, 0);
+ */
+}
+
+.red {
+  color: rgb(59, 81, 104);
+}
+
+#tableHead {
+  display: none;
+}
+
+.search-row {
+  background-color: #f4a261 !important;
+  color: black !important;
+  font-weight: bold;
+}
+.footer {
+    width: 80%;
+    margin: 10px auto;
+    text-align:center;
+    color: #f4a261;
+}
+
+/* -------------- media query 768 px -----------------------*/
+
+@media (max-width: 768px) {
+
+
+  .container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .logo {
+    display: flex;
+    justify-content: center;
+   
+  }
+
+ .logo h2 {
+        font-size: 22px;
+    }
+
+  ul li a{
+  font-size: 14px;
+}
+
+  .info {
+    display: inline;
+    width: 95%;
+    flex-wrap: wrap;
+  }
+
+  .input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+  }
+
+  .input .felt {
+    width: 120px;
+    height: 35px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #0d72ba;
+    padding: 0 10px;
+  }
+
+  #result {
+    width: 100%;
+    font-size: 12px;
+  }
+
+  .red {
+    color:rgb(198, 73, 73);
+  }
+
+  #tabel {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 400px; 
+  }
+
+  #tabel th {
+    font-size: 12px;
+    font-weight: bolder;
+  }
+  #tabel td {
+    padding: 10px;
+    text-align: center;
+    font-size: 12px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+
+  .maned {
+    width: 120px;
+    height: 35px;
+    border-radius: 8px;
+    padding-left: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;
+  }
+}

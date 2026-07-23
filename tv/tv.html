@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mazloum Hjemmeside</title>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
+    <script src="https://unpkg.com/@videojs/youtube/dist/Youtube.min.js"></script>
+
+    <link rel="stylesheet" href="player.css" />
+  </head>
+
+  <body>
+    <div class="logo">
+      <img src="../image/mazLogo.png" alt="" />
+      <h2>HJEMMESIDE</h2>
+    </div>
+    <div class="container">
+      <div class="topTitle">
+        <ul>
+          <li><a href="../index.html">HJEM</a></li>
+          <li><a href="../tv/tv.html">TV</a></li>
+          <li><a href="../skatten/skatt.html">SKATTEKALKULATOR</a></li>
+          <li><a href="../bolig/bolig.html">BOLIGLÅNSBEREGNING</a></li>
+          <li><a href="../oss.html">OM OSS</a></li>
+        </ul>
+      </div>
+      <div class="inneholder">
+        <div id="channels"></div>
+
+        <div id="player">
+          <div class="top">
+            <div id="clock"></div>
+            <h2 id="channelName">القناة</h2>
+          </div>
+
+          <iframe
+            id="ytPlayer"
+            width="1185.4"
+            height="666.7"
+            style="display: none"
+            allow="autoplay; encrypted-media"
+            allowfullscreen
+          >
+          </iframe>
+
+          <video
+            id="video"
+            controls
+            autoplay
+            preload="auto"
+            poster="/tv/images/logo-tv.png"
+          ></video>
+        </div>
+      </div>
+    </div>
+    <script src="player.js"></script>
+    <p>&copy Mazloum</p>
+  </body>
+</html>

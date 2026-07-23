@@ -1,0 +1,293 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
+  width: 80%;
+  margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+.logo img {
+  width: 70px;
+}
+
+.logo h2{
+    color: rgb(164, 161, 160);
+}
+.container {
+  width: 80%;
+  min-height:80vh;
+  margin: 0 auto;
+  background-color: rgb(230, 236, 240);
+
+}
+
+.topTitle {
+  width: 95%;
+  margin: 0 auto;
+/*   padding: 20px 0px;
+ */}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding: 15px;
+  margin: 0;
+
+  border-bottom: 1px solid rgb(213, 212, 212);
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ul li a {
+  text-decoration: none;
+  color: rgb(100, 111, 111);
+  font-size: 17px;
+  transition: 0.15s;
+}
+ul li a:hover {
+  text-decoration: underline;
+  text-decoration-color: #f4a261;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px; /* Avstand mellom tekst og underlinje*/
+}
+
+p {
+  color: #f4a261;
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+
+
+/* ----------------------------------------------------------------------------------------------------*/
+
+.inneholder {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 0px; 
+/*   border: 1px solid orange;
+ */}
+
+#channels {
+  width: 25%;
+  max-height:70vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+ /*  scrollbar-color: rgb(153, 211, 250) #1b0679; */
+  margin: 20px 10px;
+  padding: 10px;
+  /* box-shadow:
+    0 4px 8px 0 rgba(0, 0, 0, 0.5),
+    0 6px 20px 0 rgba(0, 0, 0, 0.79);
+  border-bottom: 10px solid goldenrod; */
+  
+
+}
+.channel {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  padding: 12px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+  justify-items: center;
+  font-size: 22px;
+  font-weight: 600;
+  color: rgb(124, 125, 126);
+
+  border: 0.3px solid rgb(209, 206, 206);
+
+  box-shadow:
+    0 4px 8px 0 rgba(0, 0, 0, 0.1),
+    0 6px 20px 0 rgba(0, 0, 0, 0.1); 
+}
+.channel:hover {
+  background-color:rgb(255, 255, 255);
+  color: rgb(250, 168, 5);
+  /* color: #2f0cf3; */
+}
+#player {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:start;
+  font-size: 25px;
+  margin-top: 20px;
+
+  
+/*   height: auto;
+ */ 
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 97%;
+  color: rgb(60, 49, 88);
+  height: 50px;
+  background-color:  rgb(59, 81, 104);
+      border: 1px solid  rgb(230, 236, 240);
+
+ 
+}
+
+#clock {
+  font-size: 22px;
+  color: rgb(250, 168, 5);
+  padding-left: 15px;
+}
+
+video, #ytPlayer{
+  width: 97%;
+  max-height:69vh; 
+  display:block;
+  border: 0.5px solid silver;
+}
+
+#channelName {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 22px;
+/*   background-color: rgba(255, 255, 255, 0.757); */
+  padding: 5px 18px;
+  color:  rgb(250, 168, 5);
+ /* 
+  border-radius: 8px 8px 0px 0px;
+  border: 0.3px solid rgb(209, 206, 206) */
+}
+
+.channel-icon {
+  width: 50px;
+}
+
+.player-icon {
+  width: 40px;
+  margin-right: 8px;
+  background-color: rgb(230, 230, 222);
+  padding: 2px ;
+
+}
+
+/* -------------- media query 1024 -----------------------*/
+
+@media (max-width: 768px) {
+
+  .container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .logo {
+    display: flex;
+    justify-content: center;
+  }
+
+  .logo h2 {
+    font-size: 22px; 
+    }
+
+  ul li a{
+  font-size: 14px;
+}
+
+  #channels {
+    order: 2; 
+    width: 100%;
+    max-height: 395px;
+    cursor: pointer;
+  }
+  
+  #channels:hover {
+    margin-left: 0;
+    transition: 1.5s;
+  }
+
+  video {
+    width: 95%;
+    height: auto;
+    margin:0 auto;
+  }
+
+  #ytPlayer{
+   width: 95%;
+   height:450px;
+    margin: auto;
+  }
+
+  .channel {
+   font-size: 22px;
+    font-weight: 500;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-right: 15px;
+    height:70px;
+    align-items: center;
+  }
+  
+  .channel-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  #channelName{
+    justify-content:end;
+    width: 100%;
+    font-size: 17px;
+    height: 60px;
+    padding-right: 10px;    
+    
+  }
+
+   #player{
+    order: -1;
+  }
+
+  .player-icon {
+    width: 35px;
+  }
+
+  .top {
+    width: 95%;
+
+  }
+
+
+   #clock {
+    padding: 0 10px;
+    margin-left: 0px;
+    font-size: 16px;
+  } 
+
+ p{
+  text-align: center;
+ }
+ 
+
+  
+}
+
+

@@ -1,0 +1,232 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
+  width: 80%;
+  margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.logo img {
+  width: 70px;
+}
+
+.logo h2{
+    color: rgb(164, 161, 160);
+}
+.container {
+  width: 80%;
+  height: 80vh;
+  margin: 0 auto;
+  background-color: rgb(230, 236, 240);
+}
+
+.topTitel {
+  width: 95%;
+  margin: 0 auto;
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding: 15px;
+  margin: 0;
+
+  border-bottom: 1px solid rgb(213, 212, 212);
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ul li a {
+  text-decoration: none;
+  color: rgb(100, 111, 111);
+  font-size: 17px;
+  transition: 0.15s;
+}
+ul li a:hover {
+  text-decoration: underline;
+  text-decoration-color: #f4a261;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px; /* Avstand mellom tekst og underlinje*/
+}
+
+
+
+.soura{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    height: 70vh;          
+}
+
+.soura img{
+  width:40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+p{
+    color: #f4a261;
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+.omOss{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   
+    align-items: center;       
+    gap: 30px;
+    padding: 40px 20px;
+}
+
+
+.en, .no, .ar {
+  width: 40%;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: olive;
+  margin-bottom: 20px;
+  font-weight: 600;
+  border-bottom: 1px solid #f4a261;
+  padding-bottom: 20px;
+}
+.ar {
+    direction: rtl;
+    text-align:justify;
+/*     text-align: right;
+ */   
+
+}
+.en,
+.no {
+    direction: ltr;
+    text-align:justify;
+    
+}
+
+
+/* -------------- media query 768 px -----------------------*/
+
+@media (max-width: 768px) {
+  body {
+    padding: 20px 0;
+  }
+
+    .container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .logo {
+    display: flex;
+    justify-content: center;
+   
+
+  }
+  .logo h2 {
+        font-size: 22px;
+    }
+
+  ul li a{
+  font-size: 14px;
+}
+
+  .top {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  
+  }
+
+  .info {
+    display: inline;
+    width: 95%;
+    flex-wrap: wrap;
+  }
+
+  .input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+  }
+
+  .input .felt {
+    width: 120px;
+    height: 35px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #0d72ba;
+    padding: 0 10px;
+  }
+
+  #result {
+    width: 100%;
+    font-size: 12px;
+  }
+
+  .red {
+    color: red;
+  }
+
+  #tabel {
+    width: 95%;
+    border-collapse: collapse;
+    min-width: 400px; 
+  }
+
+  #tabel th {
+    font-size: 12px;
+    font-weight: bolder;
+  }
+  #tabel td {
+    padding: 10px;
+    text-align: center;
+    font-size: 12px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+
+  .maned {
+    width: 120px;
+    height: 35px;
+    border-radius: 8px;
+    padding-left: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;
+  }
+
+  .omOss p{
+    width: 100%;
+  }
+  .soura{
+    width: 100%;
+    height: 73vh;
+    
+  }
+  
+}

@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mazloums hjemmeside</title>
+    <link rel="stylesheet" href="bolig.css" />
+  </head>
+  <body>
+    <div class="logo">
+      <img src="../image/mazLogo.png" alt="" />
+      <h2>HJEMMESIDE</h2>
+    </div>
+
+    <div class="container">
+      
+        <div class="topTitel">
+          <ul>
+            <li><a href="../index.html">HJEM</a></li>
+            <li><a href="../tv/tv.html">TV</a></li>
+            <li><a href="../skatten/skatt.html">SKATTEKALKULATOR</a></li>
+            <li><a href="../bolig/bolig.html">BOLIGLÅNSBEREGNING</a></li>
+            <li><a href="../oss.html">OM OSS</a></li>
+          </ul>
+        </div>
+
+        <div class="sokeFelt">
+          <input
+            type="number"
+            id="sokManed"
+            placeholder="Månedsnummer"
+            class="maned"
+          />
+          <button class="btnSøk" onclick="sokMåned()">Søk</button>
+        </div>
+
+        <div class="top">
+          <div id="title">
+            <img src="../image/loan.png" alt="" />
+            <h1>Boliglånskalkulator</h1>
+            <h2>Beregn hva boliglånet vil koste deg</h2>
+          </div>
+        </div>
+
+        <div class="info">
+          <div class="input">
+            <input class="felt" type="number" placeholder="Lån" id="laan" />
+            <input class="felt" type="number" placeholder="Rente" id="rente" />
+            <input class="felt" type="number" placeholder="Løpetid" id="ar" />
+          </div>
+
+          <div class="btn">
+            <button id="beregn">Beregn</button>
+            <button id="fjerne">Fjerne</button>
+            <button id="lukke">Lukke</button>
+          </div>
+        </div>
+
+        <div id="result">
+          <p id="result1"></p>
+          <p id="result2"></p>
+          <p id="result3"></p>
+          <p id="result4"></p>
+        </div>
+
+        <div class="content">
+          <table id="tabel">
+            <thead id="tableHead">
+              <tr>
+                <th>Ant. måneder</th>
+                <th>Lånebeløp</th>
+                <th>Terminbeløp</th>
+                <th>Rente</th>
+                <th>Avdrag</th>
+                <th>Restgjeld</th>
+              </tr>
+            </thead>
+            <tbody id="tBody">
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      
+    </div>
+    <script src="bolig.js"></script>
+    <footer class="footer">
+  &copy; Mazloum
+</footer>
+  </body>
+</html>
