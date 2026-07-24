@@ -79,6 +79,9 @@ fetch("bilder.json")
 
           
         }
+        hls.on(Hls.Events.ERROR, function(event, data) {
+    console.log("HLS ERROR:", data);
+});
 
         if (video.canPlayType("application/vnd.apple.mpegurl")) {
                video.src = url;
