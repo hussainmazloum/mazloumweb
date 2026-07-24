@@ -137,7 +137,7 @@ function sokMåned() {
   }
 
   if (!funnet) {
-    alert("Ingen navn ble funnet.");
+    alert("Ingen månedsnummer ble funnet.");
   }
 
   input.value = "";
