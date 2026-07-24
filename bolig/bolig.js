@@ -69,7 +69,7 @@ document.getElementById("beregn").onclick = function () {
     // Vise data
 
     document.getElementById("result1").innerHTML =
-      `Lånebeløp: <span class="red">${laan.toLocaleString("nb-NO")} kr</span> med rente <span class="red">${arRente}% </span> over ${ar} år (<span class="red">${antallManed} måneder</span>).`;
+      `Lånebeløp: <span class="red">${laan.toLocaleString("nb-NO")} kr</span> med rente <span class="red">${arRente}% </span> <br> over <span class="red"> ${ar}</span> år (<span class="red">${antallManed} måneder</span>).`;
     /* document.getElementById("result1").innerHTML =`Lånebeløp: <span class="red">${laan} kr</span> over  ${ar} år (<span class="red"> ${antallManed} måneder.)</span>`; */
 
     document.getElementById("result2").innerHTML =

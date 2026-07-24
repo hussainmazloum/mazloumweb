@@ -306,6 +306,21 @@ input:focus {
   text-align: center;
 }
 
+thead th {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.table-title {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background-color: rgb(59,81,104);
+  color: #f4a261;
+  padding: 10px;
+}
+
 /* fikset*/
 .content-table thead th,
 .arlig-table thead th {
@@ -343,23 +358,22 @@ input:focus {
         font-size: 22px;
     }
 
-  ul li a{
-  font-size: 13px;
+    .topTitel{
+      width: 100%;
+      border: 1px solid red;
+
+    }
+
+  ul {
+  font-size: 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
- 
-}
-ul {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-  }
+  flex-wrap: wrap;
 
-.topTitel {
-  width: 100%;
-  
 }
+
+
 
   .top {
     width: 100%;

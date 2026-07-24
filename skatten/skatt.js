@@ -231,7 +231,7 @@ function sokNavn() {
   }
 
   if (!funnet) {
-    alert("Ingen navn ble funnet.");
+      alert(`Ingen navn med "${sok}" ble funnet.`);
   }
 
   input.value = "";
