@@ -215,7 +215,8 @@ hr {
 
 .content-table,
 .arlig-table {
-  border-collapse: collapse;
+   border-collapse: separate;
+  border-spacing: 0;
   margin: 0 auto;
   font-size: 20px;
   width: 100%;
@@ -229,6 +230,7 @@ hr {
   text-align: center;
   font-weight: bold;
   width: 100%;
+  /* border-bottom: 5px solid #f4a261; */
 }
 
 .content-table th,
@@ -330,6 +332,8 @@ thead th {
   position: sticky;
   top: 0;
   z-index: 10;
+/*     border-bottom: 2px solid #f4a261;
+ */
 }
 
 .table-title {
@@ -349,6 +353,9 @@ thead th {
   z-index: 10;
   background-color: #ffffff;
   color: rgb(7, 90, 32);
+  border-bottom: 3px solid  red;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+
 }
 
 .content-table td:first-child,
