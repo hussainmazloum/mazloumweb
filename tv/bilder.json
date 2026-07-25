@@ -477,6 +477,20 @@
   },
 
   {
+    "name": "Abdul Basit Quran warsh",
+    "url": "https://qurango.net/radio/abdulbasit_abdulsamad_warsh",
+    "icon":"images/radio.png",
+     "type": "hls"
+  },
+
+  {
+    "name": "Abdul Basit Quran mojawwad",
+    "url": "https://qurango.net/radio/abdulbasit_abdulsamad_mojawwad",
+    "icon":"images/radio.png",
+     "type": "hls"
+  },
+
+  {
     "name": "Al Quran Elkarim",
     "url": "bNY8a2BB5Gc",
     "icon":"images/quran.png",
