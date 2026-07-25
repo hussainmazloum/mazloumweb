@@ -187,8 +187,9 @@ function lukkSide() {
 
 // ------------------------------------------------- søke etter bruttolønn ------------------------------
 function sokNavn() {
-  const input = document.getElementById("sokNavn");
+  const input = document.getElementById("sokNavnInput");
   const sok = input.value.trim().toLowerCase();
+  const sokeType = document.getElementById("sokeType").value;
 
   if (sok === "") {
     alert("Skriv inn et navn.");
@@ -196,8 +197,9 @@ function sokNavn() {
   }
 
   let funnet = false;
+  let antallNavneFunnet = 0;
 
-  // Fjern det forrige valget
+  // Fjern tidligere markeringer
   tableBody
     .querySelectorAll("tr")
     .forEach((row) => row.classList.remove("search-row"));
@@ -207,9 +209,26 @@ function sokNavn() {
     .forEach((row) => row.classList.remove("search-row"));
 
   for (let i = 0; i < tableBody.rows.length; i++) {
-    const navn = tableBody.rows[i].cells[0].textContent.trim().toLowerCase();
+    const fulltNavn = tableBody.rows[i].cells[0].textContent.trim();
 
-    if (navn.includes(sok)) {
+    const deler = fulltNavn.split(/\s+/);
+
+    const fornavn = deler[0]?.toLowerCase() || "";
+    const etternavn = deler[deler.length - 1]?.toLowerCase() || "";
+
+    let treff = false;
+
+    if (sokeType === "fornavn") {
+      treff = fornavn.startsWith(sok);
+    } else if (sokeType === "etternavn") {
+      treff = etternavn.startsWith(sok);
+    } else {
+      treff = fulltNavn.toLowerCase().startsWith(sok);
+    }
+
+    if (treff) {
+      antallNavneFunnet++;
+
       tableBody.rows[i].classList.add("search-row");
 
       if (tablekroppen.rows[i]) {
@@ -231,12 +250,15 @@ function sokNavn() {
   }
 
   if (!funnet) {
-      alert(`Ingen navn med "${sok}" ble funnet.`);
+    alert(`Ingen navn med "${sok}" ble funnet.`);
+  } else {
+    alert(`Fant ${antallNavneFunnet} navn med "${sok}".`);
   }
 
   input.value = "";
 }
-document.getElementById("sokNavn").addEventListener("keydown", function (e) {
+
+document.getElementById("sokNavnInput").addEventListener("keydown", function (e) {
   if (e.key === "Enter") {
     sokNavn();
   }
@@ -257,3 +279,16 @@ console.log(
   (total / 1024).toFixed(2),
   "KB",
 );
+
+function sortere() {
+  const rows = Array.from(tableBody.querySelectorAll("tr"));
+
+  rows.sort((a, b) => {
+    let navnA = a.cells[0].textContent.toLowerCase();
+    let navnB = b.cells[0].textContent.toLowerCase();
+
+    return navnA.localeCompare(navnB);
+  });
+
+  rows.forEach(row => tableBody.appendChild(row));
+}
