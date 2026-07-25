@@ -146,6 +146,15 @@ p{
   flex-wrap: wrap;
 
 }
+ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+    .container {
+    height: auto;
+    min-height: 100vh;
+  }
 
 .en,
 .no,
