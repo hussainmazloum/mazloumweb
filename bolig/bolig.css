@@ -286,7 +286,7 @@ tr {
 
 /* -------------- media query 768 px -----------------------*/
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
 
   .container,
   .logo {
@@ -297,23 +297,16 @@ tr {
         font-size: 22px;
     }
 
-  ul li a{
-  font-size: 13px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
- 
-}
+    .topTitel{
+      width: 100%;
+    }
+
+
 ul {
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
   }
-
-.topTitel {
-  width: 100%;
-  
-}
 
 .input{
   flex-wrap: wrap;
