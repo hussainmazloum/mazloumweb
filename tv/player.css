@@ -197,7 +197,7 @@ video, #ytPlayer{
 
 /* -------------- media query 1024 -----------------------*/
 
-@media (max-width: 800px) {
+@media (max-width: 780px) {
 
   .container,
   .logo {
