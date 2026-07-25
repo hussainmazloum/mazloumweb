@@ -124,8 +124,7 @@ p{
 
 /* -------------- media query 768 px -----------------------*/
 
-@media (max-width: 768px) {
-
+@media (max-width: 800px) {
   .container,
   .logo {
     width: 100%;
@@ -135,22 +134,17 @@ p{
         font-size: 22px;
     }
 
-  ul li a{
-  font-size: 13px;
+    .topTitel{
+      width: 100%;
+    }
+
+  ul {
+  font-size: 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
- 
-}
-ul {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-  }
+  flex-wrap: wrap;
 
-.topTitel {
-  width: 100%;
-  
 }
 
 .en,
