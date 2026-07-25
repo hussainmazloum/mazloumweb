@@ -75,9 +75,10 @@ p {
 
 .top {
   display: flex;
-  justify-content: space-between;
+  justify-content:center;
   align-items: center;
   width: 100%;
+  flex-wrap: wrap;
 
 /*   border: 1px solid rgb(0, 0, 255);
  */}
@@ -353,7 +354,7 @@ thead th {
   z-index: 10;
   background-color: #ffffff;
   color: rgb(7, 90, 32);
-  border-bottom: 3px solid  red;
+  border-bottom: 3px solid  #f4a261;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
 
 }
