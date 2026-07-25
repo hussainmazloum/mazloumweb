@@ -379,7 +379,7 @@ thead th {
 } 
 
 /*----------------------------------- Mobile divices-----------------------------------------*/
-@media (max-width: 800px) {
+@media (max-width: 780px) {
   .container,
   .logo {
     width: 100%;
