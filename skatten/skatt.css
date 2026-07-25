@@ -75,10 +75,11 @@ p {
 
 .top {
   display: flex;
-  justify-content:center;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   flex-wrap: wrap;
+  border: 1px solid red;
 
 /*   border: 1px solid rgb(0, 0, 255);
  */}
