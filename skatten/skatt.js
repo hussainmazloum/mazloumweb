@@ -107,7 +107,10 @@ function beregneSkatte() {
   name.value = "";
   lonn.value = "";
   skattesats.value = "";
+
+  document.getElementById("navn").focus();
 }
+
 
 /* 
 function btn() {
@@ -139,6 +142,7 @@ window.onload = function () {
 
   if (tabell) tableBody.innerHTML = tabell;
   if (arlig) tablekroppen.innerHTML = arlig;
+  
 };
 //------------------------------------------------------- Fjerne rad fra tabell i local storage ---------------------------------------------------------------------------
 
@@ -239,10 +243,10 @@ function sokNavn() {
         setTimeout(() => {
           tableBody.rows[i].scrollIntoView({
             behavior: "smooth",
-            block: "center",
+            block: "start",
             inline: "nearest",
           });
-        }, 50);
+        });
 
         funnet = true;
       }
@@ -255,6 +259,7 @@ function sokNavn() {
     alert(`Fant ${antallNavneFunnet} navn med "${sok}".`);
   }
 
+  
   input.value = "";
 }
 
@@ -283,9 +288,17 @@ console.log(
 //--------------------------------- sortere ----------------------------
 
 function sortere() {
-  const rows = Array.from(tableBody.querySelectorAll("tr"));
+  const rows1 = Array.from(tableBody.rows);
+  const rows2 = Array.from(tablekroppen.rows);
 
-  rows.sort((a, b) => {
+  const arligMap = {};
+
+  rows2.forEach(row => {
+    const navn = row.cells[0].textContent.trim().toLowerCase();
+    arligMap[navn] = row;
+  });
+
+  rows1.sort((a, b) => {
     const navnA = a.cells[0].textContent.trim();
     const navnB = b.cells[0].textContent.trim();
 
@@ -295,5 +308,17 @@ function sortere() {
     return etternavnA.localeCompare(etternavnB, "nb-NO");
   });
 
-  rows.forEach(row => tableBody.appendChild(row));
+  tableBody.innerHTML = "";
+  tablekroppen.innerHTML = "";
+
+  rows1.forEach(row => {
+    tableBody.appendChild(row);
+
+    const navn = row.cells[0].textContent.trim().toLowerCase();
+
+    if (arligMap[navn]) {
+      tablekroppen.appendChild(arligMap[navn]);
+    }
+  });
 }
+

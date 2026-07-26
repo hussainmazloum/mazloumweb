@@ -249,11 +249,13 @@ hr {
   border-bottom: 0.1px solid #ffffff51;
   text-align: center;
   font-weight: bold;
+  scroll-margin-top: 85px;
 }
 .content-table tbody tr:nth-of-type(even),
 .arlig-table tbody tr:nth-of-type(even) {
   background-color: #d0e8f7;
   color: rgb(59, 81, 104);
+  
   
 }
 
