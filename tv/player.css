@@ -151,7 +151,7 @@ p {
   color: rgb(60, 49, 88);
   height: 50px;
   background-color:  rgb(59, 81, 104);
-      border: 1px solid  rgb(230, 236, 240);
+  border: 1px solid  rgb(230, 236, 240);
 
  
 }
@@ -224,13 +224,13 @@ video, #ytPlayer{
 
 
 
-  .top {
+  /* .top {
     width: 100%;
     justify-content: center;
     flex-wrap: wrap;
     
   
-  }
+  } */
 
 
 
@@ -295,7 +295,8 @@ video, #ytPlayer{
   }
 
   .top {
-    width: 95%;
+    width: 95.5%;
+    border: 1px solid rgb(255, 255, 255);
 
   }
 
