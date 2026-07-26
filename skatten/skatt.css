@@ -433,13 +433,22 @@ thead th {
 
  .sokeNavn{
   width: 100%;
-  
-  
+
  }
 
   #sokNavnInput{
-    width:40%;
+    width:50%;
+
   }
+  #sokNavnInput::placeholder {
+  color: gray;
+  font-size: 15px;
+}
+
+#sokeType{
+  font-size: 14px;
+  color: gray;
+}
 
   .btn {
     width: 120px;
