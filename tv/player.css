@@ -202,22 +202,35 @@ video, #ytPlayer{
   .container,
   .logo {
     width: 100%;
-    }
+  }
 
   .logo h2 {
         font-size: 22px;
     }
 
-  .topTitel {
-  width: 100%;
-  
-    }
+    /* .topTitel{
+      width: 100%;
+      
+    } */
 
   ul {
-    flex-wrap: wrap;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+
+
+  .top {
+    width: 100%;
     justify-content: center;
-    gap: 10px;
-    }
+    flex-wrap: wrap;
+    
+  
+  }
 
 
 
@@ -296,15 +309,6 @@ video, #ytPlayer{
  p{
   text-align: center;
  }
- ul {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-  }
-    .container {
-    height: auto;
-    min-height: 100vh;
-  }
  
   
 }

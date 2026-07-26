@@ -280,14 +280,19 @@ console.log(
   "KB",
 );
 
+//--------------------------------- sortere ----------------------------
+
 function sortere() {
   const rows = Array.from(tableBody.querySelectorAll("tr"));
 
   rows.sort((a, b) => {
-    let navnA = a.cells[0].textContent.toLowerCase();
-    let navnB = b.cells[0].textContent.toLowerCase();
+    const navnA = a.cells[0].textContent.trim();
+    const navnB = b.cells[0].textContent.trim();
 
-    return navnA.localeCompare(navnB);
+    const etternavnA = navnA.split(/\s+/).pop().toLowerCase();
+    const etternavnB = navnB.split(/\s+/).pop().toLowerCase();
+
+    return etternavnA.localeCompare(etternavnB, "nb-NO");
   });
 
   rows.forEach(row => tableBody.appendChild(row));

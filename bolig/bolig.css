@@ -297,15 +297,28 @@ tr {
         font-size: 22px;
     }
 
-    .topTitel{
+    /* .topTitel{
       width: 100%;
-    }
+      
+    } */
+
+  ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
 
 
-ul {
-    flex-wrap: wrap;
+
+  .top {
+    width: 100%;
     justify-content: center;
-    gap: 10px;
+    flex-wrap: wrap;
+    
+  
   }
 
 .input{
