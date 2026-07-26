@@ -442,12 +442,12 @@ thead th {
   }
   #sokNavnInput::placeholder {
   color: gray;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 #sokeType{
-  font-size: 14px;
-  color: rgb(252, 5, 5);
+  font-size: 16px;
+  color: gray;
 }
 
   .btn {
