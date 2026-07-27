@@ -4,7 +4,6 @@ const tablekroppen = document.getElementById("tablekroppen");
 let radSomRedigeres = null;
 let radArligSomRedigeres = null;
 
-
 function beregneSkatte() {
   const name = document.getElementById("navn");
   const lonn = document.getElementById("lonn");
@@ -241,7 +240,7 @@ function sokNavn() {
       if (tablekroppen.rows[i]) {
         tablekroppen.rows[i].classList.add("search-row");
       }
-//--------------------------- scroll bare table --------------------------
+      //--------------------------- scroll bare table --------------------------
       if (!funnet) {
         const container = document.querySelector(".table-container");
 
@@ -334,28 +333,29 @@ function redigerRad(knapp) {
   const rad = knapp.closest("tr");
   const index = Array.from(tableBody.rows).indexOf(rad);
 
-  document.getElementById("navn").value =
-    rad.cells[0].textContent.trim();
+  document.getElementById("navn").value = rad.cells[0].textContent.trim();
 
-  document.getElementById("lonn").value =
-    parseInt(rad.cells[1].textContent.replace(/[^\d]/g, ""));
+  document.getElementById("lonn").value = parseInt(
+    rad.cells[1].textContent.replace(/[^\d]/g, ""),
+  );
 
-  document.getElementById("skattesats").value =
-    parseInt(rad.cells[2].textContent);
+  document.getElementById("skattesats").value = parseInt(
+    rad.cells[2].textContent,
+  );
 
   radSomRedigeres = rad;
   radArligSomRedigeres = tablekroppen.rows[index];
 }
 
-
+// ----------------------------------------------------- lagre endring ------------------------------------------------
 function lagreEndring() {
   if (radSomRedigeres === null) {
     alert("Ingen rad er valgt for redigering.");
     return;
   }
 
-const rad = radSomRedigeres;
-const radArlig = radArligSomRedigeres;
+  const rad = radSomRedigeres;
+  const radArlig = radArligSomRedigeres;
 
   const navn = document.getElementById("navn").value.trim();
   const lonn = Number(document.getElementById("lonn").value);
@@ -380,8 +380,10 @@ const radArlig = radArligSomRedigeres;
     radArlig.cells[0].textContent = navn;
     radArlig.cells[1].textContent = formatLonn + " kr";
     radArlig.cells[2].textContent = (lonn * 12).toLocaleString("nb-NO") + " kr";
-    radArlig.cells[3].textContent = (netto * 12).toLocaleString("nb-NO") + " kr";
-    radArlig.cells[4].textContent = (-skatt * 11.5).toLocaleString("nb-NO") + " kr";
+    radArlig.cells[3].textContent =
+      (netto * 12).toLocaleString("nb-NO") + " kr";
+    radArlig.cells[4].textContent =
+      (-skatt * 11.5).toLocaleString("nb-NO") + " kr";
   }
 
   // حفظ التغييرات
@@ -389,8 +391,8 @@ const radArlig = radArligSomRedigeres;
   localStorage.setItem("arligTabell", tablekroppen.innerHTML);
 
   // إنهاء وضع التعديل
-radSomRedigeres = null;
-radArligSomRedigeres = null;
+  radSomRedigeres = null;
+  radArligSomRedigeres = null;
 
   // تنظيف الحقول
   document.getElementById("navn").value = "";

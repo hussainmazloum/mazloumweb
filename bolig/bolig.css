@@ -121,12 +121,6 @@ h1 {
   /* border: 5px solid rgb(217, 255, 0); 
  */
 }
-/* 
-.felt{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
 
 .sokeFelt {
   display: flex;
@@ -202,12 +196,12 @@ button:hover {
 }
 
 /* Inneholder tabel */
-/* .content {
+/*  .content {
   width: 100%;
-  height: 232px;
+  height: 400px;
   overflow-y: auto;
   padding: 0;
-} */
+}  */
 
 #tableHead th {
   position: sticky;
@@ -383,6 +377,8 @@ tr {
     min-height: 100vh;
   }
 
-  
+  .content{
+    height: 50vh;
+  }
 
 }
