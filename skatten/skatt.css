@@ -259,7 +259,7 @@ hr {
   
 }
 
-.remove-btn{
+.remove-btn, .edit-btn{
   padding: 5px 10px;
   background-color: #f4a261;
   color: white;
@@ -293,8 +293,8 @@ input:focus {
 /*   border: 1px solid red;
  */}
 
-.btn {
-  width: 120px;
+.btn, .btnn {
+  width: 150px;
   height: 35px;
   margin: 10px 15px;
   transition: 0.3s ease;
@@ -309,6 +309,13 @@ input:focus {
 }
 
 .btn:hover {
+  color: white;
+  background-color: #a6a6ecb6;
+  border: 0.5px solid rgba(255, 255, 255, 0.815);
+  transform: translateY(-2px);
+}
+
+.btnn:hover {
   color: white;
   background-color: #a6a6ecb6;
   border: 0.5px solid rgba(255, 255, 255, 0.815);
@@ -483,6 +490,14 @@ thead th {
   .manar{
     width: 100%;
     font-size: 18px;
+  }
+
+  .remove-btn, .edit-btn{
+    display: none;
+  }
+
+  .btnn{
+    display: none;
   }
 
   

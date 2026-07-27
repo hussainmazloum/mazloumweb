@@ -1,6 +1,10 @@
 const tableBody = document.getElementById("tableBody");
 const tablekroppen = document.getElementById("tablekroppen");
 
+let radSomRedigeres = null;
+let radArligSomRedigeres = null;
+
+
 function beregneSkatte() {
   const name = document.getElementById("navn");
   const lonn = document.getElementById("lonn");
@@ -80,12 +84,15 @@ function beregneSkatte() {
 
   tableBody.innerHTML += `
 <tr>
-    <td><span">${nom}</span></td>
+    <td><span>${nom}</span></td>
     <td><span >${formatertPris} kr</span></td>
     <td><span >${skattProsent} %</span></td>
     <td><span >${formatertSkatt} kr</span></td>
     <td><span >${formatertLonn} kr</span></td>
     <td>
+    <button class="edit-btn" onclick="redigerRad(this)">
+        Rediger
+    </button>
         <button class="remove-btn" onclick="slettRad(this)">
             Slette
         </button>
@@ -110,7 +117,6 @@ function beregneSkatte() {
 
   document.getElementById("navn").focus();
 }
-
 
 /* 
 function btn() {
@@ -142,7 +148,6 @@ window.onload = function () {
 
   if (tabell) tableBody.innerHTML = tabell;
   if (arlig) tablekroppen.innerHTML = arlig;
-  
 };
 //------------------------------------------------------- Fjerne rad fra tabell i local storage ---------------------------------------------------------------------------
 
@@ -238,14 +243,13 @@ function sokNavn() {
       if (tablekroppen.rows[i]) {
         tablekroppen.rows[i].classList.add("search-row");
       }
-
+//--------------------------- scroll bare table --------------------------
       if (!funnet) {
-        setTimeout(() => {
-          tableBody.rows[i].scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-            inline: "nearest",
-          });
+        const container = document.querySelector(".table-container");
+
+        container.scrollTo({
+          top: tableBody.rows[i].offsetTop - 40,
+          behavior: "smooth",
         });
 
         funnet = true;
@@ -259,15 +263,16 @@ function sokNavn() {
     alert(`Fant ${antallNavneFunnet} navn med "${sok}".`);
   }
 
-  
   input.value = "";
 }
 
-document.getElementById("sokNavnInput").addEventListener("keydown", function (e) {
-  if (e.key === "Enter") {
-    sokNavn();
-  }
-});
+document
+  .getElementById("sokNavnInput")
+  .addEventListener("keydown", function (e) {
+    if (e.key === "Enter") {
+      sokNavn();
+    }
+  });
 
 // ------------------------------------------------- Størrelse på localStorage via console log ------------------------------
 
@@ -293,7 +298,7 @@ function sortere() {
 
   const arligMap = {};
 
-  rows2.forEach(row => {
+  rows2.forEach((row) => {
     const navn = row.cells[0].textContent.trim().toLowerCase();
     arligMap[navn] = row;
   });
@@ -311,7 +316,7 @@ function sortere() {
   tableBody.innerHTML = "";
   tablekroppen.innerHTML = "";
 
-  rows1.forEach(row => {
+  rows1.forEach((row) => {
     tableBody.appendChild(row);
 
     const navn = row.cells[0].textContent.trim().toLowerCase();
@@ -320,5 +325,79 @@ function sortere() {
       tablekroppen.appendChild(arligMap[navn]);
     }
   });
+
+  localStorage.setItem("skattTabell", tableBody.innerHTML);
+  localStorage.setItem("arligTabell", tablekroppen.innerHTML);
 }
 
+
+
+function redigerRad(knapp) {
+  const rad = knapp.closest("tr");
+  const index = Array.from(tableBody.rows).indexOf(rad);
+
+  document.getElementById("navn").value =
+    rad.cells[0].textContent.trim();
+
+  document.getElementById("lonn").value =
+    parseInt(rad.cells[1].textContent.replace(/[^\d]/g, ""));
+
+  document.getElementById("skattesats").value =
+    parseInt(rad.cells[2].textContent);
+
+  radSomRedigeres = rad;
+  radArligSomRedigeres = tablekroppen.rows[index];
+}
+
+
+function lagreEndring() {
+  if (radSomRedigeres === null) {
+    alert("Ingen rad er valgt for redigering.");
+    return;
+  }
+
+const rad = radSomRedigeres;
+const radArlig = radArligSomRedigeres;
+
+  const navn = document.getElementById("navn").value.trim();
+  const lonn = Number(document.getElementById("lonn").value);
+  const skattesats = Number(document.getElementById("skattesats").value);
+
+  const skatt = Math.round((lonn * skattesats) / 100);
+  const netto = Math.round(lonn - skatt);
+
+  const formatLonn = lonn.toLocaleString("nb-NO");
+  const formatSkatt = (-skatt).toLocaleString("nb-NO");
+  const formatNetto = netto.toLocaleString("nb-NO");
+
+  // استبدال البيانات القديمة في الجدول الأول
+  rad.cells[0].textContent = navn;
+  rad.cells[1].textContent = formatLonn + " kr";
+  rad.cells[2].textContent = skattesats + " %";
+  rad.cells[3].textContent = formatSkatt + " kr";
+  rad.cells[4].textContent = formatNetto + " kr";
+
+  // استبدال البيانات القديمة في الجدول السنوي
+  if (radArlig) {
+    radArlig.cells[0].textContent = navn;
+    radArlig.cells[1].textContent = formatLonn + " kr";
+    radArlig.cells[2].textContent = (lonn * 12).toLocaleString("nb-NO") + " kr";
+    radArlig.cells[3].textContent = (netto * 12).toLocaleString("nb-NO") + " kr";
+    radArlig.cells[4].textContent = (-skatt * 11.5).toLocaleString("nb-NO") + " kr";
+  }
+
+  // حفظ التغييرات
+  localStorage.setItem("skattTabell", tableBody.innerHTML);
+  localStorage.setItem("arligTabell", tablekroppen.innerHTML);
+
+  // إنهاء وضع التعديل
+radSomRedigeres = null;
+radArligSomRedigeres = null;
+
+  // تنظيف الحقول
+  document.getElementById("navn").value = "";
+  document.getElementById("lonn").value = "";
+  document.getElementById("skattesats").value = "";
+
+  alert("Data er oppdatert!");
+}
