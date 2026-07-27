@@ -328,7 +328,7 @@ function sortere() {
   localStorage.setItem("arligTabell", tablekroppen.innerHTML);
 }
 
-
+//------------------------- rediger --------------------------------------------------
 
 function redigerRad(knapp) {
   const rad = knapp.closest("tr");
