@@ -136,7 +136,7 @@
 
   {
     "name": "IFilm arabic",
-    "url": "https://live.presstv.co.uk/hls/ifilmar_5_482/index.m3u8",
+    "url": "https://live.presstv.co.uk/hls/ifilmar_4_482/index.m3u8",
     "icon":"images/ifilm_1.png",
      "type": "hls"
   },
