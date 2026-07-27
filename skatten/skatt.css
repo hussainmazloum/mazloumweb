@@ -484,6 +484,7 @@ thead th {
     padding: 6px;
     width:100%;
 
+
     
   }
 
@@ -493,10 +494,14 @@ thead th {
   }
 
   .remove-btn, .edit-btn{
-    display: none;
+    display:none;
   }
 
   .btnn{
+    display: none;
+  }
+
+    .valuta {
     display: none;
   }
 

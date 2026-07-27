@@ -101,14 +101,12 @@ function beregneSkatte() {
 
   tablekroppen.innerHTML += `
 <tr>
-    <td><span >${nom}</span></td>
-    <td><span >${formatertPris}  kr</span></td>
-    <td><span >${formatertArligBrutto}  kr</span></td>
-    <td><span >${formatertArligNetto}  kr</span></td>
-    <td><span >${formatertArligSkatt}  kr</span></td>
-    <!-- <td><span style="color:#ffffff;">${formatertuforArligSkatt}</span> kr</td> -->
-   
-</tr> `;
+    <td><span>${nom}</span></td>
+    <td><span>${formatertPris}<span class="valuta"> kr</span></span></td>
+    <td><span>${formatertArligBrutto}<span class="valuta"> kr</span></span></td>
+    <td><span>${formatertArligNetto}<span class="valuta"> kr</span></span></td>
+    <td><span>${formatertArligSkatt}<span class="valuta"> kr</span></span></td>
+</tr>`;
 
   //------------------------------------------------------- Tøm inputfeltene etter at funksjonen er kjørt ---------------------------------------------------------------------------
   name.value = "";
