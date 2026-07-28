@@ -1,6 +1,8 @@
 const tableBody = document.getElementById("tableBody");
 const tablekroppen = document.getElementById("tablekroppen");
 
+ let sisteNavn = "";
+
 let radSomRedigeres = null;
 let radArligSomRedigeres = null;
 
@@ -9,11 +11,15 @@ function beregneSkatte() {
   const lonn = document.getElementById("lonn");
   const skattesats = document.getElementById("skattesats");
 
+ 
+
   const nom = name.value
     .trim()
     .split(/\s+/)
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
     .join(" ");
+
+    sisteNavn = nom;
   const lonnVerdi = Number(lonn.value);
   const skattProsent = Number(skattesats.value);
 
@@ -109,7 +115,7 @@ function beregneSkatte() {
 
 sortere();
 
-//-------------------------------------- Å lage setning som viser antall medlemmer -----------
+//-------------------------------------- Å lage setning som viser antall medlemmer --------------------------------------------------------------------------------------------
 const medlem = document.getElementById("medlem");
 medlem.innerHTML = `Antall medlemmer:  <span class="svar"> ${tableBody.rows.length}</span>`;
 
@@ -118,14 +124,9 @@ medlem.innerHTML = `Antall medlemmer:  <span class="svar"> ${tableBody.rows.leng
   name.value = "";
   lonn.value = "";
   skattesats.value = "";
-
-  document.getElementById("navn").focus();
+  
+  document.getElementById("navn").focus(); // muse kommer tilbake til felt navn når den beregner og lage data .
 }
-
-/* 
-function btn() {
-  location.reload();
-} */
 
 //------------------------------------------------------- Lagre data i local storage ---------------------------------------------------------------------------
 
@@ -140,9 +141,9 @@ function lagreData() {
   localStorage.setItem("skattTabell", tableBody.innerHTML);
   localStorage.setItem("arligTabell", tablekroppen.innerHTML);
 
-  alert("Data er lagret!");
+  alert(`Data til ${sisteNavn} er lagret!`);
 }
-
+//-------------------------------------- window onload -----------------------------------
 window.onload = function () {
   // Denne koden kjøres når siden lastes inn; dens oppgave er å hente dataene som er lagret i `localStorage`,
   // og gjenopprette dem i de to tabellene.
@@ -153,7 +154,8 @@ window.onload = function () {
   if (tabell) tableBody.innerHTML = tabell;
   if (arlig) tablekroppen.innerHTML = arlig;
 
-//----------------- Å vise antall medlemmer når siden last ned igjen -------------
+//----------------- Å vise antall medlemmer når siden last ned igjen -----------------------------------------------
+
  const medlem = document.getElementById("medlem");
 medlem.innerHTML = `Antall medlemmer: <span class="svar">${tableBody.rows.length}</span>`;
 };
@@ -251,7 +253,7 @@ function sokNavn() {
       if (tablekroppen.rows[i]) {
         tablekroppen.rows[i].classList.add("search-row");
       }
-      //--------------------------- scroll bare table --------------------------
+      //--------------------------- scroll bare table ----------------------------------------------------------------------------------------------
       if (!funnet) {
         const container = document.querySelector(".table-container");
 
@@ -282,7 +284,7 @@ document
     }
   });
 
-// ------------------------------------------------- Størrelse på localStorage via console log ------------------------------
+// ------------------------------------------------- Størrelse på localStorage via console log ------------------------------------------------------
 
 let total = 0;
 
@@ -298,7 +300,7 @@ console.log(
   "KB",
 );
 
-//--------------------------------- sortere ----------------------------
+//--------------------------------------------------------------------- sortere ----------------------------------------------------------------------------------
 
 function sortere() {
   const rows1 = Array.from(tableBody.rows);
@@ -339,7 +341,7 @@ function sortere() {
 
 }
 
-//------------------------- rediger --------------------------------------------------
+//-------------------------------------------------------------------- rediger --------------------------------------------------
 
 function redigerRad(knapp) {
   const rad = knapp.closest("tr");
@@ -359,7 +361,7 @@ function redigerRad(knapp) {
   radArligSomRedigeres = tablekroppen.rows[index];
 }
 
-// ----------------------------------------------------- lagre endring ------------------------------------------------
+// ------------------------------------------------------------------ lagre endring ------------------------------------------------
 function lagreEndring() {
   if (radSomRedigeres === null) {
     alert("Ingen rad er valgt for redigering.");
@@ -412,6 +414,8 @@ function lagreEndring() {
   document.getElementById("skattesats").value = "";
 
   alert("Data er oppdatert!");
+
+  sortere();
 }
 
 

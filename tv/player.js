@@ -4,9 +4,14 @@ fetch("bilder.json")
       throw new Error(`HTTP error! status: ${response.status}`);
     }
     return response.json();
+
   })
 
   .then((jsonData) => {
+
+    const channelCount = document.getElementById("antallKanaler");
+    channelCount.innerHTML = `Antall kanaler: ${jsonData.length}`;
+
     const channelList = document.getElementById("channels");
     const video = document.getElementById("video");
     const channelName = document.getElementById("channelName");
@@ -117,3 +122,5 @@ function tilbake() {
 }
 
 /* --------------------------------------------------------------*/
+
+

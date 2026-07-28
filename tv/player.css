@@ -67,13 +67,7 @@ ul li a:hover {
   text-underline-offset: 6px; /* Avstand mellom tekst og underlinje*/
 }
 
-p {
-  color: #f4a261;
-  width: 80%;
-  text-align: center;
-  margin: 0 auto;
-  padding-top: 10px;
-}
+
 
 
 /* ----------------------------------------------------------------------------------------------------*/
@@ -195,6 +189,39 @@ video, #ytPlayer{
 
 }
 
+#antallKanaler{
+  display: flex;
+  margin: 0 auto;
+  width: 40%;
+  padding: 10px 0 0 10px;
+  font-size: 18px;
+  color: #f4a261;
+  font-weight: 600;
+
+}
+
+.kopi{
+  display: flex;
+  width: 100%;
+}
+
+.kopi p {
+  color: #f4a261;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 10px;
+
+}
+
+.footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
 /* -------------- media query 1024 -----------------------*/
 
 @media (max-width: 780px) {
@@ -307,8 +334,10 @@ video, #ytPlayer{
     font-size: 16px;
   } 
 
- p{
-  text-align: center;
+
+ #antallKanaler{
+  width: 100%;
+  font-size: 14px;
  }
  
   
