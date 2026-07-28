@@ -70,7 +70,7 @@
 
   {
     "name": "Al Jazeera Doc",
-    "url": "http://154.58.202.18:8080/beinseries1/tracks-v1a1/mono.m3u8",
+    "url": "https://meyon.com.ye/static/streaming-playlists/hls/7d3fa6b5-ba73-4594-b619-1a2bf901f01b/2.m3u8",
     "icon":"images/jazeeraDoc.png",
     "type": "hls"
   },
