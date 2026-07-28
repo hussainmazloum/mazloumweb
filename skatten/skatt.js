@@ -107,6 +107,11 @@ function beregneSkatte() {
     <td><span>${formatertArligSkatt}<span class="valuta"> kr</span></span></td>
 </tr>`;
 
+//-------------------------------------- Å lage setning som viser antall medlemmer -----------
+const medlem = document.getElementById("medlem");
+medlem.innerHTML = `Antall medlemmer er:  <span class="svar"> ${tableBody.rows.length}</span>`;
+
+
   //------------------------------------------------------- Tøm inputfeltene etter at funksjonen er kjørt ---------------------------------------------------------------------------
   name.value = "";
   lonn.value = "";
@@ -145,6 +150,10 @@ window.onload = function () {
 
   if (tabell) tableBody.innerHTML = tabell;
   if (arlig) tablekroppen.innerHTML = arlig;
+
+//----------------- Å vise antall medlemmer når siden last ned igjen -------------
+ const medlem = document.getElementById("medlem");
+medlem.innerHTML = `Antall medlemmer er: <span class="svar">${tableBody.rows.length}</span>`;
 };
 //------------------------------------------------------- Fjerne rad fra tabell i local storage ---------------------------------------------------------------------------
 
@@ -325,6 +334,7 @@ function sortere() {
 
   localStorage.setItem("skattTabell", tableBody.innerHTML);
   localStorage.setItem("arligTabell", tablekroppen.innerHTML);
+
 }
 
 //------------------------- rediger --------------------------------------------------
@@ -401,3 +411,5 @@ function lagreEndring() {
 
   alert("Data er oppdatert!");
 }
+
+
