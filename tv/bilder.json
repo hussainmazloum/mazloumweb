@@ -910,21 +910,21 @@
   },
 
   {
-    "name": "TSN Sport ",
-    "url": "http://149.100.11.252:8000/play/a050/index.m3u8",
-    "icon":"images/tsn3.png",
+    "name": "Al sharq discovery ",
+    "url": "https://svs.itworkscdn.net/asharqdiscoverylive/asharqd.smil/asharqdiscoverypublish/asharqd_source/chunks_dvr.m3u8",
+    "icon":"images/asharq_dis.png",
      "type": "hls"
   },
   {
-    "name": "TSN Sport 4",
-    "url": "https://tvpass.org/live/tsn4/hd",
-    "icon":"images/tsn4.png",
+    "name": "Alsharq document",
+    "url": "https://svs.itworkscdn.net/asharqdocumentarylive/asharqdocumentary.smil/asharqdocumentarypublish/asharqdocumentary_720p/chunks_dvr.m3u8",
+    "icon":"images/asharq_doc.png",
      "type": "hls"
   },
   {
-    "name": "TSN Sport 5",
-    "url": "https://tvpass.org/live/tsn5/hd",
-    "icon":"images/tsn5.png",
+    "name": "Al sharq culture",
+    "url": "https://live-thaqafeyah.asharq.com/asharq_1080p30.m3u8",
+    "icon":"images/asharq_c",
      "type": "hls"
   },
 
