@@ -107,6 +107,8 @@ function beregneSkatte() {
     <td><span>${formatertArligSkatt}<span class="valuta"> kr</span></span></td>
 </tr>`;
 
+sortere();
+
 //-------------------------------------- Å lage setning som viser antall medlemmer -----------
 const medlem = document.getElementById("medlem");
 medlem.innerHTML = `Antall medlemmer er:  <span class="svar"> ${tableBody.rows.length}</span>`;
