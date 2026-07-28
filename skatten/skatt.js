@@ -111,7 +111,7 @@ sortere();
 
 //-------------------------------------- Å lage setning som viser antall medlemmer -----------
 const medlem = document.getElementById("medlem");
-medlem.innerHTML = `Antall medlemmer er:  <span class="svar"> ${tableBody.rows.length}</span>`;
+medlem.innerHTML = `Antall medlemmer:  <span class="svar"> ${tableBody.rows.length}</span>`;
 
 
   //------------------------------------------------------- Tøm inputfeltene etter at funksjonen er kjørt ---------------------------------------------------------------------------
@@ -155,7 +155,7 @@ window.onload = function () {
 
 //----------------- Å vise antall medlemmer når siden last ned igjen -------------
  const medlem = document.getElementById("medlem");
-medlem.innerHTML = `Antall medlemmer er: <span class="svar">${tableBody.rows.length}</span>`;
+medlem.innerHTML = `Antall medlemmer: <span class="svar">${tableBody.rows.length}</span>`;
 };
 //------------------------------------------------------- Fjerne rad fra tabell i local storage ---------------------------------------------------------------------------
 
