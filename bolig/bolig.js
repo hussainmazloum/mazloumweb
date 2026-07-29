@@ -46,13 +46,17 @@ document.getElementById("beregn").onclick = function () {
 
   tBody.innerHTML = "";
 
+  let totaltBetalt = 0;
+
   for (let i = 1; i <= antallManed; i++) {
     let renteBetaling = gjenværendeSaldo * manedRente;
     let hovedstolbetaling = terminbelop - renteBetaling;
     gjenværendeSaldo -= hovedstolbetaling;
 
+    totaltBetalt += terminbelop;
+
     tBody.innerHTML += `<tr>
-                        
+             <tr data-betalt="${totaltBetalt}">           
             <td>Måned : ${i}</td>
             <td>${laan.toLocaleString("nb-NO")}</td>
             <td>${terminbelop.toLocaleString("nb-NO", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</td>
@@ -106,6 +110,7 @@ document.getElementById("lukke").onclick = () => {
 // ----------------------------------------------------------------------------------------------------------------------------------------------------------
 const tBody = document.getElementById("tBody");
 
+
 function sokMåned() {
   const input = document.getElementById("sokManed");
   const sok = input.value.trim().toLowerCase();
@@ -123,18 +128,26 @@ function sokMåned() {
     .forEach((row) => row.classList.remove("search-row"));
 
   for (let i = 0; i < tBody.rows.length; i++) {
-    const nummer = tBody.rows[i].cells[0].textContent.trim().toLowerCase();
 
-    if (nummer.includes(sok)) {
-      tBody.rows[i].classList.add("search-row");
+  const row = tBody.rows[i];
 
-      if (!funnet) {
-        scrollToElement(tBody.rows[i], 500);
-      }
+  // تجاهل الصفوف الفارغة
+  if (row.cells.length === 0) continue;
 
-      funnet = true;
+  const nummer = row.cells[0].textContent
+    .trim()
+    .toLowerCase();
+
+  if (nummer.includes(sok)) {
+    row.classList.add("search-row");
+
+    if (!funnet) {
+      scrollToElement(row, 500);
     }
+
+    funnet = true;
   }
+}
 
   if (!funnet) {
     alert("Ingen månedsnummer ble funnet.");
@@ -158,8 +171,50 @@ document.getElementById("sokManed").addEventListener("keydown", function (e) {
   }
 });
 
-/*  console.log(`Måned :  ${i} 
-    Terminbeløp : Kr. ${terminbelop.toFixed(2)}, 
-    Rente       : Kr. ${renteBetaling.toFixed(2)}, 
-    Avdrag      : Kr. ${hovedstolbetaling.toFixed(2)}, 
-    Restegjeld  : Kr. ${gjenværendeSaldo.toFixed(2)}`); */
+//---------------------------------------------------- Hover infoBoks ----------------------------------------
+
+const infoBox = document.getElementById("infoBox");
+
+
+tBody.addEventListener("mouseover", (e) => {
+
+  const rad = e.target.closest("tr");
+
+  if (!rad) return;
+
+
+  const betalt = Number(rad.dataset.betalt);
+
+
+  infoBox.innerHTML = `
+    <strong>${rad.cells[0].textContent}</strong><br>
+    Betalt til nå:
+    ${betalt.toLocaleString("nb-NO", {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2
+    })} kr
+    <br>
+    Gjenstående gjeld:
+    ${rad.cells[5].textContent}
+  `;
+
+
+  infoBox.style.display = "block";
+
+});
+
+
+tBody.addEventListener("mousemove", (e)=>{
+
+  infoBox.style.left = (e.clientX + 15) + "px";
+  infoBox.style.top = (e.clientY + 15) + "px";
+
+});
+
+
+tBody.addEventListener("mouseleave", ()=>{
+
+  infoBox.style.display = "none";
+
+});
+
