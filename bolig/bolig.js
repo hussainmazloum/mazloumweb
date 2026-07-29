@@ -55,15 +55,27 @@ document.getElementById("beregn").onclick = function () {
 
     totaltBetalt += terminbelop;
 
-    tBody.innerHTML += `<tr>
-             <tr data-betalt="${totaltBetalt}">           
-            <td>Måned : ${i}</td>
-            <td>${laan.toLocaleString("nb-NO")}</td>
-            <td>${terminbelop.toLocaleString("nb-NO", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</td>
-            <td>${renteBetaling.toLocaleString("nb-NO", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</td>
-            <td>${hovedstolbetaling.toLocaleString("nb-NO", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</td>
-            <td>${gjenværendeSaldo.toLocaleString("nb-NO", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</td> 
-          </tr>`;
+    tBody.innerHTML += `
+<tr data-betalt="${totaltBetalt}">
+    <td>Måned : ${i}</td>
+    <td>${laan.toLocaleString("nb-NO")}</td>
+    <td>${terminbelop.toLocaleString("nb-NO", {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2
+    })}</td>
+    <td>${renteBetaling.toLocaleString("nb-NO", {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2
+    })}</td>
+    <td>${hovedstolbetaling.toLocaleString("nb-NO", {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2
+    })}</td>
+    <td>${gjenværendeSaldo.toLocaleString("nb-NO", {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2
+    })}</td>
+</tr>`;
 
     // Formel for total lån / total rente / effektive rente :
 
@@ -172,49 +184,70 @@ document.getElementById("sokManed").addEventListener("keydown", function (e) {
 });
 
 //---------------------------------------------------- Hover infoBoks ----------------------------------------
-
-const infoBox = document.getElementById("infoBox");
-
-
+/* const tBody = document.getElementById("tBody");
+ */const infoBox = document.getElementById("infoBox");
 tBody.addEventListener("mouseover", (e) => {
-
   const rad = e.target.closest("tr");
 
   if (!rad) return;
 
-
   const betalt = Number(rad.dataset.betalt);
+  console.log("mouseover");
 
+    
+    console.log(rad);
+
+    if (!rad) return;
+
+    console.log(rad.dataset.betalt);
+
+  // استخراج رقم الشهر
+  const manedNr = parseInt(
+    rad.cells[0].textContent.replace(/\D/g, "")
+  );
+
+  // تحويل إلى سنوات وأشهر
+  const ar = Math.floor(manedNr / 12);
+  const resterendeManeder = manedNr % 12;
+
+  let periode = "";
+
+  if (ar > 0) {
+    periode += `${ar} år`;
+  }
+
+  if (resterendeManeder > 0) {
+    periode += (periode ? " og " : "") + `${resterendeManeder} måneder`;
+  }
+
+  if (manedNr < 12) {
+    periode = `${manedNr} måneder`;
+  }
 
   infoBox.innerHTML = `
     <strong>${rad.cells[0].textContent}</strong><br>
+    Tid: ${periode}<br><br>
+
     Betalt til nå:
     ${betalt.toLocaleString("nb-NO", {
       minimumFractionDigits: 2,
       maximumFractionDigits: 2
     })} kr
     <br>
+
     Gjenstående gjeld:
     ${rad.cells[5].textContent}
   `;
 
-
   infoBox.style.display = "block";
-
 });
 
-
-tBody.addEventListener("mousemove", (e)=>{
-
+tBody.addEventListener("mousemove", (e) => {
   infoBox.style.left = (e.clientX + 15) + "px";
   infoBox.style.top = (e.clientY + 15) + "px";
-
 });
 
-
-tBody.addEventListener("mouseleave", ()=>{
-
+tBody.addEventListener("mouseleave", () => {
   infoBox.style.display = "none";
-
 });
 

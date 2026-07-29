@@ -283,13 +283,12 @@ tr {
   display: none;
   background: white;
   color: black;
-  padding: 12px;
-  border: 1px solid #888;
+  padding: 10px;
+  border: 1px solid #999;
   border-radius: 8px;
-  box-shadow: 0 3px 12px rgba(0,0,0,0.3);
-  z-index: 9999;
+  box-shadow: 0 4px 10px rgba(0,0,0,.3);
+  z-index: 99999;
   pointer-events: none;
-  font-size: 14px;
 }
 
 /* -------------- media query 768 px -----------------------*/
