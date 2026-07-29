@@ -418,4 +418,47 @@ function lagreEndring() {
   sortere();
 }
 
+//---------------------------------------------------- Hover infoBoks ----------------------------------------
+
+const infoBox = document.getElementById("infoBox");
+
+if (!infoBox) {
+  console.error("infoBox ikke finnes");
+}
+
+tableBody.addEventListener("mouseover", (e) => {
+  const celle = e.target.closest("td");
+
+  if (!celle || celle.cellIndex !== 0) return;
+
+  const rad = celle.parentElement;
+  const navn = rad.cells[0].textContent.trim().toLowerCase();
+
+  const arligRad = Array.from(tablekroppen.rows).find(
+    row => row.cells[0].textContent.trim().toLowerCase() === navn
+  );
+
+  if (!arligRad) return;
+
+  infoBox.innerHTML = `
+    <strong>${arligRad.cells[0].textContent}</strong><br>
+    Årlig brutto: ${arligRad.cells[2].textContent}<br>
+    Årlig netto: ${arligRad.cells[3].textContent}<br>
+    Årlig skatt: ${arligRad.cells[4].textContent}
+  `;
+
+  infoBox.style.display = "block";
+});
+
+
+tableBody.addEventListener("mousemove", (e) => {
+  infoBox.style.left = `${e.clientX + 15}px`;
+  infoBox.style.top = `${e.clientY + 15}px`;
+});
+
+
+tableBody.addEventListener("mouseleave", () => {
+  infoBox.style.display = "none";
+});
+
 

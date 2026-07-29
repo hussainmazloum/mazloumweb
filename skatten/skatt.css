@@ -404,6 +404,18 @@ thead th {
   color: #f4a261;
 }
 
+#infoBox {
+  color: rgb(59,81,104);
+  display: none;
+  position: fixed;
+  background: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,.2);
+  z-index: 1000;
+}
+
 
 /*----------------------------------- Mobile divices-----------------------------------------*/
 @media (max-width: 780px) {
