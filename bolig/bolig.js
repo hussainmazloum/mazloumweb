@@ -184,22 +184,15 @@ document.getElementById("sokManed").addEventListener("keydown", function (e) {
 });
 
 //---------------------------------------------------- Hover infoBoks ----------------------------------------
-/* const tBody = document.getElementById("tBody");
- */const infoBox = document.getElementById("infoBox");
+const infoBox = document.getElementById("infoBox");
 tBody.addEventListener("mouseover", (e) => {
   const rad = e.target.closest("tr");
 
   if (!rad) return;
 
   const betalt = Number(rad.dataset.betalt);
-  console.log("mouseover");
-
-    
-    console.log(rad);
-
+ 
     if (!rad) return;
-
-    console.log(rad.dataset.betalt);
 
   // استخراج رقم الشهر
   const manedNr = parseInt(
