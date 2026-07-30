@@ -24,29 +24,38 @@ function beregneSkatte() {
   const skattProsent = Number(skattesats.value);
 
   //--------------------------------------------------------------
-  function skatteIntekt(lonn, prosent) {
-    return (lonn * prosent) / 100;
-  }
-  if (
-    isNaN(lonnVerdi) ||
-    isNaN(skattProsent) ||
-    lonnVerdi <= 0 ||
-    skattProsent <= 0
-  ) {
-    alert("Fyll inn gyldige tall.");
-    return;
-  }
-  if (skattProsent > 100) {
-    alert("Skatt må være mindre enn 100 %");
-    return;
-  }
+ function skatteIntekt(lonn, prosent) {
+  return (lonn * prosent) / 100;
+}
 
-  const skatten = Math.round(skatteIntekt(lonnVerdi, skattProsent));
-  const lonnEtterSkatte = Math.round(lonnVerdi - skatten);
-  const arligNetto = Math.round(lonnEtterSkatte * 12);
-  const arligSkatt = Math.round(skatten * 11.5);
-  const uforArligSkatt = Math.round(skatten * 10.5);
-  const arligBrutto = Math.round(lonnVerdi * 12);
+if (
+  isNaN(lonnVerdi) ||
+  isNaN(skattProsent) ||
+  lonnVerdi <= 0 ||
+  skattProsent <= 0
+) {
+  alert("Fyll inn gyldige tall.");
+  return;
+}
+
+if (skattProsent > 100) {
+  alert("Skatt må være mindre enn 100 %");
+  return;
+}
+
+const skatten = Math.round(skatteIntekt(lonnVerdi, skattProsent));
+
+// Lønn etter skatt i en vanlig måned
+const lonnEtterSkatte = Math.round(lonnVerdi - skatten);
+
+// Årlig skatt: 11 hele måneder + 1 måned halv skatt
+const arligSkatt = Math.round((skatten * 11) + (skatten / 2));
+
+// Årsinntekt etter skatt
+const arligNetto = Math.round((lonnVerdi * 12) - arligSkatt);
+
+//Årsinntekt før skatt
+const arligBrutto = Math.round(lonnVerdi * 12);
 
   //-------------------------------------------------------------- Å formatere / skrive lønn eller resultat nummer i norsk måte ------
 
@@ -71,11 +80,6 @@ function beregneSkatte() {
   });
 
   const formatertArligSkatt = (-arligSkatt).toLocaleString("nb-NO", {
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 0,
-  });
-
-  const formatertuforArligSkatt = (-uforArligSkatt).toLocaleString("nb-NO", {
     minimumFractionDigits: 0,
     maximumFractionDigits: 0,
   });
@@ -176,9 +180,8 @@ function slettRad(slettbtn) {
 
       tableBody.deleteRow(index); // Raden slettes fra den første tabellen (tableBody).
       tablekroppen.deleteRow(index); // Selve raden slettes fra den andre tabellen (tabellkroppen).
-      leggTilHover();
+      
       localStorage.setItem("skattTabell", tableBody.innerHTML); // Innholdet i den første tabellen lagres i localStorage etter sletting.
-
       localStorage.setItem("arligTabell", tablekroppen.innerHTML); // Innholdet i den andre tabellen bevares også etter sletting.
     }
   }
@@ -284,21 +287,6 @@ document
     }
   });
 
-// ------------------------------------------------- Størrelse på localStorage via console log ------------------------------------------------------
-
-let total = 0;
-
-const skatt = localStorage.getItem("skattTabell");
-const arlig = localStorage.getItem("arligTabell");
-
-if (skatt) total += skatt.length;
-if (arlig) total += arlig.length;
-
-console.log(
-  "Brukt størrelse i localStorage: ",
-  (total / 1024).toFixed(2),
-  "KB",
-);
 
 //--------------------------------------------------------------------- sortere ----------------------------------------------------------------------------------
 
@@ -371,34 +359,64 @@ function lagreEndring() {
   const rad = radSomRedigeres;
   const radArlig = radArligSomRedigeres;
 
-  const navn = document.getElementById("navn").value.trim();
   const lonn = Number(document.getElementById("lonn").value);
   const skattesats = Number(document.getElementById("skattesats").value);
+  
+
+  if (
+    isNaN(lonn) ||
+    isNaN(skattesats) ||
+    lonn <= 0 ||
+    skattesats <= 0
+  ) {
+    alert("Fyll inn gyldige tall.");
+    return;
+  }
+
+  if (skattesats > 100) {
+  alert("Skatt må være mindre enn 100 %");
+  return;
+}
 
   const skatt = Math.round((lonn * skattesats) / 100);
   const netto = Math.round(lonn - skatt);
 
+  // 11 måneder full skatt + 1 måned halv skatt
+  const arligSkatt = Math.round(skatt * 11.5);
+
+  // Netto årsinntekt
+  const arligNetto = Math.round((lonn * 12) - arligSkatt);
+
   const formatLonn = lonn.toLocaleString("nb-NO");
   const formatSkatt = (-skatt).toLocaleString("nb-NO");
   const formatNetto = netto.toLocaleString("nb-NO");
+  const formatArligSkatt = (-arligSkatt).toLocaleString("nb-NO");
+  const formatArligNetto = arligNetto.toLocaleString("nb-NO");
+  const formatArligBrutto = (lonn * 12).toLocaleString("nb-NO");
+
+  const navn = document.getElementById("navn").value
+    .trim()
+    .split(/\s+/)
+    .map(word =>
+      word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+    )
+    .join(" ");
 
   // استبدال البيانات القديمة في الجدول الأول
-  rad.cells[0].textContent = navn;
-  rad.cells[1].textContent = formatLonn + " kr";
-  rad.cells[2].textContent = skattesats + " %";
-  rad.cells[3].textContent = formatSkatt + " kr";
-  rad.cells[4].textContent = formatNetto + " kr";
+  rad.cells[0].innerHTML = `<span>${navn}</span>`;
+rad.cells[1].innerHTML = `<span>${formatLonn} kr</span>`;
+rad.cells[2].innerHTML = `<span>${skattesats} %</span>`;
+rad.cells[3].innerHTML = `<span>${formatSkatt} kr</span>`;
+rad.cells[4].innerHTML = `<span>${formatNetto} kr</span>`;
 
   // استبدال البيانات القديمة في الجدول السنوي
   if (radArlig) {
-    radArlig.cells[0].textContent = navn;
-    radArlig.cells[1].textContent = formatLonn + " kr";
-    radArlig.cells[2].textContent = (lonn * 12).toLocaleString("nb-NO") + " kr";
-    radArlig.cells[3].textContent =
-      (netto * 12).toLocaleString("nb-NO") + " kr";
-    radArlig.cells[4].textContent =
-      (-skatt * 11.5).toLocaleString("nb-NO") + " kr";
-  }
+  rad.cells[0].innerHTML = `<span>${navn}</span>`;
+rad.cells[1].innerHTML = `<span>${formatLonn} kr</span>`;
+rad.cells[2].innerHTML = `<span>${skattesats} %</span>`;
+rad.cells[3].innerHTML = `<span>${formatSkatt} kr</span>`;
+rad.cells[4].innerHTML = `<span>${formatNetto} kr</span>`;
+}
 
   // حفظ التغييرات
   localStorage.setItem("skattTabell", tableBody.innerHTML);
@@ -421,11 +439,6 @@ function lagreEndring() {
 //---------------------------------------------------- Hover infoBoks ----------------------------------------
 
 const infoBox = document.getElementById("infoBox");
-
-if (!infoBox) {
-  console.error("infoBox ikke finnes");
-}
-
 tableBody.addEventListener("mouseover", (e) => {
   const celle = e.target.closest("td");
 
@@ -440,11 +453,26 @@ tableBody.addEventListener("mouseover", (e) => {
 
   if (!arligRad) return;
 
+
+  //Årlig ordinær skatt
+  const vanligSkatt = Math.abs(
+    Number(arligRad.cells[4].textContent.replace(/[^\d]/g, ""))
+  );
+
+
+// Pensjon: 10 måneder skattefritt + 1 måned skattefritt + 1 måned halv skatt
+  const manedSkatt = vanligSkatt / 11.5;
+  const pensjonSkatt = Math.round(manedSkatt * 10.5);
+
+
   infoBox.innerHTML = `
     <strong>${arligRad.cells[0].textContent}</strong><br>
     Årlig brutto: ${arligRad.cells[2].textContent}<br>
     Årlig netto: ${arligRad.cells[3].textContent}<br>
-    Årlig skatt: ${arligRad.cells[4].textContent}
+    Årlig skatt: ${arligRad.cells[4].textContent}<br><br>
+    Hvis du er uføretrygdet, <br>Årlig pensjon skatt: ${(-pensjonSkatt).toLocaleString("nb-NO")} kr
+    <br>
+    (10 mnd skatt + 1 mnd uten skatt + 1 mnd halv skatt)
   `;
 
   infoBox.style.display = "block";
@@ -460,5 +488,21 @@ tableBody.addEventListener("mousemove", (e) => {
 tableBody.addEventListener("mouseleave", () => {
   infoBox.style.display = "none";
 });
+
+// ------------------------------------------------- Størrelse på localStorage via console log ------------------------------------------------------
+
+let total = 0;
+
+const skatt = localStorage.getItem("skattTabell");
+const arlig = localStorage.getItem("arligTabell");
+
+if (skatt) total += skatt.length;
+if (arlig) total += arlig.length;
+
+console.log(
+  "Brukt størrelse i localStorage: ",
+  (total / 1024).toFixed(2),
+  "KB",
+);
 
 
