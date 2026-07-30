@@ -34,6 +34,7 @@
           <input type="text" id="sokNavnInput" placeholder="Søk etter navn" />
 
           <select id="sokeType">
+            <option value="telefon">Telefon</option>
             <option value="etternavn">Etternavn</option>
             <option value="fornavn">Fornavn</option>
             <option value="alle">Hele navnet</option>
@@ -55,6 +56,7 @@
           max="100"
           placeholder="Skatt %"
         />
+        <input type="tel" id="tlf" placeholder="Telefon">
       </div>
       <div class="beregne">
         <button class="btnBeregne" onclick="beregneSkatte()">Regne ut</button>
@@ -74,6 +76,7 @@
               <th>Skatt</th>
               <th>Skattetrekk</th>
               <th>Nettolønn</th>
+              <th>tlf</th>
               <th></th>
             </tr>
           </thead>

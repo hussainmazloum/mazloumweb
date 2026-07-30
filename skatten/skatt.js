@@ -10,6 +10,7 @@ function beregneSkatte() {
   const name = document.getElementById("navn");
   const lonn = document.getElementById("lonn");
   const skattesats = document.getElementById("skattesats");
+  const tlf = document.getElementById("tlf").value;
 
  
 
@@ -98,6 +99,8 @@ const arligBrutto = Math.round(lonnVerdi * 12);
     <td><span >${skattProsent} %</span></td>
     <td><span >${formatertSkatt} kr</span></td>
     <td><span >${formatertLonn} kr</span></td>
+
+    <td><span >${tlf}</span></td>
     <td>
     <button class="edit-btn" onclick="redigerRad(this)">
         Rediger
@@ -128,6 +131,9 @@ medlem.innerHTML = `Antall medlemmer:  <span class="svar"> ${tableBody.rows.leng
   name.value = "";
   lonn.value = "";
   skattesats.value = "";
+
+  document.getElementById("tlf").value = "";
+  
   
   document.getElementById("navn").focus(); // muse kommer tilbake til felt navn når den beregner og lage data .
 }
@@ -214,7 +220,7 @@ function sokNavn() {
   const sokeType = document.getElementById("sokeType").value;
 
   if (sok === "") {
-    alert("Skriv inn et navn.");
+    alert("Skriv inn et navn eller telefon.");
     return;
   }
 
@@ -238,15 +244,21 @@ function sokNavn() {
     const fornavn = deler[0]?.toLowerCase() || "";
     const etternavn = deler[deler.length - 1]?.toLowerCase() || "";
 
-    let treff = false;
+    const telefon = tableBody.rows[i].cells[5].textContent.trim();
 
-    if (sokeType === "fornavn") {
-      treff = fornavn.startsWith(sok);
-    } else if (sokeType === "etternavn") {
-      treff = etternavn.startsWith(sok);
-    } else {
-      treff = fulltNavn.toLowerCase().startsWith(sok);
-    }
+let treff = false;
+
+if (sokeType === "fornavn") {
+  treff = fornavn.startsWith(sok);
+} else if (sokeType === "etternavn") {
+  treff = etternavn.startsWith(sok);
+} else if (sokeType === "telefon") {
+  treff = telefon.startsWith(sok);
+} else {
+  treff =
+    fulltNavn.toLowerCase().startsWith(sok) ||
+    telefon.startsWith(sok);
+} 
 
     if (treff) {
       antallNavneFunnet++;
@@ -344,6 +356,8 @@ function redigerRad(knapp) {
   document.getElementById("skattesats").value = parseInt(
     rad.cells[2].textContent,
   );
+  document.getElementById("tlf").value =
+  rad.cells[5].textContent.trim();
 
   radSomRedigeres = rad;
   radArligSomRedigeres = tablekroppen.rows[index];
@@ -355,6 +369,8 @@ function lagreEndring() {
     alert("Ingen rad er valgt for redigering.");
     return;
   }
+
+  const tlf = document.getElementById("tlf").value;
 
   const rad = radSomRedigeres;
   const radArlig = radArligSomRedigeres;
@@ -409,14 +425,15 @@ rad.cells[1].innerHTML = `<span>${formatLonn} kr</span>`;
 rad.cells[2].innerHTML = `<span>${skattesats} %</span>`;
 rad.cells[3].innerHTML = `<span>${formatSkatt} kr</span>`;
 rad.cells[4].innerHTML = `<span>${formatNetto} kr</span>`;
+rad.cells[5].innerHTML = `<span>${tlf}</span>`;
 
   // Erstatt gamle data i den årlige tabellen
-  if (radArlig) {
-  rad.cells[0].innerHTML = `<span>${navn}</span>`;
-rad.cells[1].innerHTML = `<span>${formatLonn} kr</span>`;
-rad.cells[2].innerHTML = `<span>${skattesats} %</span>`;
-rad.cells[3].innerHTML = `<span>${formatSkatt} kr</span>`;
-rad.cells[4].innerHTML = `<span>${formatNetto} kr</span>`;
+if (radArlig) {
+  radArlig.cells[0].innerHTML = `<span>${navn}</span>`;
+  radArlig.cells[1].innerHTML = `<span>${formatLonn} kr</span>`;
+  radArlig.cells[2].innerHTML = `<span>${formatArligBrutto} kr</span>`;
+  radArlig.cells[3].innerHTML = `<span>${formatArligNetto} kr</span>`;
+  radArlig.cells[4].innerHTML = `<span>${formatArligSkatt} kr</span>`;
 }
 
   // Lagre endringer
@@ -430,6 +447,7 @@ rad.cells[4].innerHTML = `<span>${formatNetto} kr</span>`;
   document.getElementById("navn").value = "";
   document.getElementById("lonn").value = "";
   document.getElementById("skattesats").value = "";
+  document.getElementById("tlf").value = "";
 
   alert("Data er oppdatert!");
 
