@@ -402,14 +402,15 @@ function lagreEndring() {
     )
     .join(" ");
 
-  // استبدال البيانات القديمة في الجدول الأول
-  rad.cells[0].innerHTML = `<span>${navn}</span>`;
+// Erstatt gamle data i den første tabellen
+
+rad.cells[0].innerHTML = `<span>${navn}</span>`;
 rad.cells[1].innerHTML = `<span>${formatLonn} kr</span>`;
 rad.cells[2].innerHTML = `<span>${skattesats} %</span>`;
 rad.cells[3].innerHTML = `<span>${formatSkatt} kr</span>`;
 rad.cells[4].innerHTML = `<span>${formatNetto} kr</span>`;
 
-  // استبدال البيانات القديمة في الجدول السنوي
+  // Erstatt gamle data i den årlige tabellen
   if (radArlig) {
   rad.cells[0].innerHTML = `<span>${navn}</span>`;
 rad.cells[1].innerHTML = `<span>${formatLonn} kr</span>`;
@@ -418,15 +419,14 @@ rad.cells[3].innerHTML = `<span>${formatSkatt} kr</span>`;
 rad.cells[4].innerHTML = `<span>${formatNetto} kr</span>`;
 }
 
-  // حفظ التغييرات
+  // Lagre endringer
   localStorage.setItem("skattTabell", tableBody.innerHTML);
   localStorage.setItem("arligTabell", tablekroppen.innerHTML);
 
-  // إنهاء وضع التعديل
+  // Avslutt redigeringsmodus
   radSomRedigeres = null;
   radArligSomRedigeres = null;
 
-  // تنظيف الحقول
   document.getElementById("navn").value = "";
   document.getElementById("lonn").value = "";
   document.getElementById("skattesats").value = "";
