@@ -517,8 +517,15 @@ thead th {
     padding:6px 2px;
     width:100%;
     font-size: 13px;
+    
+  }
 
-
+  .arlig-table th,
+  .arlig-table td
+   {
+    padding:6px;
+    width:100%;
+    font-size: 13px;
     
   }
 
