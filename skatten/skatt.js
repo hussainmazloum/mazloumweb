@@ -478,7 +478,7 @@ tableBody.addEventListener("mouseover", (e) => {
   );
 
   // Årlig brutto
-const arligBrutto = Number(
+  const arligBrutto = Number(
   arligRad.cells[2].textContent.replace(/[^\d]/g, "")
 );
 
@@ -493,11 +493,14 @@ const arligBrutto = Number(
   infoBox.innerHTML = `
     <strong>${arligRad.cells[0].textContent}</strong><br>
     Årlig brutto: ${arligRad.cells[2].textContent}<br>
-    Årlig netto: ${arligRad.cells[3].textContent}<br>
-    Årlig skatt: ${arligRad.cells[4].textContent}<br><br>
-    Hvis du er uføretrygdet, <br>
-    Årlig netto pensjon skatt: ${arlignettoPensjonSkatt.toLocaleString("nb-NO")} kr<br>
-   Årlig pensjon skatt: ${(-pensjonSkatt).toLocaleString("nb-NO")} kr<br>
+    Årlig skatt: ${arligRad.cells[4].textContent}<br>
+    Årlig netto: ${arligRad.cells[3].textContent}<br><br>
+   
+    Hvis du er uføretrygdet,<br>
+    Årlig brutto pensjon: ${arligRad.cells[2].textContent}<br>
+    Årlig skatt på pensjon: ${(-pensjonSkatt).toLocaleString("nb-NO")} kr<br>
+    Årlig pensjon etter skatt: ${arlignettoPensjonSkatt.toLocaleString("nb-NO")} kr<br>
+    
   `;
 
   infoBox.style.display = "block";
