@@ -477,10 +477,17 @@ tableBody.addEventListener("mouseover", (e) => {
     Number(arligRad.cells[4].textContent.replace(/[^\d]/g, ""))
   );
 
+  // Årlig brutto
+const arligBrutto = Number(
+  arligRad.cells[2].textContent.replace(/[^\d]/g, "")
+);
+
 
 // Pensjon: 10 måneder skattefritt + 1 måned skattefritt + 1 måned halv skatt
   const manedSkatt = vanligSkatt / 11.5;
   const pensjonSkatt = Math.round(manedSkatt * 10.5);
+  const arlignettoPensjonSkatt = arligBrutto - pensjonSkatt
+  
 
 
   infoBox.innerHTML = `
@@ -488,9 +495,9 @@ tableBody.addEventListener("mouseover", (e) => {
     Årlig brutto: ${arligRad.cells[2].textContent}<br>
     Årlig netto: ${arligRad.cells[3].textContent}<br>
     Årlig skatt: ${arligRad.cells[4].textContent}<br><br>
-    Hvis du er uføretrygdet, <br>Årlig pensjon skatt: ${(-pensjonSkatt).toLocaleString("nb-NO")} kr
-    <br>
-    (10 mnd skatt + 1 mnd uten skatt + 1 mnd halv skatt)
+    Hvis du er uføretrygdet, <br>
+    Årlig netto pensjon skatt: ${arlignettoPensjonSkatt.toLocaleString("nb-NO")} kr<br>
+   Årlig pensjon skatt: ${(-pensjonSkatt).toLocaleString("nb-NO")} kr<br>
   `;
 
   infoBox.style.display = "block";
