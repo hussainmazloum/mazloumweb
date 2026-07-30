@@ -143,6 +143,11 @@ p {
   font-size: 16px;
 }
 
+#sokNavnInput::placeholder {
+  color: gray;
+  font-size: 14px;
+}
+
 h1 {
   font-size: clamp(22px, 5vw, 50px);
   max-width: 100%;
@@ -483,7 +488,7 @@ thead th {
   }
   #sokNavnInput::placeholder {
   color: gray;
-  font-size: 16px;
+  font-size: 12px;
 }
 
 #sokeType{
