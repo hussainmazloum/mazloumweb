@@ -145,7 +145,7 @@ p {
 
 #sokNavnInput::placeholder {
   color: gray;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 h1 {
@@ -488,7 +488,7 @@ thead th {
   }
   #sokNavnInput::placeholder {
   color: gray;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 #sokeType{
