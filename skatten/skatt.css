@@ -30,7 +30,7 @@ body {
     min-height: 80vh;
     margin: 0 auto;
 /*     background-color: rgb(230, 236, 240);
- */    padding-bottom: 30px;
+ */ padding-bottom: 30px;
 }
 
 .topTitel {
@@ -121,12 +121,12 @@ p {
   font-weight: 700;
   color: #1d4c3dc3;
   cursor: pointer;
-  border: 0.5px solid #f4a261;
+  border: 0.5px solid  rgb(213, 212, 212);
   
 }
 
 #sokeType:focus {
-  outline:none;
+  outline:#f4a261;
 }
 
 .bilde img {
@@ -293,10 +293,11 @@ input {
   font-size: 20px;
   font-weight: 700;
   color: #1d4c3d;
-  border: 0.5px solid #f4a261 ;
+  border: 0.5px solid  rgb(213, 212, 212) ;
 }
 input:focus {
   outline: none;
+  border: 1px solid #f4a261;
 }
 
 .buttons {
@@ -320,8 +321,15 @@ input:focus {
   background-color: #f4a261;
   color: rgb(255, 255, 255);
   border-radius: 50px;
-  border: none;
+   border: 1px solid transparent;
   cursor: pointer;
+}
+
+.btn:focus-visible,
+.btnBeregne:focus-visible,
+.btnn:focus-visible {
+  outline: none;
+  border: 1px solid #615f5f;
 }
 
 
