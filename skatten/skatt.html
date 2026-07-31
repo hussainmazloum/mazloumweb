@@ -24,8 +24,6 @@
         </ul>
       </div>
 
-
-
       <div class="top">
         <div class="sokeNavn">
           <input type="text" id="sokNavnInput" placeholder="Søk etter" />
@@ -46,7 +44,7 @@
           <h1>Skattekalkulator</h1>
           <h2>Oversikt over din skatt</h2>
         </div>
-      </div>  
+      </div>
 
       <div class="btnNavn">
         <input id="navn" type="text" placeholder="Navn" />
@@ -58,13 +56,12 @@
           max="100"
           placeholder="Skatt %"
         />
-        <input type="tel" id="tlf" placeholder="Telefon">
+        <input type="tel" id="tlf" placeholder="Telefon" />
       </div>
       <div class="beregne">
         <button class="btnBeregne" onclick="beregneSkatte()">Regne ut</button>
         <button class="btn" onclick="lagreData()">Lagre</button>
-        <button class="btnn"  onclick="lagreEndring()">Lagre endring</button>
-        
+        <button class="btnn" onclick="lagreEndring()">Lagre endring</button>
       </div>
       <div id="medlem">Antall medlemmer:</div>
 
@@ -109,18 +106,11 @@
         <button class="btn" onclick="fjerneData()">Slette</button>
         <button class="btn" onclick="sortere()">Sortere</button>
       </div>
-      <!-- </div> -->
+
     </div>
- <div id="infoBox"></div>
+    <div id="infoBox"></div>
     <p>&copy Mazloum</p>
 
-    <script>
-window.addEventListener("load", () => {
-  console.log("scrollY =", window.scrollY);
-});
-</script>
     <script src="skatt.js"></script>
-
-   
   </body>
 </html>
