@@ -8,6 +8,7 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   padding: 10px 0;
+  overflow-y: scroll;
 }
 
 .logo {
@@ -19,7 +20,7 @@ body {
   margin: 0 auto;
 }
 .logo img{
-    width: 70px;
+    width: 55px;
     max-width: 100%;
 }
 
@@ -33,7 +34,7 @@ body {
 /*   background-color: rgb(230, 236, 240);
  */}
 
-.topTitel {
+.topTitle {
   width: 100%;
   margin: 0 auto;
 }
@@ -43,7 +44,7 @@ ul {
   justify-content: space-between;
   align-items: center;
   list-style: none;
-  padding: 15px;
+  padding: 10px;
   margin: 0;
 
   border-top: 1px solid rgb(213, 212, 212);

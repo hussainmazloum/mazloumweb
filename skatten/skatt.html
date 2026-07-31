@@ -14,7 +14,7 @@
       <h2>HJEMMESIDE</h2>
     </div>
     <div class="container">
-      <div class="topTitel">
+      <div class="topTitle">
         <ul>
           <li><a href="../index.html">HJEM</a></li>
           <li><a href="../tv/tv.html">TV</a></li>
@@ -24,12 +24,9 @@
         </ul>
       </div>
 
-      <div class="top">
-        <div class="bilde">
-          <img src="../image/skatt_logo.png" alt="Skatt" />
-          <h2>Mazloum Etaten</h2>
-        </div>
 
+
+      <div class="top">
         <div class="sokeNavn">
           <input type="text" id="sokNavnInput" placeholder="Søk etter" />
 
@@ -43,8 +40,13 @@
           <button type="button" class="btn" onclick="sokNavn()">Søk</button>
         </div>
       </div>
-
-      <h1>Oversikt over din skatt</h1>
+      <div class="topp">
+        <div class="bilde">
+          <img src="../image/skatt_logo.png" alt="Skatt" />
+          <h1>Skattekalkulator</h1>
+          <h2>Oversikt over din skatt</h2>
+        </div>
+      </div>  
 
       <div class="btnNavn">
         <input id="navn" type="text" placeholder="Navn" />
@@ -111,6 +113,12 @@
     </div>
  <div id="infoBox"></div>
     <p>&copy Mazloum</p>
+
+    <script>
+window.addEventListener("load", () => {
+  console.log("scrollY =", window.scrollY);
+});
+</script>
     <script src="skatt.js"></script>
 
    
