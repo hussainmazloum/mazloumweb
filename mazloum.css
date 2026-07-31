@@ -244,22 +244,15 @@ p{
     height: auto;
   }
 
-  .board {
-    display: grid;
-    grid-template-columns: repeat(3, min(40vw, 200px));
-    gap: 5px;
-    width: max-content;
-    margin: 20px auto;
-}
+ .board {
+    grid-template-columns: repeat(3, 31vw);
+    gap: 2px;
+  }
 
-.cell {
-    width: min(40vw, 200px);
-    height: min(40vw, 200px);
-    font-size: min(16vw, 80px);
-}
-
-.btn button{
-  width: 100%;
-}
+  .cell {
+    width: 31vw;
+    height: 31vw;
+    font-size: 18vw;
+  }
 
 }
