@@ -246,16 +246,16 @@ p{
 
   .board {
     display: grid;
-    grid-template-columns: repeat(3, min(28vw, 180px));
+    grid-template-columns: repeat(3, min(32vw, 180px));
     gap: 5px;
     width: max-content;
     margin: 20px auto;
 }
 
 .cell {
-    width: min(28vw, 180px);
-    height: min(28vw, 180px);
-    font-size: min(12vw, 80px);
+    width: min(32vw, 180px);
+    height: min(32vw, 180px);
+    font-size: min(14vw, 80px);
 }
 
 }
