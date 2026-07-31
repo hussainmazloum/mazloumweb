@@ -171,7 +171,7 @@ function sokMåned() {
 function scrollToElement(element, duration) {
   element.scrollIntoView({
     behavior: "smooth",
-    block: "center",
+    block:"center",
   });
 }
 

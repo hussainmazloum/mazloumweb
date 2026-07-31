@@ -29,8 +29,8 @@ body {
     width: 80%;
     min-height: 80vh;
     margin: 0 auto;
-    background-color: rgb(230, 236, 240);
-    padding-bottom: 30px;
+/*     background-color: rgb(230, 236, 240);
+ */    padding-bottom: 30px;
 }
 
 .topTitel {
@@ -46,6 +46,7 @@ ul {
   padding: 15px;
   margin: 0;
 
+  border-top: 1px solid rgb(213, 212, 212);
   border-bottom: 1px solid rgb(213, 212, 212);
 
   font-family: Arial, Helvetica, sans-serif;
@@ -110,20 +111,22 @@ p {
   -webkit-appearance: none;
   -moz-appearance: none;
 
-  width: 150px;
-  padding: 8px 35px 8px 10px;
-  border:none;
-  border-radius: 5px;
+  width: 200px;
+  height: 35PX;
+  padding:5PX;
+/*   border:none;
+ */  border-radius: 8px;
 
   font-size: 20px;
   font-weight: 700;
   color: #1d4c3dc3;
   cursor: pointer;
+  border: 0.5px solid #f4a261;
   
 }
 
 #sokeType:focus {
-  outline: 1px solid #f4a261;
+  outline:none;
 }
 
 .bilde img {
@@ -290,9 +293,10 @@ input {
   font-size: 20px;
   font-weight: 700;
   color: #1d4c3d;
+  border: 0.5px solid #f4a261 ;
 }
 input:focus {
-  outline: 1px solid #f4a261;
+  outline: none;
 }
 
 .buttons {
@@ -319,6 +323,7 @@ input:focus {
   border: none;
   cursor: pointer;
 }
+
 
 .btn:hover {
   color: white;
@@ -494,8 +499,9 @@ thead th {
 }
 
 #sokeType{
-  font-size: 14px;
+  font-size: 16px;
   color: gray;
+  
 }
 
   .btn {

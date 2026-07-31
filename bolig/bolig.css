@@ -30,8 +30,8 @@ body {
     width: 80%;
     min-height: 80vh;
     margin: 0 auto;
-    background-color: rgb(230, 236, 240);
-    padding-bottom: 30px;
+/*     background-color: rgb(230, 236, 240);
+ */    padding-bottom: 30px;
 }
 
 ul {
@@ -42,6 +42,7 @@ ul {
   padding: 15px;
   margin: 0;
 
+  border-top: 1px solid rgb(213, 212, 212);
   border-bottom: 1px solid rgb(213, 212, 212);
 
   font-family: Arial, Helvetica, sans-serif;
@@ -118,6 +119,7 @@ h1 {
   width: 100%;
   margin: auto;
   gap: 10px;
+  
   /* border: 5px solid rgb(217, 255, 0); 
  */
 }
@@ -129,6 +131,7 @@ h1 {
   gap: 10px;
 
   padding: 15px 15px 0 0;
+  
 }
 
 .btnSøk {
@@ -147,7 +150,8 @@ h1 {
   padding-left: 10px;
   font-size: 18px;
   font-weight: bold;
-  border: none;
+  color: #8c8686;
+  border: 1px solid orange;
 }
 
 /* Fjerner standardrammen som nettleseren legger til rundt feltet når det er i fokus.*/
@@ -164,7 +168,7 @@ input:focus {
   padding: 0 10px;
 
   border-radius: 8px;
-  border: none;
+   border: 1px solid orange;
 }
 /* Inneholder div- knapper */
 .btn {
@@ -247,15 +251,23 @@ tr {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
-  gap: 35px;
+  gap: 5px;
   font-size: 18px;
   color: rgb(141, 141, 144);
   font-weight: 600;
-  padding: 10px 5px;
+  padding: 10px 0px;
   margin: 10px 0;
+  border-top: 0.5px solid rgb(202, 200, 197);
+    border-bottom: 0.5px solid rgb(202, 200, 197);
+
 
   /*   border: 5px solid rgb(217, 255, 0);
  */
+}
+#result1,#result2,#result3,#result4{
+  padding: 0 5px;
+  border-right:  0.5px solid #f4a261;
+  border-left:  0.5px solid #f4a261;
 }
 
 .red {

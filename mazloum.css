@@ -30,8 +30,8 @@ body {
   width: 80%;
   min-height: 80vh;
   margin: 0 auto;
-  background-color: rgb(230, 236, 240);
-}
+/*   background-color: rgb(230, 236, 240);
+ */}
 
 .topTitel {
   width: 100%;
@@ -46,6 +46,7 @@ ul {
   padding: 15px;
   margin: 0;
 
+  border-top: 1px solid rgb(213, 212, 212);
   border-bottom: 1px solid rgb(213, 212, 212);
 
   font-family: Arial, Helvetica, sans-serif;
