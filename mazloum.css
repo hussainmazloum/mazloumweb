@@ -246,16 +246,20 @@ p{
 
   .board {
     display: grid;
-    grid-template-columns: repeat(3, min(32vw, 180px));
+    grid-template-columns: repeat(3, min(40vw, 200px));
     gap: 5px;
     width: max-content;
     margin: 20px auto;
 }
 
 .cell {
-    width: min(32vw, 180px);
-    height: min(32vw, 180px);
-    font-size: min(14vw, 80px);
+    width: min(40vw, 200px);
+    height: min(40vw, 200px);
+    font-size: min(16vw, 80px);
+}
+
+.btn button{
+  width: 100%;
 }
 
 }
