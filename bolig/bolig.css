@@ -313,6 +313,9 @@ tr {
   z-index: 99999;
   pointer-events: none;
 }
+.menu-btn {
+  display: none;
+}
 
 /* -------------- media query 768 px -----------------------*/
 

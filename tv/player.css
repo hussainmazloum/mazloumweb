@@ -222,6 +222,9 @@ video, #ytPlayer{
   width: 80%;
   margin: 0 auto;
 }
+.menu-btn {
+  display: none;
+}
 
 /* -------------- media query 1024 -----------------------*/
 

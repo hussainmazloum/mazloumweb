@@ -453,6 +453,9 @@ thead th {
   box-shadow: 0 0 10px rgba(0,0,0,.2);
   z-index: 1000;
 }
+.menu-btn {
+  display: none;
+}
 
 
 /*----------------------------------- Mobile divices-----------------------------------------*/
