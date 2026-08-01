@@ -248,7 +248,7 @@ video, #ytPlayer{
     flex-direction: column;
 
     position: absolute;
-    left: 10px;      /* بجانب الزر */
+    left: 10px;      /* ved siden av knappen*/
     top: 60px;
 
     width: 220px;
