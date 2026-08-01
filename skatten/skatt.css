@@ -514,29 +514,6 @@ thead th {
         font-size: 22px;
     }
 
-    /* .topTitel{
-      width: 100%;
-      
-    } */
-
-  ul {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-
-
-  .top {
-    width: 100%;
-    justify-content: center;
-    flex-wrap: wrap;
-    
-  
-  }
 
   .bilde img{
     display:none;

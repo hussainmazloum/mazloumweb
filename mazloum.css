@@ -249,40 +249,12 @@ p{
         font-size: 22px;
     }
 
-    /* .topTitel{
-      width: 100%;
-      
-    } */
-
-  ul {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-
-
-  .top {
-    width: 100%;
-    justify-content: center;
-    flex-wrap: wrap;
-    
-  
-  }
-
-
 .en,
 .no,
 .ar {
     width: 90%;
     margin-bottom: -25px;
 }
-  /* .soura img {
-    width: 70%;
-  } */
 
   .container {
     height: auto;
