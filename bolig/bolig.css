@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
 }
 
 body {
@@ -28,11 +27,12 @@ body {
   color: #a4a1a0;
 }
 .container {
-    width: 80%;
-    min-height: 80vh;
-    margin: 0 auto;
-/*     background-color: rgb(230, 236, 240);
- */    padding-bottom: 30px;
+  width: 80%;
+  min-height: 80vh;
+  margin: 0 auto;
+  /*     background-color: rgb(230, 236, 240);
+ */
+  padding-bottom: 30px;
 }
 
 ul {
@@ -45,7 +45,6 @@ ul {
 
   border-top: 1px solid rgb(213, 212, 212);
   border-bottom: 1px solid rgb(213, 212, 212);
-
 }
 
 ul li a {
@@ -86,7 +85,6 @@ p {
 .top {
   width: 100%;
   text-align: center;
-  
 }
 
 #titel img {
@@ -98,7 +96,6 @@ h1 {
   font-size: 40px;
   color: #8c8686;
   font-weight: 700;
-
 }
 
 #titel h2 {
@@ -121,7 +118,7 @@ h1 {
   width: 100%;
   margin: auto;
   gap: 10px;
-  
+
   /* border: 5px solid rgb(217, 255, 0); 
  */
 }
@@ -133,7 +130,6 @@ h1 {
   gap: 10px;
 
   padding: 15px 15px 0 0;
-  
 }
 
 .btnSøk {
@@ -153,19 +149,16 @@ h1 {
   font-size: 18px;
   font-weight: bold;
   color: #8c8686;
-  border: 0.5px solid  rgb(213, 212, 212) ;
+  border: 0.5px solid rgb(213, 212, 212);
 }
 
 /* Fjerner standardrammen som nettleseren legger til rundt feltet når det er i fokus.*/
 input:focus {
   outline: none;
-    border: 0.5px solid #f4a261 ;
-
+  border: 0.5px solid #f4a261;
 }
 
-
-
-.felt{
+.felt {
   width: 220px;
   height: 35px;
   font-size: 20px;
@@ -174,7 +167,7 @@ input:focus {
   padding: 0 10px;
 
   border-radius: 8px;
-  border: 0.5px solid  rgb(213, 212, 212) ;
+  border: 0.5px solid rgb(213, 212, 212);
 }
 /* Inneholder div- knapper */
 .btn {
@@ -201,7 +194,7 @@ input:focus {
 .btn button:focus-visible,
 .btnSøk:focus-visible {
   outline: none;
-  border-color:#615f5f;
+  border-color: #615f5f;
 }
 
 button:hover {
@@ -222,7 +215,7 @@ button:hover {
   position: sticky;
   top: 0;
   background: rgb(59, 81, 104);
-  color:  #f4a261;
+  color: #f4a261;
   z-index: 10;
   padding: 10px 0;
 }
@@ -235,7 +228,7 @@ button:hover {
 }
 
 #tabel th {
-  color:  #f4a261;
+  color: #f4a261;
   font-size: 22px;
 }
 #tabel td {
@@ -269,16 +262,18 @@ tr {
   padding: 10px 0px;
   margin: 10px 0;
   border-top: 0.5px solid rgb(202, 200, 197);
-    border-bottom: 0.5px solid rgb(202, 200, 197);
-
+  border-bottom: 0.5px solid rgb(202, 200, 197);
 
   /*   border: 5px solid rgb(217, 255, 0);
  */
 }
-#result1,#result2,#result3,#result4{
+#result1,
+#result2,
+#result3,
+#result4 {
   padding: 0 5px;
-  border-right:  0.5px solid #f4a261;
-  border-left:  0.5px solid #f4a261;
+  border-right: 0.5px solid #f4a261;
+  border-left: 0.5px solid #f4a261;
 }
 
 .red {
@@ -295,10 +290,10 @@ tr {
   font-weight: bold;
 }
 .footer {
-    width: 80%;
-    margin: 10px auto;
-    text-align:center;
-    color: #f4a261;
+  width: 80%;
+  margin: 10px auto;
+  text-align: center;
+  color: #f4a261;
 }
 
 #infoBox {
@@ -309,7 +304,7 @@ tr {
   padding: 10px;
   border: 1px solid #999;
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,.3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   z-index: 99999;
   pointer-events: none;
 }
@@ -320,7 +315,6 @@ tr {
 /* -------------- media query 768 px -----------------------*/
 
 @media (max-width: 780px) {
-
   .topTitle {
     position: relative;
   }
@@ -338,14 +332,14 @@ tr {
     flex-direction: column;
 
     position: absolute;
-    left: 10px;      /* بجانب الزر */
+    left: 10px; /* بجانب الزر */
     top: 60px;
 
     width: 220px;
     background: white;
 
     border: 1px solid #ccc;
-    box-shadow: 0 3px 10px rgba(0,0,0,.15);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
 
     z-index: 1000;
   }
@@ -372,45 +366,39 @@ tr {
   }
 
   .logo h2 {
-        font-size: 22px;
-    }
+    font-size: 22px;
+  }
 
-    /* .topTitel{
+  /* .topTitel{
       width: 100%;
       
     } */
 
   ul {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
 
   .top {
     width: 100%;
     justify-content: center;
     flex-wrap: wrap;
-    
-  
   }
 
-.input{
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  width: 80%;
-  
-}
+  .input {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+  }
 
-.felt{
-  width:100%;
-}
-
+  .felt {
+    width: 100%;
+  }
 
   #result {
     width: 100%;
@@ -418,18 +406,18 @@ tr {
   }
 
   .red {
-    color:rgb(198, 73, 73);
+    color: rgb(198, 73, 73);
   }
 
   #tabel {
     width: 100%;
     border-collapse: collapse;
-    min-width: 400px; 
+    min-width: 400px;
   }
 
   #tabel th {
     font-size: 12px;
-    font-weight: bolder;
+    font-weight:500;
   }
   #tabel td {
     padding: 10px;
@@ -437,7 +425,6 @@ tr {
     font-size: 12px;
   }
 
- 
   h2 {
     font-size: 20px;
   }
@@ -450,7 +437,7 @@ tr {
     font-size: 12px;
     font-weight: bold;
   }
-  #titel img{
+  #titel img {
     display: none;
   }
   .container {
@@ -458,9 +445,8 @@ tr {
     min-height: 100vh;
   }
 
-  .content{
+  .content {
     height: 50vh;
     font-weight: 600;
   }
-
 }
