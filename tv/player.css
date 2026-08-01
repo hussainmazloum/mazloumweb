@@ -240,6 +240,7 @@ video, #ytPlayer{
     padding: 10px;
     width: fit-content;
     cursor: pointer;
+    color: #767474;
   }
 
   .topTitle ul {
@@ -252,6 +253,7 @@ video, #ytPlayer{
 
     width: 220px;
     background: white;
+    border-radius: 0 10px 10px 0;
 
     border: 1px solid #ccc;
     box-shadow: 0 3px 10px rgba(0,0,0,.15);
@@ -261,11 +263,13 @@ video, #ytPlayer{
 
   .topTitle ul.show {
     display: flex;
+    
   }
 
   .topTitle li {
     width: 100%;
     list-style: none;
+    
   }
 
   .topTitle li a {
@@ -273,7 +277,15 @@ video, #ytPlayer{
     padding: 5px 12px;
     text-align: left;
     font-size: 16px;
+    border-bottom: 1px solid #ccc;
+
   }
+
+  .topTitle ul li a:hover {
+  color: #f4a261;
+  text-decoration: none;
+  
+}
 
   .container,
   .logo {

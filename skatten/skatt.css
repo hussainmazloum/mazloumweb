@@ -471,6 +471,8 @@ thead th {
     padding: 10px;
     width: fit-content;
     cursor: pointer;
+    color: #767474;
+
   }
 
   .topTitle ul {
@@ -485,6 +487,7 @@ thead th {
     background: white;
 
     border: 1px solid #ccc;
+    border-radius: 0 10px 10px 0;
     box-shadow: 0 3px 10px rgba(0,0,0,.15);
 
     z-index: 1000;
@@ -504,7 +507,14 @@ thead th {
     padding: 5px 12px;
     text-align: left;
     font-size: 16px;
+    border-bottom: 1px solid #ccc;
   }
+
+  .topTitle ul li a:hover {
+  color: #f4a261;
+  text-decoration: none;
+  
+}
   .container,
   .logo {
     width: 100%;
