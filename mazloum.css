@@ -125,7 +125,7 @@ p{
 /* --------------- tic tac -----------------------------------*/
 .board {
     display: grid;
-    grid-template-columns: repeat(3, 180px);
+    grid-template-columns: repeat(3, 175px);
     gap: 5px;
     width: max-content;
     margin: 20px auto;
@@ -134,8 +134,8 @@ p{
  */  }
 
   .cell {
-    width: 180px;
-    height: 180px;
+    width: 175px;
+    height: 175px;
     font-size: 80px;
     cursor: pointer;
     color: rgb(153, 0, 255);
@@ -149,7 +149,6 @@ p{
   #status {
     text-align: center;
     font-size: 25px;
-    padding-top: 15px;
     color: blueviolet;
 
 /*     border: 1px solid rgb(0, 0, 255);
@@ -177,6 +176,12 @@ p{
     color: blueviolet;
     border: 0.5px solid blueviolet;
   }
+
+  #tic {
+    text-align: center;
+    color: #f4a261;
+/*     border: 1px solid red;
+ */  }
 
 
 /* -------------- media query 768 px -----------------------*/
@@ -254,5 +259,10 @@ p{
     height: 31vw;
     font-size: 18vw;
   }
+   #tic h2 {
+    text-align: center;
+    color: #f4a261;
+     border: 1px solid red;
+ }
 
 }
