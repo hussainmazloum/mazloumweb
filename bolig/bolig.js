@@ -1,3 +1,9 @@
+
+function toggleMenu() {
+  document.getElementById("menu").classList.toggle("show");
+}
+
+
 let laan;
 let arRente;
 let ar;

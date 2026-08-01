@@ -1,3 +1,9 @@
+
+function toggleMenu() {
+  document.getElementById("menu").classList.toggle("show");
+}
+
+
 const cells = document.querySelectorAll(".cell");
 const status = document.getElementById("status");
 

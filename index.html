@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="image/mazLogo.png">
+    <link rel="icon" type="image/png" href="image/mazLogo.png" />
     <title>Mazloums hjemmeside</title>
     <link rel="stylesheet" href="mazloum.css" />
   </head>
@@ -14,7 +14,8 @@
     </div>
     <div class="container">
       <div class="topTitle">
-        <ul>
+        <div class="menu-btn" onclick="toggleMenu()">☰</div>
+        <ul id="menu">
           <li><a href="index.html">HJEM</a></li>
           <li><a href="ticiac.html">SPILL</a></li>
           <li><a href="tv/tv.html">TV</a></li>
@@ -26,5 +27,7 @@
       <div class="soura"><img src="image/logo.png" alt="" /></div>
     </div>
     <p>&copy Mazloum</p>
+
+    <script src="mazloum.js"></script>
   </body>
 </html>

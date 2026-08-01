@@ -457,6 +457,51 @@ thead th {
 
 /*----------------------------------- Mobile divices-----------------------------------------*/
 @media (max-width: 780px) {
+
+  .topTitle {
+    position: relative;
+  }
+
+  .menu-btn {
+    display: block;
+    font-size: 32px;
+    padding: 10px;
+    width: fit-content;
+    cursor: pointer;
+  }
+
+  .topTitle ul {
+    display: none;
+    flex-direction: column;
+
+    position: absolute;
+    left: 10px;      /* بجانب الزر */
+    top: 60px;
+
+    width: 220px;
+    background: white;
+
+    border: 1px solid #ccc;
+    box-shadow: 0 3px 10px rgba(0,0,0,.15);
+
+    z-index: 1000;
+  }
+
+  .topTitle ul.show {
+    display: flex;
+  }
+
+  .topTitle li {
+    width: 100%;
+    list-style: none;
+  }
+
+  .topTitle li a {
+    display: block;
+    padding: 5px 12px;
+    text-align: left;
+    font-size: 16px;
+  }
   .container,
   .logo {
     width: 100%;

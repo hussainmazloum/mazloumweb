@@ -1,3 +1,9 @@
+
+function toggleMenu() {
+  document.getElementById("menu").classList.toggle("show");
+}
+
+
 fetch("bilder.json")
   .then((response) => {
     if (!response.ok) {

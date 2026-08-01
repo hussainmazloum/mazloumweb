@@ -1,3 +1,9 @@
+
+function toggleMenu() {
+  document.getElementById("menu").classList.toggle("show");
+}
+
+
 const tableBody = document.getElementById("tableBody");
 const tablekroppen = document.getElementById("tablekroppen");
 
