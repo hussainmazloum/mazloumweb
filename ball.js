@@ -43,6 +43,8 @@ document.getElementById("numOfBall").addEventListener("keydown", function(e){
 
 });
 
+//------------------------------------ enter knappen --------------------------------------
+
 document.getElementById("numOfBall").addEventListener("keydown", function (e) {
   if (e.key === "Enter") {
     rollBall();
