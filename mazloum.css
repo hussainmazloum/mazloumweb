@@ -26,6 +26,7 @@ body {
 
 .logo h2{
     color: rgb(164, 161, 160);
+    
 }
 .container {
   width: 80%;
@@ -348,9 +349,7 @@ input{
     width: 100%;
   }
 
-  .logo h2 {
-        font-size: 22px;
-    }
+  
 
 .en,
 .no,

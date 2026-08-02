@@ -25,8 +25,9 @@ body {
   max-width: 100%;
 }
 
-.logo h2{
-    color: rgb(164, 161, 160);
+.logo h2 {
+  color: #a4a1a0;
+  font-size: 22px;
 }
 .container {
   width: 80%;

@@ -25,6 +25,7 @@ body {
 
 .logo h2 {
   color: #a4a1a0;
+  font-size: 22px;
 }
 .container {
   width: 80%;
@@ -371,9 +372,9 @@ tr {
     width: 100%;
   }
 
-  .logo h2 {
+  /* .logo h2 {
     font-size: 22px;
-  }
+  } */
 
   
   .input {
