@@ -199,17 +199,13 @@ input:focus {
 
 button:hover {
   color: white;
-  background-color: #929294;
+  background-color: #ccc;
   transform: translateY(-2px);
 }
 
-/* Inneholder tabel */
-/*  .content {
-  width: 100%;
-  height: 400px;
-  overflow-y: auto;
-  padding: 0;
-}  */
+button:active {
+  background-color: gray;
+}
 
 #tableHead th {
   position: sticky;

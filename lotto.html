@@ -25,7 +25,24 @@
           <li><a href="oss.html">OM OSS</a></li>
         </ul>
       </div>
-      <div class="soura"><img src="image/logo.png" alt="" /></div>
+
+      <div id="store">
+        <img src="ball_images/norsk_tipping .png" alt="tipping" /><br />
+        <h1>Norsk Tipping</h1>
+        <h2 class="tipping">Vikinglotto</h2><br>
+
+        <div class="trekk">
+        <label>Antall ball :</label>
+        <input type="number" id="numOfBall" value="1" min="1" />
+        </div>
+
+        <button onclick="rollBall()" class="knapp">Trekke ut</button>
+        <div id="ballResult"></div>
+        <div id="ballImages"></div>
+    </div>
+
+    <script src="ball.js"></script>
+
     </div>
     <p>&copy Mazloum</p>
 

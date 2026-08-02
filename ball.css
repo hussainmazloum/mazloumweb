@@ -1,0 +1,110 @@
+body {
+  margin: 50px;
+  padding: 0px;
+  background-color: rgb(176, 193, 238);
+}
+
+#container {
+  width: 65%;
+  margin: 0 auto;
+  background-color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  border: 0.5px solid hsl(0, 0%, 72%);
+  border-radius: 0px 0px 25px 25px;
+}
+
+button {
+  font-size: 1.5rem;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: none;
+  background-color: hsl(210, 100%, 50%);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: hsl(210, 100%, 60%);
+}
+button:active {
+  background-color: blue;
+}
+
+input {
+  font-size: 2rem;
+  width: 150px;
+  text-align: center;
+  font-weight: bold;
+  color: #005aff;
+}
+
+#ballResult {
+  margin: 25px;
+  color: #00b2ff;
+}
+
+#ballImages img {
+  width: 100px;
+  margin: 15px 5px;
+}
+
+img {
+  width: 20%;
+  margin-bottom: 25px;
+}
+h1 {
+  color: #005aff;
+  font-weight: bold;
+}
+label {
+  color: blue;
+}
+
+/* media query*/
+@media (max-width: 520px) {
+  #container {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 40px;
+    font-weight: bold;
+  }
+
+  h2 {
+    font-size: 35px;
+    font-weight: bold;
+  }
+
+  img {
+    width: 30%;
+  }
+
+  label {
+    font-size: 25px;
+  }
+
+  input {
+    font-size: 25px;
+    height: 30px;
+  }
+
+  button {
+    width: 60%;
+    font-size: 25px;
+    margin: 20px 0px;
+  }
+
+  #ballResult {
+    font-size: 20px;
+  }
+
+  #ballImages img {
+    width: 50px;
+    margin: 5px 4px;
+  }
+}

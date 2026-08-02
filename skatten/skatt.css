@@ -220,9 +220,13 @@ h1 {
 
 .btnBeregne:hover{
   color: white;
-  background-color: #929294;
+  background-color: #ccc;
   border: 0.5px solid rgba(255, 255, 255, 0.815);
   transform: translateY(-2px);
+}
+
+.btnBeregne:active {
+  background-color: gray;
 }
 
 .table-container {
@@ -349,16 +353,23 @@ input:focus {
 
 .btn:hover {
   color: white;
-  background-color: #929294;
+  background-color: #ccc;
   border: 0.5px solid rgba(255, 255, 255, 0.815);
   transform: translateY(-2px);
 }
 
+.btn:active {
+  background-color: gray;
+}
+
 .btnn:hover {
   color: white;
-  background-color: #929294;
+  background-color: #ccc;
   border: 0.5px solid rgba(255, 255, 255, 0.815);
   transform: translateY(-2px);
+}
+.btnn:active {
+  background-color: gray;
 }
 
 .search-row,

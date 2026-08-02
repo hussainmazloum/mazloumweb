@@ -122,6 +122,97 @@ p{
     
 }
 
+/* --------------------------------------- Vikinglotto ---------------------*/
+
+#store{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 50px;
+/*    border: 1px solid red;
+ */ 
+}
+
+#store img{
+  width: 85px;
+  padding-top: 15px;
+}
+
+.trekk{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+
+  width: 20%;
+/*  border: 1px solid red;
+ */  }
+
+h1{
+  font-size: 40px;
+  color: #8c8686;
+  font-weight: 700;
+}
+h2{
+  color: #f4a261;
+  font-size: 22px;
+}
+label{
+  color: #767474;
+  font-size: 20px;
+  font-weight: 600;
+}
+.knapp {
+  width: 150px;
+  height: 35px;
+  margin: 15px 0;
+  transition: 0.3s ease;
+  font-size: large;
+  font-weight: 600;
+
+  background-color: #f4a261;
+  color: rgb(255, 255, 255);
+  border-radius: 50px;
+   border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.knapp:hover{
+  color: white;
+  background-color: #ccc;
+  border: 0.5px solid rgba(255, 255, 255, 0.815);
+  transform: translateY(-2px);
+}
+
+input{
+  width: 100px;
+  height: 30px;
+  border: 0.5px solid #ccc ;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: #8c8686;
+}
+#ballResult{
+  font-size: 24px;
+  font-weight: 600;
+  color: #767474;
+  margin-top: 15px;
+}
+
+#ballImages{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  width: 100%;
+/*   border: 1px solid red;
+ */}
+
 /* --------------- tic tac -----------------------------------*/
 .board {
     display: grid;
@@ -189,6 +280,8 @@ p{
   cursor: pointer;
   padding: 10px;
 }
+
+
 
 
 /* -------------- media query 768 px -----------------------*/
@@ -297,6 +390,14 @@ p{
    #tic h2 {
     text-align: center;
     color: #f4a261;
+ }
+
+ .trekk{
+  width: 60%;
+ }
+
+ #ballImages img{
+  width: 55px;
  }
 
 }
