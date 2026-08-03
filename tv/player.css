@@ -275,7 +275,7 @@ video, #ytPlayer{
 
   .topTitle li a {
     display: block;
-    padding: 5px 12px;
+    padding: 10px 12px;
     text-align: left;
     font-size: 16px;
     border-bottom: 1px solid #ccc;
