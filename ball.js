@@ -10,7 +10,7 @@ function rollBall() {
 
   if (numOfBall > 7 || numOfBall <= 0) {
     alert(
-      "Vikinglotto trekker 6 hovedtall fra 48. Du kan velge maksimalt 7 tall."
+      "Vikingolotto trekker 6 hovedtall fra 48. Du kan velge maksimalt 7 tall."
     );
     return;
   }
