@@ -10,7 +10,7 @@ async function rollBall(maxNumber) {
   ballImages.innerHTML = "";
 
 
-  if (numOfBall > 7 || numOfBall <= 0) {
+  if (numOfBall <= 0 || numOfBall > 7) {
     alert("Du kan velge maksimalt 7 tall.");
     return;
   }
@@ -24,27 +24,43 @@ async function rollBall(maxNumber) {
 
       values.push(value);
 
-      ballResult.textContent = `Ball : ${values.join(" - ")}`;
-
       ballImages.innerHTML +=
-        `<img src="ball_images/${value}.png" alt="Ball ${value}">`;
+        `<img src="ball_images/${value}.png" alt="Ball ${value}" class="ball">`;
 
       if (values.length < numOfBall) {
         await new Promise(resolve => setTimeout(resolve, 800));
       }
     }
   }
+
+
+  // ترتيب الأرقام بعد السحب
+  values.sort((a, b) => a - b);
+
+  ballResult.textContent = `Ball : ${values.join(" - ")}`;
+}
+
+
+// زر Enter يعمل حسب الصفحة
+const inputBall = document.getElementById("numOfBall");
+
+if (inputBall) {
+  inputBall.addEventListener("keydown", function(e) {
+
+    if (e.key === "Enter") {
+
+      if (location.pathname.includes("vikingo")) {
+        rollBall(48);   // Vikinglotto
+      } 
+      else {
+        rollBall(34);   // Lotto
+      }
+
+    }
+  });
 }
 
 //------------------------------------ enter knappen --------------------------------------
 
-const inputBall = document.getElementById("numOfBall");
-
-if (inputBall) {
-  inputBall.addEventListener("keydown", function (e) {
-    if (e.key === "Enter") {
-      rollBall(48); // Bare for vikingo Tipping
-    }
-  });
-}
+const lottoInputBall = document.getElementById("numOfBall");
 
