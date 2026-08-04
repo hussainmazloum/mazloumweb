@@ -28,7 +28,7 @@ async function rollBall(maxNumber) {
         `<img src="ball_images/${value}.png" alt="Ball ${value}" class="ball">`;
 
       if (values.length < numOfBall) {
-        await new Promise(resolve => setTimeout(resolve, 800));
+        await new Promise(resolve => setTimeout(resolve, 600));
       }
     }
   }

@@ -125,7 +125,27 @@ p{
 
 /* --------------------------------------- Vikinglotto ---------------------*/
 
-#store{
+#stora .bil img{
+  width: 350px;
+  height: auto;
+}
+
+#store .bill img{
+  width: 300px;
+  height: auto;
+  padding-left: 40px;
+
+/*     border: 1px solid red;
+ */
+
+  
+}
+
+#ballImages img{
+  width: 100px;
+}
+
+#stora, #store{
   display:flex;
   flex-direction: column;
   justify-content: center;
@@ -136,10 +156,6 @@ p{
  */ 
 }
 
-#store img{
-  width: 130px;
-  padding-top: 15px;
-}
 
 .trekk{
   display: flex;
