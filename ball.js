@@ -1,12 +1,13 @@
-function rollBall() {
+async function rollBall() {
 
   const numOfBall = Number(document.getElementById("numOfBall").value);
   const ballResult = document.getElementById("ballResult");
   const ballImages = document.getElementById("ballImages");
 
   const values = [];
-  const images = [];
 
+  ballResult.textContent = "";
+  ballImages.innerHTML = "";
 
   if (numOfBall > 7 || numOfBall <= 0) {
     alert(
@@ -21,27 +22,20 @@ function rollBall() {
     const value = Math.floor(Math.random() * 48) + 1;
 
     if (!values.includes(value)) {
+
       values.push(value);
-      images.push(
-        `<img src="ball_images/${value}.png" alt="Ball ${value}">`
-      );
+
+// Viser den nåværende ballen
+      ballResult.textContent = `Ball : ${values.join(" - ")}`;
+
+      ballImages.innerHTML += 
+        `<img src="ball_images/${value}.png" alt="Ball ${value}">`;
+
+// Vent et sekund før neste ball
+      await new Promise(resolve => setTimeout(resolve, 800));
     }
   }
-
-
-  ballResult.textContent = `Ball : ${values.join(" - ")}`;
-  ballImages.innerHTML = images.join("");
 }
-
-
-
-document.getElementById("numOfBall").addEventListener("keydown", function(e){
-
-  if(e.key === "Enter"){
-    rollBall();
-  }
-
-});
 
 //------------------------------------ enter knappen --------------------------------------
 
