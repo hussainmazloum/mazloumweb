@@ -1,4 +1,5 @@
-async function rollBall() {
+async function rollBall(maxNumber) {
+
   const numOfBall = Number(document.getElementById("numOfBall").value);
   const ballResult = document.getElementById("ballResult");
   const ballImages = document.getElementById("ballImages");
@@ -8,27 +9,28 @@ async function rollBall() {
   ballResult.textContent = "";
   ballImages.innerHTML = "";
 
+
   if (numOfBall > 7 || numOfBall <= 0) {
-    alert(
-      "Vikingolotto trekker 6 hovedtall fra 48. Du kan velge maksimalt 7 tall.",
-    );
+    alert("Du kan velge maksimalt 7 tall.");
     return;
   }
 
+
   while (values.length < numOfBall) {
-    const value = Math.floor(Math.random() * 48) + 1;
+
+    const value = Math.floor(Math.random() * maxNumber) + 1;
 
     if (!values.includes(value)) {
+
       values.push(value);
 
-      // Viser den nåværende ballen
       ballResult.textContent = `Ball : ${values.join(" - ")}`;
 
-      ballImages.innerHTML += `<img src="ball_images/${value}.png" alt="Ball ${value}">`;
+      ballImages.innerHTML +=
+        `<img src="ball_images/${value}.png" alt="Ball ${value}">`;
 
-      // Vent et sekund før neste ball
       if (values.length < numOfBall) {
-        await new Promise((resolve) => setTimeout(resolve, 800));
+        await new Promise(resolve => setTimeout(resolve, 800));
       }
     }
   }
@@ -36,8 +38,13 @@ async function rollBall() {
 
 //------------------------------------ enter knappen --------------------------------------
 
-document.getElementById("numOfBall").addEventListener("keydown", function (e) {
-  if (e.key === "Enter") {
-    rollBall();
-  }
-});
+const inputBall = document.getElementById("numOfBall");
+
+if (inputBall) {
+  inputBall.addEventListener("keydown", function (e) {
+    if (e.key === "Enter") {
+      rollBall(48); // Bare for vikingo Tipping
+    }
+  });
+}
+
