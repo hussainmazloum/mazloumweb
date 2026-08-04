@@ -34,14 +34,14 @@ async function rollBall(maxNumber) {
   }
 
 
-  // ترتيب الأرقام بعد السحب
+// Sortering av tallene etter trekningen
   values.sort((a, b) => a - b);
 
-  ballResult.textContent = `Ball : ${values.join(" - ")}`;
+  ballResult.textContent = `Tall : ${values.join(" - ")}`;
 }
 
 
-// زر Enter يعمل حسب الصفحة
+// Enter-tasten fungerer avhengig av siden.
 const inputBall = document.getElementById("numOfBall");
 
 if (inputBall) {
