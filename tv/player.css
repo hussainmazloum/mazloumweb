@@ -226,10 +226,76 @@ video, #ytPlayer{
 .menu-btn {
   display: none;
 }
+.norsk-tipping {
+  position: relative;
+}
+
+.tipp {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  background: white;
+  padding: 0;
+  margin: 0;
+  min-width: 150px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  border-radius: 0 10px 10px 0;
+
+}
+
+.tipp a,
+.tipp a:hover,
+.tipp a:focus,
+.tipp a:active {
+    text-decoration: none;
+}
+
+.tipp li a {
+  display: block;
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+}
+
+.tipp li a:hover {
+  background: #f0f0f0;
+}
+
+/* Å vise list ved hover muse på */
+.norsk-tipping:hover .tipp {
+  display: block;
+}
 
 /* -------------- media query 1024 -----------------------*/
 
 @media (max-width: 780px) {
+
+   /*--------------------------- Norsk tipping --------------*/
+
+  .norsk-tipping{
+    width:100%;
+  }
+
+  .tipp{
+    display:none;
+    position:static !important;
+    margin:0 !important;
+    padding:0 0 0 5px !important;
+    width:100%;
+  }
+
+  .tipp.show{
+    display:block;
+  }
+
+  .tipp li{
+    margin:0;
+    padding: 5px;
+  }
+/*--------------------------- toggel Menu --------------*/
+  
 
   .topTitle {
     position: relative;
