@@ -137,13 +137,17 @@ p{
 
 /*     border: 1px solid red;
  */
+}
 
+#ballImages{
+  width: 100%;
   
 }
 
 #ballImages img{
   width: 100px;
-}
+/*   border: 1px solid red;
+ */}
 
 #stora, #store{
   display:flex;
