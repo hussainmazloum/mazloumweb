@@ -148,8 +148,8 @@ p{
   width: 100%;
   direction: ltr;
   width: 53%;
-  border: 1px solid red;
- }
+/*   border: 1px solid red;
+ */ }
 
 #ballImages img{
   width: 100px;
@@ -163,8 +163,8 @@ p{
   align-items: center;
 
   margin-top: 50px;
-border: 1px solid red;
- 
+/* border: 1px solid red;
+ */ 
 }
 
 
