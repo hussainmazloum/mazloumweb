@@ -140,10 +140,16 @@ p{
 }
 
 #ballImages{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
   width: 100%;
-  padding: 15px 0;
-  
-}
+  direction: ltr;
+  width: 53%;
+/*   border: 1px solid red;
+ */}
 
 #ballImages img{
   width: 100px;
@@ -225,15 +231,7 @@ input{
   margin-top: 15px;
 }
 
-#ballImages{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 5px;
-  width: 100%;
-/*   border: 1px solid red;
- */}
+
 
 /* --------------- tic tac -----------------------------------*/
 .board {
@@ -492,6 +490,11 @@ input{
 
  #ballImages img{
   width: 55px;
+ }
+
+ #ballImages{
+  width: 100%;
+  padding-left: 25px;
  }
 
 }
