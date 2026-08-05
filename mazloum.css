@@ -238,17 +238,18 @@ input{
 /* --------------- tic tac -----------------------------------*/
 .board {
     display: grid;
-    grid-template-columns: repeat(3, 160px);
+    grid-template-columns: repeat(3, 140px);
     gap: 5px;
     width: max-content;
-    margin: 20px auto;
+    margin: 0 auto;
+    padding: 0 10px;
 
 /*     border: 1px solid red;
  */  }
 
   .cell {
-    width: 160px;
-    height: 160px;
+    width: 140px;
+    height: 140px;
     font-size: 80px;
     cursor: pointer;
     color: rgb(153, 0, 255);
@@ -261,8 +262,9 @@ input{
 
   #status {
     text-align: center;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 600;
+    padding-bottom: 10px;
     color: blueviolet;
 
 /*     border: 1px solid rgb(0, 0, 255);
@@ -291,11 +293,6 @@ input{
     border: 0.5px solid blueviolet;
   }
 
-  #tic {
-    text-align: center;
-    color: #f4a261;
-/*     border: 1px solid red;
- */  }
 
  .menu-btn {
   display: none;
@@ -305,12 +302,15 @@ input{
 }
 
 .tictac{
-  width:90px;
-  padding-top: 10px;
+  width:190px;
+  padding-top: 15px;
   display: flex;
   margin: 0 auto;
 
 }
+
+/* ---------------------------- Norsk Tipping -----------------------------*/
+
 .norsk-tipping {
   position: relative;
 }
