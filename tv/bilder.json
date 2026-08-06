@@ -20,6 +20,13 @@
 },
 
 {
+  "name": "Al Ittihad 2",
+  "url": "http://185.105.4.151:8080/_defapp_/ittihad/index.m3u8",
+  "icon":"images/etihad.png",
+  "type": "hls"
+},
+
+{
   "name": "Al Mayadeen",
   "url": "https://mdnlv.cdn.octivid.com/almdn/smil:mpegts.stream.smil/chunklist_b2700000.m3u8",
   "icon":"images/mayadeen_1.png",
@@ -845,6 +852,12 @@
     "name": "Ch4teen doc",
     "url": "https://ch14.tv/live/ch4teendoc/playlist.m3u8",
     "icon":"images/ch4teen doc.png",
+     "type": "hls"
+  },
+{
+    "name": "NRK Kidsss",
+    "url": "http://185.105.4.151:8080/_defapp_/ittihad/index.m3u8",
+    "icon":"images/nrk_kids.png",
      "type": "hls"
   },
 
