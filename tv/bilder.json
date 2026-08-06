@@ -19,12 +19,6 @@
   "type": "hls"
 },
 
-{
-  "name": "Al Ittihad 2",
-  "url": "http://185.105.4.151:8080/_defapp_/ittihad/index.m3u8",
-  "icon":"images/etihad.png",
-  "type": "hls"
-},
 
 {
   "name": "Al Mayadeen",
