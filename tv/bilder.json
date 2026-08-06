@@ -478,7 +478,7 @@
 
     {
     "name": "Spacetoon kids",
-    "url": "https://live-uae-next.spacetoongo.com/ST_MENA_NEXT/hls/ST_MENA_NEXT_1080p.m3u8?pkg_media=video&pkg_alone=1&pkg_hm=r9p2hjipmw2kl.m3u8&pkg_svc=1&pkg_vcodec=avc1",
+    "url": "https://live-uae-next.spacetoongo.com/ST_MENA_NEXT/hls/r9p2hjipmw2kl.m3u8",
     "icon":"images/spacetoon.png",
      "type": "hls"
   },
