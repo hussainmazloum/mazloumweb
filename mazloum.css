@@ -139,7 +139,7 @@ p{
  */
 }
 
-#ballImages{
+#ballBilder{
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -151,7 +151,7 @@ p{
 /*   border: 1px solid red;
  */ }
 
-#ballImages img{
+#ballBilder img{
   width: 100px;
 /*   border: 1px solid red;
  */}
@@ -224,7 +224,7 @@ input{
   font-weight: 600;
   color: #8c8686;
 }
-#ballResult{
+#ballResultat{
   font-size: 24px;
   font-weight: 600;
   color: #767474;
@@ -488,11 +488,11 @@ input{
   width: 60%;
  }
 
- #ballImages img{
+ #ballBilder img{
   width: 55px;
  }
 
- #ballImages{
+ #ballBilder{
   width: 100%;
   padding-left: 15px;
  }
