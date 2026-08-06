@@ -245,7 +245,7 @@ input{
 /*     border: 1px solid red;
  */  }
 
-  .cell {
+  .celle {
     width: 140px;
     height: 140px;
     font-size: 80px;
@@ -474,7 +474,7 @@ input{
     gap: 2px;
   }
 
-  .cell {
+  .celle {
     width: 31vw;
     height: 31vw;
     font-size: 18vw;

@@ -4,10 +4,10 @@ function toggleMenu() {
 }
 
 
-const cells = document.querySelectorAll(".cell");
+const celler = document.querySelectorAll(".celle");
 const status = document.getElementById("status");
 
-const human = "X";
+const mennesker = "X";
 const computer = "O";
 
 const winningCombinations = [
@@ -16,26 +16,26 @@ const winningCombinations = [
   [0,4,8],[2,4,6]
 ];
 
-let gameOver = false;
+let spillOver = false;
 
-cells.forEach(cell => {
-  cell.addEventListener("click", humanMove);
+celler.forEach(celle => {
+  celle.addEventListener("click", menneskeligFlytt);
 });
 
-function humanMove() {
-  if (gameOver || this.textContent !== "") return;
+function menneskeligFlytt() {
+  if (spillOver || this.textContent !== "") return;
 
-  this.textContent = human;
+  this.textContent = mennesker;
 
-  if (checkWinner(human)) {
+  if (checkWinner(mennesker)) {
     status.textContent = "Du vinner !";
-    gameOver = true;
+    spillOver = true;
     return;
   }
 
   if (isDraw()) {
     status.textContent = "Tegne !";
-    gameOver = true;
+    spillOver = true;
     return;
   }
 
@@ -46,7 +46,7 @@ function humanMove() {
 
 function findWinningMove(player) {
   for (const combo of winningCombinations) {
-    const values = combo.map(i => cells[i].textContent);
+    const values = combo.map(i => celler[i].textContent);
 
     const playerCount = values.filter(v => v === player).length;
     const emptyCount = values.filter(v => v === "").length;
@@ -61,8 +61,8 @@ function findWinningMove(player) {
 
 
 function computerMove() {
-  const emptyCells = [...cells].filter(
-    cell => cell.textContent === ""
+  const emptyCells = [...celler].filter(
+    celle => celle.textContent === ""
   );
 
   if (emptyCells.length === 0) return;
@@ -70,11 +70,11 @@ function computerMove() {
   let move = findWinningMove(computer);
 
   if (move === null) {
-    move = findWinningMove(human);
+    move = findWinningMove(mennesker);
   }
 
   if (move !== null) {
-    cells[move].textContent = computer;
+    celler[move].textContent = computer;
   } else {
     const randomCell =
       emptyCells[Math.floor(Math.random() * emptyCells.length)];
@@ -84,13 +84,13 @@ function computerMove() {
 
   if (checkWinner(computer)) {
     status.textContent = "Datamaskinen vinner !";
-    gameOver = true;
+    spillOver = true;
     return;
   }
 
   if (isDraw()) {
     status.textContent = "Tegne !";
-    gameOver = true;
+    spillOver = true;
     return;
   }
 
@@ -101,10 +101,10 @@ function computerMove() {
 
 function checkWinner(player) {
   for (const combo of winningCombinations) {
-    if (combo.every(index => cells[index].textContent === player)) {
+    if (combo.every(index => celler[index].textContent === player)) {
 
       combo.forEach(index => {
-        cells[index].style.backgroundColor = "lightgreen";
+        celler[index].style.backgroundColor = "lightgreen";
       });
 
       return true;
@@ -115,16 +115,16 @@ function checkWinner(player) {
 }
 
 function isDraw() {
-  return [...cells].every(cell =>
-    cell.textContent !== ""
+  return [...celler].every(celle =>
+    celle.textContent !== ""
   );
 }
 document.getElementById("restart").onclick = () => {
-  cells.forEach(cell => {
-    cell.textContent = "";
-    cell.style.backgroundColor = "";
+  celler.forEach(celle => {
+    celle.textContent = "";
+    celle.style.backgroundColor = "";
   });
 
-  gameOver = false;
+  spillOver = false;
   status.textContent = "Din tur";
 };
