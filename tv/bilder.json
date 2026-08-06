@@ -854,12 +854,6 @@
     "icon":"images/ch4teen doc.png",
      "type": "hls"
   },
-{
-    "name": "NRK Kidsss",
-    "url": "http://185.105.4.151:8080/_defapp_/ittihad/index.m3u8",
-    "icon":"images/nrk_kids.png",
-     "type": "hls"
-  },
 
   {
     "name": "NRK Kids",
