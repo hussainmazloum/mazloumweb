@@ -5,7 +5,7 @@ async function rollBall(maxNumber) { // maxNumber er det største tallet som kan
   const ballResultat = document.getElementById("ballResultat"); // For å vise de endelige tallene.
   const ballBilder = document.getElementById("ballBilder"); // For å se bilder av ballene
 
-  const values = []; // Opprette en array med tall, (De uttrukne tallene vil bli lagret i den.)
+  const verdier = []; // Opprette en array med tall, (De uttrukne tallene vil bli lagret i den.)
 
 
   ballResultat.textContent = ""; // Fjern tidligere resultater.
@@ -19,22 +19,22 @@ async function rollBall(maxNumber) { // maxNumber er det største tallet som kan
 
   //--------------------------------- Tilfeldig trekning --------------------------------------------------------------
 
-  while (values.length < antallBall) { // Tilfeldig trekning ( Løkken fortsetter helt til antallet trukne sifre tilsvarer det påkrevde antallet.)
+  while (verdier.length < antallBall) { // Tilfeldig trekning ( Løkken fortsetter helt til antallet trukne sifre tilsvarer det påkrevde antallet.)
 
-    const value = Math.floor(Math.random() * maxNumber) + 1; // Generer et tilfeldig tall. (avhenging av maxNumber)
+    const verdi = Math.floor(Math.random() * maxNumber) + 1; // Generer et tilfeldig tall. (avhenging av maxNumber)
 
   //--------------------------------- Forebygging av duplisering -------------------------------------------------------
 
-    if (!values.includes(value)) { // Forebygging av duplisering (منع التكرار)
+    if (!verdier.includes(verdi)) { // Forebygging av duplisering (ikke gjenta den samme ballen)
 
-      values.push(value); // Legge til tallet i array
+      verdier.push(verdi); // Legge til tallet i array
 
       ballBilder.innerHTML +=
-        `<img src="ball_images/${value}.png" alt="Ball ${value}" class="ball">`; // Vis bilde av ballen.
+        `<img src="ball_images/${verdi}.png" alt="Ball ${verdi}" class="ball">`; // Vis bilde av ballen.
 
 //-------------------------------------- Forsinkelse mellom baller -------------------------------------------------------
 
-      if (values.length < antallBall) {
+      if (verdier.length < antallBall) {
         await new Promise(resolve => setTimeout(resolve, 650)); // Forsinkelse mellom baller.
       }
     }
@@ -43,9 +43,9 @@ async function rollBall(maxNumber) { // maxNumber er det største tallet som kan
 
 //------------------------------------ Sortering av tallene etter trekningen ----------------------------------------
 
-  values.sort((a, b) => a - b);
+  verdier.sort((a, b) => a - b);
 
-  ballResultat.textContent = `Tall : ${values.join(" - ")}`;
+  ballResultat.textContent = `Tall : ${verdier.join(" - ")}`;
 }
 
 
@@ -59,10 +59,10 @@ if (inputBall) { // Det verifiserer at elementet finnes på siden, for å forhin
     if (e.key === "Enter") { // Det er bekreftet at tasten som ble trykket, er Enter.
 
       if (location.pathname.includes("vikingo")) { // Sjekker navnet på gjeldende side.
-        rollBall(48);   // Vikinglotto
+        rollBall(48);   // Vikingo.html
       } 
       else {
-        rollBall(34);   // Lotto
+        rollBall(34);   // Lotto.html
       }
 
     }
