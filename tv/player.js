@@ -146,10 +146,11 @@ function showTvMessage(event) {
   event.preventDefault();
 
   Swal.fire({
-    title: "Sweet!",
-    text: "Velkommen til TV-siden",
-    imageUrl: "https://unsplash.it/400/200",
-    imageWidth: 400,
+    title: "Velkommen til Mazloum online-TV",
+    text: "Arabiske / Norske kanaler",
+    width:400,
+    imageUrl: "../image/mazlogo.png",
+    imageWidth: 200,
     imageHeight: 200,
     imageAlt: "TV"
   }).then(() => {
