@@ -141,7 +141,7 @@ function tilbake() {
 
 /* --------------------------------------------------------------*/
 
-
+/* 
 function showTvMessage(event) {
   event.preventDefault();
 
@@ -156,4 +156,4 @@ function showTvMessage(event) {
   }).then(() => {
     window.location.href = "../tv/tv.html";
   });
-}
+} */

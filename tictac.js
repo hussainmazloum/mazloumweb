@@ -1,6 +1,6 @@
 //------------------------------------ vise Tv message ----------------------------------------
 
-function showTvMessage(event) {
+/* function showTvMessage(event) {
   event.preventDefault();
 
   Swal.fire({
@@ -14,7 +14,7 @@ function showTvMessage(event) {
   }).then(() => {
     window.location.href = "../tv/tv.html";
   });
-}
+} */
 
 //---------------------------------- Toggle meny -----------------------------------------------------
 
