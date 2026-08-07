@@ -31,7 +31,9 @@
           
 
           <li><a href="../ticiac.html">SPILL</a></li>
-          <li><a href="../tv/tv.html">TV</a></li>
+          <li><a href="../tv/tv.html" onclick="showTvMessage(event)">TV</a></li>
+
+          <!-- <li><a href="../tv/tv.html">TV</a></li> -->
           <li><a href="../skatten/skatt.html">SKATTEKALKULATOR</a></li>
           <li><a href="../bolig/bolig.html">BOLIGLÅNSBEREGNING</a></li>
           <li><a href="../oss.html">OM OSS</a></li>
@@ -74,7 +76,7 @@
       </div>
       <div class="beregne">
         <button class="btnBeregne" onclick="beregneSkatte()">Regne ut</button>
-        <button class="btn" onclick="lagreData()">Lagre</button>
+        <!-- <button class="btn" onclick="lagreData()">Lagre</button> -->
         <button class="btnn" onclick="lagreEndring()">Lagre endring</button>
       </div>
       <div id="medlem">Antall medlemmer:</div>
@@ -124,7 +126,7 @@
     </div>
     <div id="infoBox"></div>
     <p>&copy Mazloum</p>
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="skatt.js"></script>
   </body>
 </html>

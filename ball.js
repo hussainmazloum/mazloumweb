@@ -13,7 +13,14 @@ async function rollBall(maxNumber) { // maxNumber er det største tallet som kan
 
 
   if (antallBall <= 0 || antallBall > 7) {
-    alert("Du kan velge maksimalt 7 tall."); // Kontroll av antall baller.
+    /* alert("Du kan velge maksimalt 7 tall."); */ // Kontroll av antall baller.
+
+      Swal.fire({
+      title: "Feil!",
+      width:300,
+      text: "Du kan velge maksimalt 7 tall.",
+      icon: "error"
+      });
     return;
   }
 

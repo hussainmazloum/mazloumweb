@@ -1,3 +1,19 @@
+function showTvMessage(event) {
+  event.preventDefault();
+
+  Swal.fire({
+    title: "Velkommen til Mazloum online-TV",
+    text: "Arabiske / Norske kanaler",
+    width:400,
+    imageUrl: "../image/mazlogo.png",
+    imageWidth: 200,
+    imageHeight: 200,
+    imageAlt: "TV"
+  }).then(() => {
+    window.location.href = "../tv/tv.html";
+  });
+}
+
 
 function toggleMenu() {
   document.getElementById("menu").classList.toggle("show");
@@ -45,12 +61,28 @@ if (
   lonnVerdi <= 0 ||
   skattProsent <= 0
 ) {
-  alert("Fyll inn gyldige tall.");
+
+Swal.fire({
+      title: "Feil!",
+      width:300,
+      text: "Fyll inn gyldige tall.",
+      icon: "error"
+      });
+
+  /* alert("Fyll inn gyldige tall."); */
   return;
 }
 
 if (skattProsent > 100) {
-  alert("Skatt må være mindre enn 100 %");
+
+  Swal.fire({
+      title: "Feil!",
+      width:300,
+      text: "Skatt må være mindre enn 100 %",
+      icon: "error"
+      });
+
+  /* alert("Skatt må være mindre enn 100 %"); */
   return;
 }
 
@@ -154,14 +186,29 @@ function lagreData() {
   //Denne funksjonen heter `saveData()`, og formålet med den er å lagre innholdet i de to tabellene i `localStorage`,
   // slik at dataene blir værende etter at siden er lastet inn på nytt.
   if (tableBody.rows.length === 0 && tablekroppen.rows.length === 0) {
-    alert("Det finnes ingen informasjon å lagre!");
+
+    Swal.fire({
+      title: "Feil!",
+      width:300,
+      text: "Det finnes ingen informasjon å lagre!",
+      icon: "error"
+      });
+
+    /* alert("Det finnes ingen informasjon å lagre!"); */
     return;
   }
 
   localStorage.setItem("skattTabell", tableBody.innerHTML);
   localStorage.setItem("arligTabell", tablekroppen.innerHTML);
 
-  alert(`Data til ${sisteNavn} er lagret!`);
+  /* Swal.fire({
+      title: "Feil!",
+      width:300,
+      text: `Data til ${sisteNavn} er lagret!`,
+      icon: "error"
+      }); */
+
+  /* alert(`Data til ${sisteNavn} er lagret!`); */
 }
 //-------------------------------------- window onload -----------------------------------
 window.onload = function () {
@@ -182,45 +229,102 @@ medlem.innerHTML = `Antall medlemmer: <span class="svar">${tableBody.rows.length
 //------------------------------------------------------- Fjerne rad fra tabell i local storage ---------------------------------------------------------------------------
 
 function slettRad(slettbtn) {
-  // Den tar imot én parameter, `slettbtn`, som er sletteknappen brukeren klikket på.
-  const row = slettbtn.closest("tr"); // closest("tr") søker etter det nærmeste <tr>-elementet (tabellraden) som inneholder knappen.Denne raden lagres i variabelen `row`.
 
-  // Radnummeret i tbody
-  const index = Array.from(tableBody.rows).indexOf(row); //Forklaring : "tableBody.rows" Returnerer alle <tbody>-rader.
-  //tableBody.rows er en HTMLCollection, ikke en array.Derfor konverterer vi den til en array:Array.from(tableBody.rows)
-  // "indexOf(row)" Den søker etter raden hvis knapp brukeren klikket på.
-  if (confirm("Er du sikker på at du vil slette den raden i tabellen?")) {
-    if (index !== -1) {
-      // Den verifiserer at raden allerede finnes.Hvis han ikke finner det:index = -1;
-      // // I så fall vil ikke slettingen finne sted.
+  const row = slettbtn.closest("tr");
 
-      tableBody.deleteRow(index); // Raden slettes fra den første tabellen (tableBody).
-      tablekroppen.deleteRow(index); // Selve raden slettes fra den andre tabellen (tabellkroppen).
-      
-      localStorage.setItem("skattTabell", tableBody.innerHTML); // Innholdet i den første tabellen lagres i localStorage etter sletting.
-      localStorage.setItem("arligTabell", tablekroppen.innerHTML); // Innholdet i den andre tabellen bevares også etter sletting.
+  const index = Array.from(tableBody.rows).indexOf(row);
+
+  Swal.fire({
+    width: 300,
+    title: "Er du sikker?",
+    text: "Du vil slette denne raden.",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#f4a261",
+    cancelButtonColor: "rgb(59, 81, 104)",
+    confirmButtonText: "Ja, slett!",
+    cancelButtonText: "Avbryt"
+  }).then((result) => {
+
+    if (result.isConfirmed) {
+
+      if (index !== -1) {
+
+        tableBody.deleteRow(index);
+        tablekroppen.deleteRow(index);
+
+        localStorage.setItem("skattTabell", tableBody.innerHTML);
+        localStorage.setItem("arligTabell", tablekroppen.innerHTML);
+
+        Swal.fire({
+          width: 300,
+          title: "Slettet!",
+          text: "Raden er fjernet.",
+          icon: "success"
+        });
+
+      }
     }
-  }
+
+  });
 }
 
 //------------------------------------------------------- Fjerne data fra local storage ---------------------------------------------------------------------------
 
 function fjerneData() {
-  if (confirm("Er du sikker på at du vil slette alle data i tabellene?")) {
-    tableBody.innerHTML = "";
-    tablekroppen.innerHTML = "";
+  Swal.fire({
+    width: 300,
+    title: "Er du sikker?",
+    text: "Du vil slette alle data i tabellene.",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#f4a261",
+    cancelButtonColor: "rgb(59, 81, 104)",
+    confirmButtonText: "Ja, slett!",
+    cancelButtonText: "Avbryt"
+  }).then((result) => {
+    if (result.isConfirmed) {
+      tableBody.innerHTML = "";
+      tablekroppen.innerHTML = "";
 
-    localStorage.removeItem("skattTabell");
-    localStorage.removeItem("arligTabell");
-  }
+      localStorage.removeItem("skattTabell");
+      localStorage.removeItem("arligTabell");
+
+      Swal.fire({
+        width: 300,
+        title: "Slettet!",
+        text: "Alle data er fjernet.",
+        icon: "success"
+      });
+    }
+  });
 }
 
 //------------------------------------------------------- lukke siden ---------------------------------------------------------------------------
 
 function lukkSide() {
-  if (confirm("Vil du lukke siden?")) {
-    window.top.location.href = "../index.html";
-  }
+ Swal.fire({
+    width: 300,
+    title: "Er du sikker?",
+    text: "Du vil forlate siden!",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#f4a261",
+    cancelButtonColor: "rgb(59, 81, 104)",
+    confirmButtonText: "Ja, lukk!",
+    cancelButtonText: "Avbryt"
+  }).then((result) => {
+    if (result.isConfirmed) {
+      Swal.fire({
+        width: 300,
+        title: "Lukket!",
+        text: "Du blir sendt til forsiden.",
+        icon: "success"
+      }).then(() => {
+        window.top.location.href = "../index.html";
+      });
+    }
+  });
 }
 
 // ------------------------------------------------- søke etter bruttolønn ------------------------------
@@ -230,7 +334,14 @@ function sokNavn() {
   const sokeType = document.getElementById("sokeType").value;
 
   if (sok === "") {
-    alert("Skriv inn et navn eller telefon.");
+
+    Swal.fire({
+      title: "Feil!",
+      width:300,
+      text: "Skriv inn et navn eller telefon.",
+      icon: "error"
+      });
+    /* alert("Skriv inn et navn eller telefon."); */
     return;
   }
 
@@ -293,9 +404,25 @@ if (sokeType === "fornavn") {
   }
 
   if (!funnet) {
-    alert(`Ingen navn med "${sok}" ble funnet.`);
+
+Swal.fire({
+      title: "Feil!",
+      width:300,
+      text: `Ingen navn eller telefon med "${sok}" ble funnet.`,
+      icon: "error"
+      });
+
+    /* alert(`Ingen navn med "${sok}" ble funnet.`); */
   } else {
-    alert(`Fant ${antallNavneFunnet} navn med "${sok}".`);
+
+    
+Swal.fire({
+      title: "Flott!",
+      width:300,
+      text: `Fant ${antallNavneFunnet} navn med "${sok}".`,
+      icon: "success"
+      });
+   /*  alert(`Fant ${antallNavneFunnet} navn med "${sok}".`); */
   }
 
   input.value = "";
@@ -376,7 +503,15 @@ function redigerRad(knapp) {
 // ------------------------------------------------------------------ lagre endring ------------------------------------------------
 function lagreEndring() {
   if (radSomRedigeres === null) {
-    alert("Ingen rad er valgt for redigering.");
+
+    Swal.fire({
+      title: "Feil!",
+      width:300,
+      text: "Ingen rad er valgt for redigering.",
+      icon: "error"
+      });
+
+    /* alert("Ingen rad er valgt for redigering."); */
     return;
   }
 
@@ -395,14 +530,30 @@ function lagreEndring() {
     lonn <= 0 ||
     skattesats <= 0
   ) {
-    alert("Fyll inn gyldige tall.");
+
+    Swal.fire({
+      title: "Feil!",
+      width:300,
+      text: "Fyll inn gyldige tall.",
+      icon: "error"
+      });
+
+    /* alert("Fyll inn gyldige tall."); */
     return;
   }
 
-  if (skattesats > 100) {
-  alert("Skatt må være mindre enn 100 %");
+  /* if (skattesats > 100) {
+
+    Swal.fire({
+      title: "Feil!",
+      width:300,
+      text: "Skatt må være mindre enn 100 %",
+      icon: "error"
+      });
+
+      alert("Skatt må være mindre enn 100 %"); 
   return;
-}
+} */
 
   const skatt = Math.round((lonn * skattesats) / 100);
   const netto = Math.round(lonn - skatt);
@@ -459,7 +610,14 @@ if (radArlig) {
   document.getElementById("skattesats").value = "";
   document.getElementById("tlf").value = "";
 
-  alert("Data er oppdatert!");
+Swal.fire({
+      title: "Flott!",
+      width:300,
+      text: `Data er oppdatert!`,
+      icon: "success"
+      });
+
+  /* alert("Data er oppdatert!"); */
 
   sortere();
 }

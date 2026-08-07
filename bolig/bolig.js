@@ -1,3 +1,19 @@
+function showTvMessage(event) {
+  event.preventDefault();
+
+  Swal.fire({
+    title: "Velkommen til Mazloum online-TV",
+    text: "Arabiske / Norske kanaler",
+    width:400,
+    imageUrl: "../image/mazlogo.png",
+    imageWidth: 200,
+    imageHeight: 200,
+    imageAlt: "TV"
+  }).then(() => {
+    window.location.href = "../tv/tv.html";
+  });
+}
+
 
 function toggleMenu() {
   document.getElementById("menu").classList.toggle("show");
@@ -27,7 +43,15 @@ document.getElementById("beregn").onclick = function () {
     isNaN(ar) ||
     ar <= 0
   ) {
-    alert(`Vennligst skriv inn gyldige positive tall.`);
+
+ Swal.fire({
+      title: "Feil!",
+      width:300,
+      text: "Vennligst skriv inn gyldige positive tall.",
+      icon: "error"
+      });
+    
+   /*  alert(`Vennligst skriv inn gyldige positive tall.`); */
     return;
   }
 
@@ -118,15 +142,54 @@ document.getElementById("beregn").onclick = function () {
     document.getElementById(id).value = "";
   });
 };
-
-//Fanksjoner for fjerne og lukke knapper
 document.getElementById("fjerne").onclick = () => {
-  if (confirm(`Er du sikker ! \n Data skal slettes . `))
-    window.location.reload();
+  Swal.fire({
+    width:300,
+    title: "Er du sikker?",
+    text: "Dataene vil bli slettet!",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#f4a261",
+    cancelButtonColor: "rgb(59, 81, 104)",
+    confirmButtonText: "Ja, slett!",
+    cancelButtonText: "Avbryt"
+  }).then((result) => {
+    if (result.isConfirmed) {
+      Swal.fire({
+        width:300,
+        title: "Slettet!",
+        text: "Dataene er slettet.",
+        icon: "success"
+      }).then(() => {
+        window.location.reload();
+      });
+    }
+  });
 };
+
 document.getElementById("lukke").onclick = () => {
-  if (confirm(`Er du sikker ! \n siden skal lukkes .`))
-    window.top.location.href = "../index.html";
+  Swal.fire({
+    width: 300,
+    title: "Er du sikker?",
+    text: "Du vil forlate siden!",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#f4a261",
+    cancelButtonColor: "rgb(59, 81, 104)",
+    confirmButtonText: "Ja, lukk!",
+    cancelButtonText: "Avbryt"
+  }).then((result) => {
+    if (result.isConfirmed) {
+      Swal.fire({
+        width: 300,
+        title: "Lukket!",
+        text: "Du blir sendt til forsiden.",
+        icon: "success"
+      }).then(() => {
+        window.top.location.href = "../index.html";
+      });
+    }
+  });
 };
 
 // ----------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -138,7 +201,15 @@ function sokMåned() {
   const sok = input.value.trim().toLowerCase();
 
   if (sok === "") {
-    alert("Skriv inn månedsnummer.");
+
+Swal.fire({
+      title: "Feil!",
+      width:300,
+      text: "Skriv inn månedsnummer.",
+      icon: "error"
+      });
+
+    /* alert("Skriv inn månedsnummer."); */
     return;
   }
 
@@ -172,7 +243,15 @@ function sokMåned() {
 }
 
   if (!funnet) {
-    alert("Ingen månedsnummer ble funnet.");
+
+    Swal.fire({
+      title: "Feil!",
+      width:300,
+      text: "Ingen månedsnummer ble funnet.",
+      icon: "error"
+      });
+
+   /*  alert("Ingen månedsnummer ble funnet."); */
   }
 
   input.value = "";

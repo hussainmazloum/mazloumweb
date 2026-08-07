@@ -1,4 +1,5 @@
 
+
 function toggleMenu() {
   document.getElementById("menu").classList.toggle("show");
 }
@@ -126,11 +127,32 @@ fetch("bilder.json")
   });
 
 /* --------------------------------------------------------------*/
-
+/* 
 function tilbake() {
+
+  
+
   window.location.href = "index.html";
-}
+
+  
+} */
+
+
 
 /* --------------------------------------------------------------*/
 
 
+function showTvMessage(event) {
+  event.preventDefault();
+
+  Swal.fire({
+    title: "Sweet!",
+    text: "Velkommen til TV-siden",
+    imageUrl: "https://unsplash.it/400/200",
+    imageWidth: 400,
+    imageHeight: 200,
+    imageAlt: "TV"
+  }).then(() => {
+    window.location.href = "../tv/tv.html";
+  });
+}
