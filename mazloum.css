@@ -546,8 +546,10 @@ input{
   gap: 0px;
   margin: 0 auto;
 
+  justify-content: center;
+
 /*   border: 1px solid red;
- */ }
+ */  }
 
  #vikingBall img{
   width: 55px;
