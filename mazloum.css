@@ -148,7 +148,7 @@ p{
   width: 55%;
   margin: 0 auto;
   direction: ltr;
-   border: 1px solid red;
+   /* border: 1px solid red; */
   }
 
 #ballBilder img{
@@ -354,7 +354,7 @@ input{
 
 /* -------------- media query 768 px -----------------------*/
 
-@media (max-width: 900px) {
+@media (max-width: 780px) {
 
   /*--------------------------- Norsk tipping --------------*/
 
@@ -493,8 +493,9 @@ input{
  }
 
  #ballBilder{
-  width: 100%;
+  width: 90%;
   gap: 3px;
+  margin: 0 auto;
  }
 
 }
