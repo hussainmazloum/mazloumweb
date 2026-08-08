@@ -73,7 +73,14 @@ ul li a:hover {
     display: flex;
     justify-content: center;
     align-items: center;    
-    height: 70vh;          
+    height: 45vh;          
+}
+
+.nor{
+  color: #767474;
+  width:100%;
+  padding: 0 15px;
+  text-align:center;
 }
 
 .soura img{
@@ -536,6 +543,11 @@ input{
  #vikingBall img{
   width: 55px;
 
+ }
+
+ .nor{
+  width: 100%;
+  text-align: justify;
  }
 
 }
