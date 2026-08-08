@@ -45,10 +45,10 @@ document.getElementById("beregn").onclick = function () {
   ) {
 
  Swal.fire({
-      title: "Feil!",
+      title: "Advarsel!",
       width:300,
       text: "Vennligst skriv inn gyldige positive tall.",
-      icon: "error"
+      icon: "warning"
       });
     
    /*  alert(`Vennligst skriv inn gyldige positive tall.`); */
@@ -203,10 +203,10 @@ function sokMåned() {
   if (sok === "") {
 
 Swal.fire({
-      title: "Feil!",
+      title: "Advarsel!",
       width:300,
       text: "Skriv inn månedsnummer.",
-      icon: "error"
+      icon: "warning"
       });
 
     /* alert("Skriv inn månedsnummer."); */

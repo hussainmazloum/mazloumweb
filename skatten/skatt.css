@@ -197,10 +197,13 @@ h1 {
 
 .beregne{
  display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  width: 100%;
+  width: 50%;
+  margin: 0 auto;
 
+/*   border: 1px solid rgb(42, 191, 139);
+ */
 }
 
 .btnBeregne{
