@@ -27,10 +27,8 @@
             </ul>
           </li>
 
-          
-
-          <li><a href="ticiac.html">SPILL</a></li> 
-         <!--  <li><a href="tv/tv.html" onclick="showTvMessage(event)">TV</a></li> -->
+          <li><a href="ticiac.html">SPILL</a></li>
+          <!--  <li><a href="tv/tv.html" onclick="showTvMessage(event)">TV</a></li> -->
           <li><a href="tv/tv.html">TV</a></li>
           <li><a href="skatten/skatt.html">SKATTEKALKULATOR</a></li>
           <li><a href="bolig/bolig.html">BOLIGLÅNSBEREGNING</a></li>
@@ -39,27 +37,29 @@
       </div>
 
       <div id="stora">
-        <div class="bil"><img src="ball_images/lotto.png" alt="tipping" /><br /></div>
+        <div class="bil">
+          <img src="ball_images/lotto.png" alt="tipping" /><br />
+        </div>
         <h1>Mazloum Tipping</h1>
-        <h2 class="tipping">Lotto</h2><br>
+        <h2 class="tipping">Lotto er et lotterispill hvor det trekkes 7 hovedtall og 1 tilleggstall av totalt 34 tall. <br> Får du 7 rette tall på én og samme rekke, vinner du førstepremiepotten i Lotto.</h2>
+        <br />
 
         <div class="trekk">
-        <label>Antall ball :</label>
-        <input type="number" id="antallBall" value="7" min="1" max="7">
+          <label>Antall ball :</label>
+          <input type="number" id="antallBall" value="7" min="1" max="7" />
         </div>
 
         <button onclick="rollBall(34)" class="knapp">Trekke ut</button>
-        
+
         <div id="ballBilder"></div>
         <div id="ballResultat"></div>
-    </div>
-
-    <script src="ball.js"></script>
-
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+      <script src="ball.js"></script>
+      <script src="mazloum.js"></script>
     </div>
     <p>&copy Mazloum</p>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    <script src="mazloum.js"></script>
+    
   </body>
 </html>

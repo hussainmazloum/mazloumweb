@@ -156,6 +156,11 @@ p{
 /*   border: 1px solid red;
  */}
 
+ #vikingBall img{
+  width: 100px;
+
+ }
+
 #stora, #store{
   display:flex;
   flex-direction: column;
@@ -183,9 +188,13 @@ h1{
   color: #8c8686;
   font-weight: 700;
 }
-h2{
+.vik{
+color: #767474;
+}
+h4 {
   color: #f4a261;
-  font-size: 22px;
+  font-size: 18px;
+  text-align: center;
 }
 label{
   color: #767474;
@@ -231,6 +240,25 @@ input{
   margin-top: 15px;
 }
 
+.zer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+#vikingBall{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 24px;
+  font-weight: 600;
+  color: #767474;
+  gap: 25px;
+/*   border: 1px solid red;
+ */}
 
 
 /* --------------- tic tac -----------------------------------*/
@@ -349,6 +377,13 @@ input{
 /* Å vise list ved hover muse på */
 .norsk-tipping:hover .tipp {
   display: block;
+}
+
+.tipping{
+  color: #f4a261;
+  font-size: 18px;
+  text-align: center;
+  padding: 0 10px;
 }
 
 
@@ -496,6 +531,11 @@ input{
   width: 90%;
   gap: 3px;
   margin: 0 auto;
+ }
+
+ #vikingBall img{
+  width: 55px;
+
  }
 
 }

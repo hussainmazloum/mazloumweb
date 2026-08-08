@@ -27,8 +27,6 @@
             </ul>
           </li>
 
-          
-
           <li><a href="ticiac.html">SPILL</a></li>
           <li><a href="tv/tv.html" onclick="showTvMessage(event)">TV</a></li>
           <!-- <li><a href="tv/tv.html">TV</a></li> -->
@@ -39,26 +37,39 @@
       </div>
 
       <div id="store">
-        <div class="bill"><img src="ball_images/tipMazloumblue.png" alt="tipping" /><br /></div>
+        <div class="bill">
+          <img src="ball_images/tipMazloumblue.png" alt="tipping" /><br />
+        </div>
         <h1>Mazloum X-Tipping</h1>
-        <h2 class="tipping">Vikingolotto</h2><br>
+        <h4 class="tipping">
+          Vikingolotto trekkes det totalt 7 baller i hver ordinær trekning:
+          <br />
+          <span class="vik"
+            >6 hovedtall fra en gruppe på 48 tall, og 1 vikingotall fra en
+            gruppe på 5 tall</span
+          >
+        </h4>
+        <br />
 
         <div class="trekk">
-        <label>Antall ball :</label>
-        <input type="number" id="antallBall" value="6" min="1" max="6">
+          <label>Antall baller :</label>
+          <input type="number" id="antallBall" value="6" min="1" max="6" />
+        </div>
+        <div class="zer">
+          <button onclick="rollBall(48, 6)" class="knapp">6 av 48</button>
+          <button onclick="rollVikingTall()" class="knapp">1 av 5</button>
         </div>
 
-        <button onclick="rollBall(48)" class="knapp">Trekke ut</button>
-        
         <div id="ballBilder"></div>
         <div id="ballResultat"></div>
-    </div>
 
-    <script src="ball.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <div id="vikingBall"></div>
+      </div>
 
+      <script src="ball.js"></script>
     </div>
     <p>&copy Mazloum</p>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script src="mazloum.js"></script>
   </body>
