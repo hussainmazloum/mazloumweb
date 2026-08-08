@@ -542,8 +542,8 @@ input{
  }
 
  #ballBilder{
-  width: 80%;
-  gap: 3px;
+  width: 100%;
+  gap: 0px;
   margin: 0 auto;
 
 /*   border: 1px solid red;
