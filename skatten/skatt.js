@@ -56,6 +56,7 @@ function beregneSkatte() {
 }
 
 if (
+  isNaN(name) ||
   isNaN(lonnVerdi) ||
   isNaN(skattProsent) ||
   lonnVerdi <= 0 ||
@@ -63,10 +64,10 @@ if (
 ) {
 
 Swal.fire({
-      title: "Feil!",
+      title: "Advarsel!",
       width:300,
       text: "Fyll inn gyldige tall.",
-      icon: "error"
+      icon: "warning"
       });
 
   /* alert("Fyll inn gyldige tall."); */
@@ -76,10 +77,10 @@ Swal.fire({
 if (skattProsent > 100) {
 
   Swal.fire({
-      title: "Feil!",
+      title: "Advarsel!",
       width:300,
       text: "Skatt må være mindre enn 100 %",
-      icon: "error"
+      icon: "warning"
       });
 
   /* alert("Skatt må være mindre enn 100 %"); */
@@ -188,10 +189,10 @@ function lagreData() {
   if (tableBody.rows.length === 0 && tablekroppen.rows.length === 0) {
 
     Swal.fire({
-      title: "Feil!",
+      title: "Advarsel!",
       width:300,
       text: "Det finnes ingen informasjon å lagre!",
-      icon: "error"
+      icon: "warning"
       });
 
     /* alert("Det finnes ingen informasjon å lagre!"); */
@@ -336,10 +337,10 @@ function sokNavn() {
   if (sok === "") {
 
     Swal.fire({
-      title: "Feil!",
+      title: "Advarsel!",
       width:300,
       text: "Skriv inn et navn eller telefon.",
-      icon: "error"
+      icon: "warning"
       });
     /* alert("Skriv inn et navn eller telefon."); */
     return;
@@ -505,10 +506,10 @@ function lagreEndring() {
   if (radSomRedigeres === null) {
 
     Swal.fire({
-      title: "Feil!",
+      title: "Advarsel!",
       width:300,
       text: "Ingen rad er valgt for redigering.",
-      icon: "error"
+      icon: "warning"
       });
 
     /* alert("Ingen rad er valgt for redigering."); */
@@ -532,10 +533,10 @@ function lagreEndring() {
   ) {
 
     Swal.fire({
-      title: "Feil!",
+      title: "Advarsel!",
       width:300,
       text: "Fyll inn gyldige tall.",
-      icon: "error"
+      icon: "warning"
       });
 
     /* alert("Fyll inn gyldige tall."); */
