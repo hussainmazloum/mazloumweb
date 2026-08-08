@@ -542,10 +542,12 @@ input{
  }
 
  #ballBilder{
-  width: 90%;
+  width: 80%;
   gap: 3px;
   margin: 0 auto;
- }
+
+/*   border: 1px solid red;
+ */ }
 
  #vikingBall img{
   width: 55px;
