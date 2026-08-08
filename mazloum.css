@@ -71,15 +71,18 @@ ul li a:hover {
 
 .soura{
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;    
-    height: 45vh;          
-}
+    align-items: center; 
+    
+    margin-top: 45px;
+/*     border: 1px solid red;
+ */}
 
 .nor{
   color: #767474;
   width:100%;
-  padding: 0 15px;
+  padding: 25px;
   text-align:center;
 }
 
