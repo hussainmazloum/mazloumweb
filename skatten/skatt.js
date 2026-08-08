@@ -56,7 +56,7 @@ function beregneSkatte() {
 }
 
 if (
-  isNaN(name) ||
+   nom === ""  ||
   isNaN(lonnVerdi) ||
   isNaN(skattProsent) ||
   lonnVerdi <= 0 ||
