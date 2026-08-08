@@ -51,12 +51,30 @@ function menneskeligFlytt() {
   if (checkWinner(mennesker)) {
     status.textContent = "Du vinner !";
     spillOver = true;
+
+  Swal.fire({
+      title: "Flott!",
+      width:300,
+      text: `Du vinner`,
+      color:"darkgreen",
+      icon: "success"
+      });
+
     return;
   }
 
   if (isDraw()) {
     status.textContent = "Tegne !";
     spillOver = true;
+
+Swal.fire({
+      title: "Flott!",
+      width:300,
+      text: `Tegne`,
+      color:"rgb(88, 173, 73)",
+      icon: "success"
+      });
+
     return;
   }
 
@@ -106,6 +124,15 @@ function computerMove() {
   if (checkWinner(computer)) {
     status.textContent = "Datamaskinen vinner !";
     spillOver = true;
+
+Swal.fire({
+      title: "Flott!",
+      width:300,
+      text: `Datamaskinen vinner !`,
+      color:"darkblue",
+      icon: "success"
+      });
+
     return;
   }
 
@@ -114,6 +141,7 @@ function computerMove() {
     spillOver = true;
     return;
   }
+
 
   status.textContent = "Din tur";
 }
@@ -148,4 +176,12 @@ document.getElementById("restart").onclick = () => {
 
   spillOver = false;
   status.textContent = "Din tur";
+
+    Swal.fire({
+      title: "Din tur!",
+      width:300,
+      text: `Klikk på en ledig rute`,
+      color:"rgb(88, 173, 73)",
+      icon: "success"
+      });
 };
